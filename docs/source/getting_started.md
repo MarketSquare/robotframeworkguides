@@ -108,30 +108,78 @@ You can type `pip show robotframework` to get more information about the install
 The virtual environment can be deactivated by typing `source venv/bin/deactivate`.
 
 ## Install IDE and Extensions
-
-### PyCharm
+Several IDEs and Code Editors support the development of Robot Framework tests.  
+The support ranges from simple code-highlighting, code-completion to test execution and debugging.  
+We list several IDEs and Extensions here, but there are many more.
 
 ### Visual Studio Code
+An Open Source and Lightweight Code-Editor developed by Microsoft.
+https://code.visualstudio.com/
+It provides extensions for a lot of different languages and technologies.
 
-#### Windows
+![VS Code](img/vscode_site.png)
 
-1. Go to [Visual Studio Code](https://code.visualstudio.com) website
-2. Click on the `Download for Windows` button to download the installer `.exe` file
-3. Run the installer with the default settings  
-(enable the setting to `Create Desktop shortcut`, if you want to)
-4. To run Visual Studio Code, you can either
-    1. Type `code` in the terminal
-    2. Double-click the Desktop shortcut
-    3. Press `Windows key` and select Visual Studio Code from the Start Menu
+Popular extensions for Robot Framework:  
+- [Robot Code](https://marketplace.visualstudio.com/items?itemName=d-biehl.robotcode)
+- [Robot Framework Language Server](https://marketplace.visualstudio.com/items?itemName=robocorp.robotframework-lsp)
 
+#### Install Visual Studio Code
 
+##### Windows
 
+1. Download the Windows installer from [Visual Studio Code](https://code.visualstudio.com/download)
+2. Run the Installer with default settings
+3. Start Visual Studio Code either by
+    1. Pressing `Windows key + R`, typing `code` and pressing `Enter`
+    2. Opening the start menu, searching for `Visual Studio Code` and clicking on it
 
+##### Linux
 
+###### Install via snap
 
-#### RoboCorp Robot Framework Extension
+1. Open a terminal 
+2. Execute `sudo snap install code --classic`
+3. Start Visual Studio Code by executing `code`
 
-#### RobotCode Extension
+###### Install via deb
+
+1. Download the deb package from [Visual Studio Code](https://code.visualstudio.com/download)
+2. Open a terminal
+3. Type `sudo dpkg -i <path_to_deb_package>`  
+e.g. `sudo dpkg -i ~/Downloads/code_1.65.2-1646927742_amd64.deb`
+4. Start Visual Studio Code by executing `code`
+
+###### Install via rpm
+
+1. Download the rpm package from [Visual Studio Code](https://code.visualstudio.com/download)
+2. Open a terminal
+3. Type `sudo rpm -i <path_to_rpm_package>`  
+e.g. `sudo rpm -i ~/Downloads/code-1.65.2-1646927812.el7.x86_64.rpm`
+4. Start Visual Studio Code by executing `code`
+
+#### Visual Studio Code Extensions
+
+Make sure that only one single Robot Framework extension is installed.
+
+##### RobotCode
+
+[RobotCode](https://marketplace.visualstudio.com/items?itemName=d-biehl.robotcode) is a Visual Studio Code extension for Robot Framework.
+
+![RobotCode](img/robotcode.png)
+
+1. Open Visual Studio Code
+2. Click on Extensions icon or press `Ctrl + Shift + X`
+3. Search for `RobotCode` and click on it
+4. Click on `Install`
+
+##### Robot Framework Language Server
+
+[Robot Framework Language Server](https://marketplace.visualstudio.com/items?itemName=robocorp.robotframework-lsp) is a Visual Studio Code extension for Robot Framework.
+
+1. Open Visual Studio Code
+2. Click on Extensions icon or press `Ctrl + Shift + X`
+3. Search for `Robot Framework Language Server` and click on it
+4. Click on `Install`
 
 ### RIDE
 
