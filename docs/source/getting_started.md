@@ -214,7 +214,7 @@ Make sure that only one single Robot Framework extension is installed.
 3. Select the `Marketplace` tab
 4. Search for `Robot Framework Language Server` and click on `Install`
 
-#### IntelliBot #patched
+##### IntelliBot #patched
 
 1. Press `Ctrl + Alt + S` to open the settings dialog
 2. Select `Plugins`
