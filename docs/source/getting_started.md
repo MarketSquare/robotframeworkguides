@@ -193,6 +193,8 @@ Popular extensions for Robot Framework:
 - [Robot Framework Language Server](https://plugins.jetbrains.com/plugin/16086-robot-framework-language-server)
 - [Intellibot (patched)](https://plugins.jetbrains.com/plugin/17424-intellibot-patched)
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/srgZ3eQ6erw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 #### Install PyCharm
 
 See the [PyCharm installation instructions](https://www.jetbrains.com/help/pycharm/2021.3/installation-guide.html) for more information.
