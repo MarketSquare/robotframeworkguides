@@ -125,6 +125,8 @@ Popular extensions for Robot Framework:
 
 #### Install Visual Studio Code
 
+See the [VS Code setup guide](https://code.visualstudio.com/docs/setup/setup-overview) for more information.
+
 ##### Windows
 
 1. Download the Windows installer from [Visual Studio Code](https://code.visualstudio.com/download)
@@ -176,10 +178,48 @@ Make sure that only one single Robot Framework extension is installed.
 
 [Robot Framework Language Server](https://marketplace.visualstudio.com/items?itemName=robocorp.robotframework-lsp) is a Visual Studio Code extension for Robot Framework.
 
+![Robot Framework Language Server](img/rflsp.png)
+
 1. Open Visual Studio Code
 2. Click on Extensions icon or press `Ctrl + Shift + X`
 3. Search for `Robot Framework Language Server` and click on it
 4. Click on `Install`
+
+### PyCharm
+
+[PyCharm](https://www.jetbrains.com/pycharm/) is a free and open-source IDE for Python.
+
+Popular extensions for Robot Framework:
+- [Robot Framework Language Server](https://plugins.jetbrains.com/plugin/16086-robot-framework-language-server)
+- [Intellibot (patched)](https://plugins.jetbrains.com/plugin/17424-intellibot-patched)
+
+#### Install PyCharm
+
+See the [PyCharm installation instructions](https://www.jetbrains.com/help/pycharm/2021.3/installation-guide.html) for more information.
+
+There two installation approaches
+- The recommended one by JetBrains using the [Toolbox App](https://www.jetbrains.com/help/toolbox/app/installation.html).
+- The alternative [stand alone installation](https://www.jetbrains.com/help/pycharm/2021.3/installation-guide.html#standalone)
+
+Make sure to install the free `PyCharm Community Edition` and not the `PyCharm Professional` version.
+
+#### PyCharm extensions
+
+Make sure that only one single Robot Framework extension is installed.
+
+##### Robot Framework Language Server
+
+1. Press `Ctrl + Alt + S` to open the settings dialog
+2. Select `Plugins`
+3. Select the `Marketplace` tab
+4. Search for `Robot Framework Language Server` and click on `Install`
+
+#### IntelliBot #patched
+
+1. Press `Ctrl + Alt + S` to open the settings dialog
+2. Select `Plugins`
+3. Select the `Marketplace` tab
+4. Search for `IntelliBot #patched` and click on `Install`
 
 ### RIDE
 
