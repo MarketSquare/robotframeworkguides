@@ -227,6 +227,24 @@ Make sure that only one single Robot Framework extension is installed.
 
 ## Debugging Robot Framework Tests 
 
+### Visual Studio Code with RobotCode
+
+Add a breakpoint to your test suite or resource file, by clicking on the left-hand side of the line.
+![Breakpoint](img/VSC_AddBreakpoint.png)
+
+Right-Click on the `Play` button 
+![Play Button](img/VSC_RBTCD_PlayBtn.png)
+
+Select `Debug Test` from the context menu.  
+Test Execution will begin and stop at the breakpoint.
+![Debug Test](img/VSC_RBTCD_Debug.png)
+
+Use `Debug Toolbar` to select actions like step over, step into, step out, continue, pause, etc.
+![Debug Toolbar](img/VSC_DebugToolbar.png)
+
+Run Robot Frameworm commands while debugging from `Debug Console`.  
+Commands needs to start with `! `
+![Debug Console](img/VSC_RBTCD_executeDebugCommands.png)
 ## Other Recommendations
 
 ### Managing Dependencies
