@@ -1,9 +1,3 @@
-
-```{figure} img/robotframeworkguides_logo.png
-:alt: Robot Framework
-:figwidth: 100px
-:align: left
-```
 # Robot Framework Guides
 
 Good practices for using Robot Framework and its ecosystem.  
