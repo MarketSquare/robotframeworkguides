@@ -69,6 +69,10 @@ They will be automatically included in the built and will be accessible via the 
 - Open the browser and navigate to `http://localhost:3000`
 - Make changes to the documentation files and check the changes in real time
 
+Changes are visible in real time in the browser.  
+![Development Server](/img/contribute/dev_server.png)
+
+
 ## Create Build and Push
 
 - Run the build via `npm run build`
