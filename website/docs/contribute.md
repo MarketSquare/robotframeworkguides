@@ -28,6 +28,37 @@ There are two branches in the project:
 - `main` is the default branch and is used to maintain the documentation
 - `gh-pages` is only used for the deployment of the `.html` documentation to GitHub Pages
 
+## Folders
+
+### Docs
+
+Docs are written in Markdown and are stored [here](https://github.com/MarketSquare/robotframeworkguides/tree/main/website/docs)
+
+The following attributes can be used to customize the page, e.g. the position on the sidebar, the title and the sidebar label:
+
+```
+---
+sidebar_position: 2
+sidebar_label: How to contribute
+title: How to contribute
+---
+```
+
+Folders will added to the sidebar automatically.
+You can use a `_category_.json` file to customize the sidebar label and the position of the folder.
+
+```
+{
+  "label": "Getting Started",
+  "position": 3
+}
+```
+
+## Static Files (e.g. images)
+
+Static files (like images) are stored in the `website/static` folder [here](https://github.com/MarketSquare/robotframeworkguides/tree/main/website/static)  
+They will be automatically included in the built and will be accessible via the `/` path (e.g. images are accessible via `/img/robotframeworkguides_logo.png`)
+
 # Updating Documentation
 
 ## Run the development server
