@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 100
 sidebar_label: How to contribute
 title: How to contribute
 ---
