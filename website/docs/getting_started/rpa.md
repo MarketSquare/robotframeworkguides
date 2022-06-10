@@ -37,7 +37,7 @@ rcc run
 
 [RCC](https://github.com/robocorp/rcc#readme) is an open-source tool that handles essentially everything around an RPA robot run on Windows, mac and Linux. With RCC the machine running the robot need nothing installed.
 1. Define your dependencies in [conda.yaml](https://robocorp.com/docs/setup/installing-python-package-dependencies#the-conda-yaml-file)
-1. Define your robot in [robot.yaml](robocorp.com/docs/setup/robot-yaml-format)
+1. Define your robot in [robot.yaml](https://robocorp.com/docs/setup/robot-yaml-format)
 1. Let [RCC](https://github.com/robocorp/rcc#readme) setup an isolated environment and makes sure your bot runs the same way.
 
 > No more: "Works for me".
