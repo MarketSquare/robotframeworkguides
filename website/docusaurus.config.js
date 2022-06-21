@@ -25,7 +25,7 @@ const config = {
           routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: 'https://github.com/MarketSquare/robotframeworkguides',
         },
         blog: false,
         theme: {
@@ -52,7 +52,7 @@ const config = {
             label: 'Tutorial',
           },
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/MarketSquare/robotframeworkguides',
             label: 'GitHub',
             position: 'right',
           },
@@ -74,16 +74,16 @@ const config = {
             title: 'Community',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: 'Forum',
+                href: 'http://forum.robotframework.org/',
               },
               {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                label: 'Slack',
+                href: 'https://robotframework.slack.com/',
               },
               {
                 label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                href: 'http://twitter.com/robotframework',
               },
             ],
           },
@@ -92,16 +92,28 @@ const config = {
             items: [
               {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/MarketSquare/robotframeworkguides',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Robot Framework Guides Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
+      },
+      algolia: {
+        // The application ID provided by Algolia
+        appId: 'GMGW7XXAQB',
+  
+        // Public API key: it is safe to commit it
+        apiKey: 'b14e514cb158f8bb5360fe8622d36ea5',
+  
+        indexName: 'robotframeworkguides',
+  
+        // Optional: see doc section below
+        contextualSearch: true,
       },
     }),
 };
