@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/"
+                       xmlns:moz="http://www.mozilla.org/2006/browser/search/">
+  <ShortName>Robot Framework Guides</ShortName>
+  <Description>Search Robot Framework Guides</Description>
+  <InputEncoding>UTF-8</InputEncoding>
+  <Image width="16" height="16" type="image/x-icon">http://marketsquare.github.io/robotframeworkguides/img/favicon.ico</Image>
+  <Url type="text/html" method="get" template="http://marketsquare.github.io/robotframeworkguides/search?q={searchTerms}"/>
+  <Url type="application/opensearchdescription+xml" rel="self" template="http://marketsquare.github.io/robotframeworkguides/opensearch.xml" />
+  <moz:SearchForm>http://marketsquare.github.io/robotframeworkguides/</moz:SearchForm>
+</OpenSearchDescription>
