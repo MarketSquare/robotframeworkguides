@@ -49,19 +49,20 @@ The first run sets up the environment, so it takes a bit longer, but if you do t
 
 ## What is this RCC?
 
-[RCC](https://github.com/robocorp/rcc#readme) is an open-source tool that handles everything essential around an RPA robot run on Windows, Mac and Linux. With RCC, the machine running the robot does not even need Python installed.
+[RCC](https://github.com/robocorp/rcc#readme) is an open-source tool that handles everything essential around an RPA robot run on Windows, macOS, and Linux. With RCC, the machine running the robot does not even need Python installed.
 
 So, if you look back into [the first robot you ran](/getting_started/rpa#run-your-first-robot), you will see the following:
 1. The environment your bot needs is defined in: [conda.yaml](https://github.com/robocorp/rcc/blob/master/docs/recipes.md#what-is-in-condayaml)
 1. How your robot is executed is defined in: [robot.yaml](https://github.com/robocorp/rcc/blob/master/docs/recipes.md#what-is-in-robotyaml)
 1. The logic of your bot is in Robot Framework (`.robot`) or Python (`.py`) -files... or both.
-With the above files [RCC](https://github.com/robocorp/rcc#readme) can set up an isolated environment and ensure your bot runs the same way every time.
 
-:point_right: No more: "Works for me".
+With the above files [RCC](https://github.com/robocorp/rcc#readme) can set up an isolated environment and ensure your bot runs the same way every time.<br/>
+:point_right: Get rid of: "Works on my machine".
 
 > RCC has a lot of cool tricks, so once you've gotten started, it is worth [check out some more](https://github.com/robocorp/rcc/tree/master/docs#readme)
 
-:rocket: So know you have your bot running and have a slight idea how you got there; what next? Well you probably need to edit your bot code a bit to get it doing what you need so head-on to the [Editor and IDEs](/getting_started/rpa#editors-and-ides)
+:rocket: So now you have your bot running and have a slight idea how you got there; what next?<br/> 
+You need to see and edit your bot code to get it doing what you need, so head-on to the [Editor and IDEs](/getting_started/rpa#editors-and-ides)
 
 ## Editors and IDEs
 There is no shortage of editors for Robot Framework and Python, but for RPA work, we limit the list to get you started. In the end, what you create is just Robot Framework and Python code, so you are not limited to the tools mentioned here.
@@ -116,15 +117,15 @@ There are options here, but **remember only to install one** as multiple LSP han
 
 ## About Robotic Process Automation (RPA)
 
-Robotic Process Automation (RPA) is similar to test automation on the technical level, but the mentality is different on the business and results side. In RPA, the most common case is that you are not running on a machine you control entirely, and instead of finding and documenting places where robot execution fails or succeeds, the aim is to get the result of the process. 
+Robotic Process Automation (RPA) is similar to test automation on the technical level, but the mentality is different on the business and results side. In RPA, it is pretty standard that you are not running on a machine you control entirely, so your robot needs to be "self-sufficient" and isolated. Also, instead of finding and documenting places where robot execution fails or succeeds, the aim is always to succeed and get the result of the process. 
 
 Isolation and repeatability are the other vital points in RPA. The bot needs to execute with minimal setup by IT people, and where governance is a thing, locking down your dependencies is a must-have feature.
 With RCC environment caching and wrapping features, you can lock down your dependencies to the actual unique files. In RPA, you do not want loose dependency handling breaking your production bots. 
 
 > Remember `pip install numpy` does **not** mean you will get the latest version;<br/>
-it means you are OK in getting whatever version you get :wink:
+it means you are OK with getting whatever version you get :wink:
 
-All this validates a separate getting started brief and a difference in tooling. The actual logic of calling out APIs, interacting with browsers and applications is still pretty much the same as in test automation. 
+All this validates a separate getting started brief and a difference in tooling. The actual logic of calling out APIs and interacting with browsers and applications is still the same as in test automation. 
 
 :rocket: So by this point, you should have run your first bot, have an editor / IDE up-n-and running, and have an idea of the slight differences between RPA and test automation using Robot Framework.
 You are raring to go, so go ahead and check out the resources and libraries -part.
@@ -134,18 +135,18 @@ You are raring to go, so go ahead and check out the resources and libraries -par
 For the resources and libraries part you can check out the following pages:
 * [RPA libraries](/robotframeworkguides/different_libraries/rpa)
 * [How to find the right library](/different_libraries/how_to_find_library)
-* RPA examples:
+* Sources for RPA example in Robot Framework:
   * [Robocorp Portal](https://robocorp.com/portal/) 
 
-The main point to remember is that with Robot Framework and Python your really are not limited. There are a ton of libraries out there, but you can also make your own.
+The main point to remember is that with Robot Framework and Python, there are just about no limits to what you can do. There are a ton of libraries out there, but you can also make your own.
 
-We always recommended giving back to the open-source community as you usually get more back than you put in. 
+We always recommend giving back to the open-source community, as you usually get more back than you put in. 
 
 For example:
-It is quite rare that the business value of an RPA process is in the library that interacts with an application or an API, so why not publish the connectivity part as OSS and get others to chip in on the maintenance and improvements? This way you can focus more on the actual RPA problem.
+It is quite rare that the business value of an RPA process is in the library that interacts with an application or an API, so why not publish the connectivity part as open-source and get others to chip in on the maintenance and improvements? This way, you can focus more on the actual RPA problem.
 * [Releasing your own library](/releasing_your_own_libraries)
 * [Helpout with this documentation](/contribute)
-* Create example bots into public repository and ping in the forums and Slacks
+* Create example bots into the public repository and ping in the forums and Slacks
 
 
 

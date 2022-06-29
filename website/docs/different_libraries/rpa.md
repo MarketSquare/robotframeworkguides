@@ -10,9 +10,10 @@ The list here is just to give a few recommendations on where to start.
 
 ### Rpaframework
 
-[Rpaframework](https://rpaframework.org) has been implemented and collected to just simplify the most common RPA use cases. The library is a collection of libraries which makes the dependency management a lot simpler.
-The library contains libraries for most common automation targets: HTTP API, browser, Windows Desktop, Excel, PDF, Email, Database, Notifiers, Slack,...
-
-### ...more coming..
-
-...possibly a simpler table would be better?
+| Library | Tags |
+| :--------------------------------------: | :-----: |
+| [Rpaframework](https://rpaframework.org) | Web, Windows Desktop, HTTP API, Selenium, Playwright, Email, Excel, PDF, Email, Database, Notifiers, Slack, Dialogs, FTP, Twitter, OCR,...|
+|[SSH Library](https://github.com/robotframework/SSHLibrary#readme)| SSH |
+|[Appium](https://github.com/serhatbolsu/robotframework-appiumlibrary#readme)| Android, iOS, Mobile |
+|[SAP GUI](https://github.com/frankvanderkuur/robotframework-sapguilibrary#readme)| SAP |
+|[Mainframe3270](https://github.com/Altran-PT-GDC/Robot-Framework-Mainframe-3270-Library#readme)| Mainframe |
