@@ -73,17 +73,15 @@ We will cover both approaches in the following chapters.
 
 We recommend to have a folder on your drive to store your projects, e.g. `C:\projects`.
 
-1. Open a terminal
-2. Type `mkdir C:\projects` to create a folder for your projects
-3. Type `cd C:\projects` to go to the folder 
-4. Type `mkdir <project_name>` to create a folder for your project  
+1. Open a terminal and navigate to your projects folder, e.g. `cd C:\projects`
+2. Type `mkdir <project_name>` to create a folder for your project  
 e.g. `mkdir MyProject`
-5. Type `cd MyProject` to go to the folder
-6. Type `python -m venv venv` to create a virtual environment
-7. Type `venv\Scripts\activate.bat` to activate the virtual environment
-8. Type `pip install robotframework` to install Robot Framework
-9. Type `robot --version`
-10. You should see something like `Robot Framework 4.x.y (Python 3.x.y)`
+3. Type `cd MyProject` to go to the folder
+4. Type `python -m venv venv` to create a virtual environment
+5. Type `venv\Scripts\activate.bat` to activate the virtual environment
+6. Type `pip install robotframework` to install Robot Framework
+7. Type `robot --version`
+8. You should see something like `Robot Framework 4.x.y (Python 3.x.y)`
 
 You can type `pip show robotframework` to get more information about the installed version of Robot Framework and the install location.  
 The virtual environment can be deactivated by typing `venv\Scripts\deactivate.bat`.
@@ -95,19 +93,16 @@ If you prefer to use `PowerShell` instead of `cmd`, you can use the following co
 
 #### Linux
 
-1. Open a terminal
-2. Type `cd` to go to your home folder
-2. Type `mkdir projects` to create a folder for your projects
-3. Type `cd projects` to go to the folder 
-4. Type `mkdir <project_name>` to create a folder for your project  
+1. Open a terminal and navigate to your projects folder, e.g. `cd ~/projects`
+2. Type `mkdir <project_name>` to create a folder for your project  
 e.g. `mkdir MyProject`
-5. Type `cd MyProject` to go to the folder
-6. Type `python -m venv venv` to create a virtual environment
-7. Type `source venv/bin/activate` to activate the virtual environment  
+3. Type `cd MyProject` to go to the folder
+4. Type `python -m venv venv` to create a virtual environment
+5. Type `source venv/bin/activate` to activate the virtual environment  
 The prefix `(venv)` will be shown in the terminal, after you have activated the virtual environment.
-8. Type `pip install robotframework` to install Robot Framework
-9. Type `robot --version`
-10. You should see something like `Robot Framework 4.x.y (Python 3.x.y)`
+6. Type `pip install robotframework` to install Robot Framework
+7. Type `robot --version`
+8. You should see something like `Robot Framework 4.x.y (Python 3.x.y)`
 
 You can type `pip show robotframework` to get more information about the installed version of Robot Framework and the install location.  
 The virtual environment can be deactivated by typing `source venv/bin/deactivate`.
