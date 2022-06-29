@@ -41,8 +41,8 @@ const config = {
       navbar: {
         title: 'Robot Framework Guides',
         logo: {
-          alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          alt: 'Robot Framework Logo',
+          src: 'img/robot-framework.svg',
         },
         items: [
           {
