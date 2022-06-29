@@ -5,8 +5,27 @@ title: GitLab
 
 ## CI Job
 
-## Docker Image
+.gitlab-ci.yml
 
-### Using existing Docker Images
+```yaml
+.RF_Test_Template:
+  image: marketsquare/robotframework-browser
+  stage: test
+  variables:
+    RF_SUITE: "$PWD/tests/"
+  script:
+    - python -m robot.run --outputdir ./results $RF_SUITE
+  artifacts:
+    paths:
+      - results/
+    when:
+      - always
 
-### Building your own Docker Images
+Acceptance Tests:
+  extends: .RF_Test_Template
+
+Some Other Tests:
+  extends: .RF_Test_Template
+  variables:
+    RF_SUITE: "$PWD/otherpath/"
+```
