@@ -15,6 +15,7 @@ Especially the [ResultVisitor](https://robot-framework.readthedocs.io/en/stable/
 * a test case starts/ends
 * a keyword starts/ends
 * ...  
+
 Check the [documentation](https://robot-framework.readthedocs.io/en/stable/autodoc/robot.result.html?highlight=Resultvisitor%20#module-robot.result.visitor) for more possible entry points.  
 While visiting the results, you will have full access to the Robot Framework [Model](https://robot-framework.readthedocs.io/en/stable/autodoc/robot.model.html#module-robot.model) and its objects.
 You can easily read the status of a test or keyword, read its arguments or the elapsed execution time. Basically all data which is written into the `output.xml` can be accessed via the model.  
