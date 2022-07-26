@@ -5,6 +5,6 @@ tasks:
     command: |
       cd $GITPOD_REPO_ROOTS/website
       npm run start
-      gp ports await 3000 && gp preview $(gp url 3000)/robotframeworkguides/
+  - command: gp ports await 3000 && gp preview $(gp url 3000)/robotframeworkguides/
 ports:
   - port: 3000
