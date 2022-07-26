@@ -1,6 +1,10 @@
 tasks:
-  - init: cd website && npm install
-    command: npm run start
+  - init: |
+      cd $GITPOD_REPO_ROOTS/website
+      npm install
+    command: |
+      cd $GITPOD_REPO_ROOTS/website
+      npm run start
 ports:
   - port: 3000
     onOpen: open-preview
