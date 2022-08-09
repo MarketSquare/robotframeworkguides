@@ -3,6 +3,8 @@ sidebar_position: 1
 sidebar_label: I'm looking for testing
 title: I'm looking for testing
 ---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 This chapter will help you to get started with Robot Framework.
 
@@ -15,97 +17,149 @@ So basically how to
 
 ## Install Python
 
-### Windows
+<Tabs>
+<TabItem value="Windows" label="Windows" default>
 
-Depending on your permissions, you can install Python for all Users (with admin permission) or for the current User only.  
-This setting can be changed via checkbox `Install launcher for all users`.
-Both options will work with Robot Framework.
-
-1. Download [Python](https://www.python.org/downloads/) installer
-2. Run the installer and
-    1. add Python to the system PATH via checkbox `Add Python 3.X to PATH`
-    2. (optional) install to a sub-folder on root of your drive (e.g. C:\Python3.X)
+Download and run the [Python](https://www.python.org/downloads/) installer  
+1. Select option `Add Python 3.X to PATH`
+2. (optional) install to a sub-folder on root of your drive (e.g. C:\Python3.X)
 3. Open a command line by
     1. pressing `Windows key + R`
-    2. typing `cmd` and pressing `Enter`
-4. Type `python -V`
-5. You should see something like `Python 3.10.2`
+    2. typing `cmd` and pressing `Enter`  
 
-### Linux
+```cmd
+python -V
+``` 
+</TabItem>
+<TabItem value="Linux" label="Linux">
 
-1. Open a terminal by either
-    1. pressing `Ctrl` + `Alt` + `T`
-    2. pressing the `Windows key` and typing `terminal`
-    3. right-clicking in your file explorer and selecting `Open in Terminal`
-2. Type `sudo apt update`
-3. Type `sudo apt install python3 python3-pip` to install Python 3.X and pip
-4. Type `python3 -V`
-5. You should see something like `Python 3.10.2`
+Open a terminal by either
+1. pressing `Ctrl` + `Alt` + `T`
+2. pressing the `Windows key` and typing `terminal`
+3. right-clicking in your file explorer and selecting `Open in Terminal`
 
-If you only have python3 installed and you want to type `python` instead of `python3`, you can do so by running `sudo apt install python-is-python3`
+```bash
+sudo apt update
+sudo apt install python3 python3-pip
+python3 -V
+```
+</TabItem>
+
+</Tabs>
+
+You should see something like this:
+
+```
+Python 3.10.2
+```
+
+:::info
+
+Check out the [official Python Downloads page](https://www.python.org/downloads/) or the [Python Beginner's Guide](https://wiki.python.org/moin/BeginnersGuide/Download) for more information
+
+:::
 
 ## Install Robot Framework
 
+:::info python, python3, pip, pip3
 All following chapters assume you have Python3 and pip installed.
 We use the commands `pip` and `python` to install packages or run Python scripts.  
 Depending on your setup, those commands may be `pip3` and `python3` or `pip` and `python`.
+:::
 
+:::info Terminal, Bash and cmd
 When we mention the word `terminal` in the following chapters, we mean both - a linux terminal (e.g. `bash`) or a windows command line (`cmd`).
+:::
 
+:::info Install globally vs. virtual environments
 Python allows you to install modules via `pip`.  
 By default, those modules are installed in the global Python environment.
 
 But especially when working on multiple projects, it is more convenient to have a separate Python environment for each project with all the required packages installed (like `robotframework` or additional libraries like `robotframework-seleniumlibrary`).  
 To separate the global Python environment from the project environment, you can use a `virtual environment`.  
 We will cover both approaches in the following chapters.
-
+:::
 
 ### Install Robot Framework globally
+<Tabs>
+<TabItem value="Install Robot Framework globally" label="Global" default>
 
-1. Open your terminal
-2. Type `pip install robotframework`
-3. Type `robot --version`
-4. You should see something like `Robot Framework 4.x.y (Python 3.x.y)`
+ Open your `terminal`
 
+```cmd
+pip install robotframework
+robot --version
+``` 
+</TabItem>
+</Tabs>
+
+You should see something like
+
+```bash
+Robot Framework 5.x.y (Python 3.x.y)
+```
 ### Install Robot Framework in a Virtual Environment
 
-#### Windows
+<Tabs>
+<TabItem value="Windows" label="Windows" default>
 
-We recommend to have a folder on your drive to store your projects, e.g. `C:\projects`.
+We recommend to have a folder on your drive to store your projects, e.g. `C:\projects`.  
+Open your `terminal`
 
-1. Open a terminal and navigate to your projects folder, e.g. `cd C:\projects`
-2. Type `mkdir <project_name>` to create a folder for your project  
-e.g. `mkdir MyProject`
-3. Type `cd MyProject` to go to the folder
-4. Type `python -m venv venv` to create a virtual environment
-5. Type `venv\Scripts\activate.bat` to activate the virtual environment
-6. Type `pip install robotframework` to install Robot Framework
-7. Type `robot --version`
-8. You should see something like `Robot Framework 4.x.y (Python 3.x.y)`
+```cmd
+cd C:\projects
+mkdir MyProject
+cd MyProject
+python -m venv .venv
+.venv\Scripts\activate.bat
+pip install robotframework
+robot --version
+```
+You should see something like
+
+```cmd
+Robot Framework 5.x.y (Python 3.x.y)
+```
 
 You can type `pip show robotframework` to get more information about the installed version of Robot Framework and the install location.  
 The virtual environment can be deactivated by typing `venv\Scripts\deactivate.bat`.
 
-If you prefer to use `PowerShell` instead of `cmd`, you can use the following commands for activating and deactivating the virtual environment:
+If you prefer to use `PowerShell` instead of `cmd`, you can use the following commands for activating and deactivating the virtual environment:  
 
 - Activate: `venv\Scripts\activate.ps1`
-- Deactivate: `venv\Scripts\deactivate.ps1`
+- Deactivate: `venv\Scripts\deactivate.ps1`  
 
-#### Linux
+</TabItem>
 
-1. Open a terminal and navigate to your projects folder, e.g. `cd ~/projects`
-2. Type `mkdir <project_name>` to create a folder for your project  
-e.g. `mkdir MyProject`
-3. Type `cd MyProject` to go to the folder
-4. Type `python -m venv venv` to create a virtual environment
-5. Type `source venv/bin/activate` to activate the virtual environment  
-The prefix `(venv)` will be shown in the terminal, after you have activated the virtual environment.
-6. Type `pip install robotframework` to install Robot Framework
-7. Type `robot --version`
-8. You should see something like `Robot Framework 4.x.y (Python 3.x.y)`
+<TabItem value="Linux" label="Linux">
 
-You can type `pip show robotframework` to get more information about the installed version of Robot Framework and the install location.  
-The virtual environment can be deactivated by typing `source venv/bin/deactivate`.
+We recommend to have a folder on your drive to store your projects, e.g. `~/projects`.  
+Open your `terminal`
+
+```cmd
+cd ~/projects
+mkdir MyProject
+cd MyProject
+python -m venv .venv
+source .venv/bin/activate
+pip install robotframework
+robot --version
+```
+You should see something like
+
+```cmd
+Robot Framework 5.x.y (Python 3.x.y)
+```
+
+The virtual environment can be deactivated by typing `source .venv/bin/deactivate`.
+
+</TabItem>
+
+</Tabs>
+
+:::info Show info about installed packages
+You can type `pip show robotframework` to get more information about the installed version of Robot Framework and the install location.
+:::
 
 ## Install IDE and Extensions
 Several IDEs and Code Editors support the development of Robot Framework tests.  
