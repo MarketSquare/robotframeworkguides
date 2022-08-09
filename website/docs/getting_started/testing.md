@@ -61,17 +61,21 @@ Check out the [official Python Downloads page](https://www.python.org/downloads/
 
 ## Install Robot Framework
 
-:::info python, python3, pip, pip3
-All following chapters assume you have Python3 and pip installed.
+<details>
+
+<summary>Assumptions and other notes</summary>  
+
+:::note python, python3, pip, pip3
+We assume that Python3 and pip are installed.  
 We use the commands `pip` and `python` to install packages or run Python scripts.  
 Depending on your setup, those commands may be `pip3` and `python3` or `pip` and `python`.
 :::
 
-:::info Terminal, Bash and cmd
-When we mention the word `terminal` in the following chapters, we mean both - a linux terminal (e.g. `bash`) or a windows command line (`cmd`).
+:::note Terminal, Bash and cmd
+When we mention the word `terminal`, we mean both - a linux terminal (e.g. `bash`) or a windows command line (`cmd`).
 :::
 
-:::info Install globally vs. virtual environments
+:::note Install globally vs. virtual environments
 Python allows you to install modules via `pip`.  
 By default, those modules are installed in the global Python environment.
 
@@ -79,6 +83,12 @@ But especially when working on multiple projects, it is more convenient to have 
 To separate the global Python environment from the project environment, you can use a `virtual environment`.  
 We will cover both approaches in the following chapters.
 :::
+
+:::note Show info about installed packages
+You can type `pip show robotframework` to get more information about the installed version of Robot Framework and the install location.
+:::
+
+</details>
 
 ### Install Robot Framework globally
 <Tabs>
@@ -156,10 +166,6 @@ The virtual environment can be deactivated by typing `source .venv/bin/deactivat
 </TabItem>
 
 </Tabs>
-
-:::info Show info about installed packages
-You can type `pip show robotframework` to get more information about the installed version of Robot Framework and the install location.
-:::
 
 ## Install IDE and Extensions
 Several IDEs and Code Editors support the development of Robot Framework tests.  
