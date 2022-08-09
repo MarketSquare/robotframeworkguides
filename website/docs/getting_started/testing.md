@@ -187,7 +187,8 @@ Popular extensions for Robot Framework:
 
 See the [VS Code setup guide](https://code.visualstudio.com/docs/setup/setup-overview) for more information.
 
-##### Windows
+<Tabs>
+<TabItem value="Windows" label="Windows" default>
 
 1. Download the Windows installer from [Visual Studio Code](https://code.visualstudio.com/download)
 2. Run the Installer with default settings
@@ -195,15 +196,16 @@ See the [VS Code setup guide](https://code.visualstudio.com/docs/setup/setup-ove
     1. Pressing `Windows key + R`, typing `code` and pressing `Enter`
     2. Opening the start menu, searching for `Visual Studio Code` and clicking on it
 
-##### Linux
+</TabItem>
 
-###### Install via snap
+<TabItem value="Linux Snap" label="Linux Snap">
 
 1. Open a terminal 
 2. Execute `sudo snap install code --classic`
 3. Start Visual Studio Code by executing `code`
 
-###### Install via deb
+</TabItem>
+<TabItem value="Linux Deb" label="Linux Deb">
 
 1. Download the deb package from [Visual Studio Code](https://code.visualstudio.com/download)
 2. Open a terminal
@@ -211,7 +213,8 @@ See the [VS Code setup guide](https://code.visualstudio.com/docs/setup/setup-ove
 e.g. `sudo dpkg -i ~/Downloads/code_1.65.2-1646927742_amd64.deb`
 4. Start Visual Studio Code by executing `code`
 
-###### Install via rpm
+</TabItem>
+<TabItem value="Linux Rpm" label="Linux Rpm">
 
 1. Download the rpm package from [Visual Studio Code](https://code.visualstudio.com/download)
 2. Open a terminal
@@ -219,11 +222,15 @@ e.g. `sudo dpkg -i ~/Downloads/code_1.65.2-1646927742_amd64.deb`
 e.g. `sudo rpm -i ~/Downloads/code-1.65.2-1646927812.el7.x86_64.rpm`
 4. Start Visual Studio Code by executing `code`
 
+</TabItem>
+
+</Tabs>
+
 #### Visual Studio Code Extensions
 
 Make sure that only one single Robot Framework extension is installed.
-
-##### RobotCode
+<Tabs>
+<TabItem value="Robot Code" label="Robot Code">
 
 [RobotCode](https://marketplace.visualstudio.com/items?itemName=d-biehl.robotcode) is a Visual Studio Code extension for Robot Framework.
 
@@ -234,7 +241,8 @@ Make sure that only one single Robot Framework extension is installed.
 3. Search for `RobotCode` and click on it
 4. Click on `Install`
 
-##### Robot Framework Language Server
+</TabItem>
+<TabItem value="Robot Framework Language Server" label="Robot Framework Language Server">
 
 [Robot Framework Language Server](https://marketplace.visualstudio.com/items?itemName=robocorp.robotframework-lsp) is a Visual Studio Code extension for Robot Framework.
 
@@ -244,6 +252,10 @@ Make sure that only one single Robot Framework extension is installed.
 2. Click on Extensions icon or press `Ctrl + Shift + X`
 3. Search for `Robot Framework Language Server` and click on it
 4. Click on `Install`
+
+</TabItem>
+
+</Tabs>
 
 ### PyCharm
 
