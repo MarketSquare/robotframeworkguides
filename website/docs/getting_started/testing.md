@@ -29,7 +29,8 @@ Download and run the [Python](https://www.python.org/downloads/) installer
 
 ```cmd
 python -V
-``` 
+```
+![Check Python version](/img/getting_started/checkpythonwin.gif)
 </TabItem>
 <TabItem value="Linux" label="Linux">
 
@@ -100,6 +101,9 @@ You can type `pip show robotframework` to get more information about the install
 pip install robotframework
 robot --version
 ``` 
+
+![Install Robot Framework](/img/getting_started/installrfwin.gif)
+
 </TabItem>
 </Tabs>
 
