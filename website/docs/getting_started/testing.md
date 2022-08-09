@@ -171,6 +171,8 @@ The virtual environment can be deactivated by typing `source .venv/bin/deactivat
 
 </Tabs>
 
+![Install Robot Framework in Virtual Environment](/img/getting_started/installvenvwin.gif)
+
 ## Install IDE and Extensions
 Several IDEs and Code Editors support the development of Robot Framework tests.  
 The support ranges from simple code-highlighting, code-completion to test execution and debugging.  
