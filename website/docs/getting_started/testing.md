@@ -234,7 +234,10 @@ e.g. `sudo rpm -i ~/Downloads/code-1.65.2-1646927812.el7.x86_64.rpm`
 
 #### Visual Studio Code Extensions
 
-Make sure that only one single Robot Framework extension is installed.
+:::caution 
+Make sure that only a **single** Robot Framework extension is installed.
+:::
+
 <Tabs>
 <TabItem value="Robot Code" label="Robot Code">
 
