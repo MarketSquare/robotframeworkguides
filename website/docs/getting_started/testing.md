@@ -20,7 +20,10 @@ So basically how to
 <Tabs>
 <TabItem value="Windows" label="Windows" default>
 
-Download and run the [Python](https://www.python.org/downloads/) installer  
+Download and run the [Python](https://www.python.org/downloads/) installer
+
+![Install Python Windows](/img/getting_started/installpywin.gif)
+
 1. Select option `Add Python 3.X to PATH`
 2. (optional) install to a sub-folder on root of your drive (e.g. C:\Python3.X)
 3. Open a command line by
