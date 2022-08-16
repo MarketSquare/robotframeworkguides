@@ -4,7 +4,10 @@ title: TodoMVC
 ---
 
 Webpage: https://todomvc.com/  
-GitHub: https://github.com/tastejs/todomvc
+GitHub: https://github.com/tastejs/todomvc  
+Technology: Web Application  
+
+![TodoMVC](/img/examples/todomvc.png)
 
 ```robotframework
 *** Settings ***

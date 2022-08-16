@@ -4,7 +4,8 @@ title: Restful Booker
 ---
 
 Webpage: https://restful-booker.herokuapp.com/  
-GitHub: https://github.com/mwinteringham/restful-booker
+GitHub: https://github.com/mwinteringham/restful-booker  
+Technology: Restful API, Web Service  
 
 ```robotframework
 *** Settings ***

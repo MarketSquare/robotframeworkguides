@@ -3,7 +3,12 @@ sidebar_label: Vehicle Insurance App
 title: Vehicle Insurance App
 ---
 
-Webpage: http://sampleapp.tricentis.com/
+Webpage: http://sampleapp.tricentis.com/  
+Technology: Web Application  
+
+![Insurance Calculator](/img/examples/insurance_calculator.png)
+
+```robotframework
 
 ```robotframework
 *** Settings ***
