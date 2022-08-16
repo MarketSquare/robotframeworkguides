@@ -9,8 +9,6 @@ Technology: Web Application
 ![Insurance Calculator](/img/examples/insurance_calculator.png)
 
 ```robotframework
-
-```robotframework
 *** Settings ***
 Library    Browser
 Suite Setup    New Browser    browser=${BROWSER}    headless=${HEADLESS}
