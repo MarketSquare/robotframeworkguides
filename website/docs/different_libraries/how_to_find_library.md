@@ -10,6 +10,19 @@ That's the main question, when searching for a library to steer your application
 Sure, there are libraries out there, which use image and text recognition to find controls and interact with them.  
 But nothing beats a library which can steer your application natively via it's exposed interfaces.
 
+## Web Applications
+
+### Libraries steering the UI of a Web Application in a Web Browser
+
+There are two main libraries which can automate web applications in a web browser:    
+- [Selenium Library](https://github.com/robotframework/SeleniumLibrary/)
+- [Browser Library](https://github.com/MarketSquare/robotframework-browser)
+
+### Libraries that can automate Web Services and RESTful APIs
+
+- [Requests Library](https://github.com/MarketSquare/robotframework-requests)
+
+
 ## Desktop Applications
 
 ### Does if offer a User Interface ?
