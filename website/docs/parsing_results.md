@@ -1,4 +1,7 @@
-# Parsing Results
+---
+sidebar_label: Parsing Test Results
+title: Parsing Test Results
+---
 
 Robot Framework can create different output files after a test run.  
 * `output.xml`
@@ -7,9 +10,11 @@ Robot Framework can create different output files after a test run.
 * `xunit.xml`
 
 Sometimes you want to parse your test results, e.g. because you want to transfer them to a different system (like a test management tool).
+
 :::warning  
 Don't try to parse the .xml files using some python xml module.
 :::
+
 Instead, use the **Robot Framework API** which allows you to get details about the executed tests, keywords, their data and the results much easier.  
 You can find the documentation for the results model [here](https://robot-framework.readthedocs.io/en/stable/autodoc/robot.result.html?highlight=Resultvisitor#). 
 Especially the [ResultVisitor](https://robot-framework.readthedocs.io/en/stable/autodoc/robot.result.html?highlight=Resultvisitor%20#module-robot.result.visitor) will allow you to access and modify your results at different points in time, e.g. when 

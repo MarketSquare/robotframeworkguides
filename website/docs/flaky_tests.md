@@ -1,3 +1,8 @@
+---
+sidebar_label: Dealing with flaky tests
+title: Dealing with flaky tests
+---
+
 # Dealing with flaky tests
 
 ## Re-Run Failed Tests and merge results
