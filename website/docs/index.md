@@ -3,10 +3,11 @@ sidebar_position: 0
 sidebar_label: Robot Framework Guides
 title: Robot Framework Guides
 ---
-<img src="img/robotframeworkguides_logo.png" width="200"></img>  
 
-**Good practices for using Robot Framework and its ecosystem.**  
-From users for users.
+Welcome to the Robot Framework Guides!  
+We hope these guides will help you get started with Robot Framework **faster and easier**.  
+If you have any questions, please reach out to our awesome community on [Slack](https://robotframework.slack.com/).
+
 
 ```mdx-code-block
 import {TopicCardsRow} from '@site/src/components/TopicCards';
