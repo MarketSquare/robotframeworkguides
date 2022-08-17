@@ -46,10 +46,15 @@ const config = {
         },
         items: [
           {
-            type: 'doc',
-            docId: 'index',
-            position: 'left',
-            label: 'Tutorial',
+            href: 'https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html',
+            label: 'User Guide',
+            position: 'right',
+          },
+
+          {
+            href: 'https://robotframework.slack.com/',
+            label: 'Slack',
+            position: 'right',
           },
           {
             href: 'https://github.com/MarketSquare/robotframeworkguides',
