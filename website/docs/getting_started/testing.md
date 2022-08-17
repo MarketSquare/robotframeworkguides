@@ -20,9 +20,9 @@ So basically how to
 <Tabs>
 <TabItem value="Windows" label="Windows" default>
 
-Download and run the [Python](https://www.python.org/downloads/) installer
+![Install Python Windows](/img/getting_started/installpywin.gif)  
 
-![Install Python Windows](/img/getting_started/installpywin.gif)
+Download and run the [Python](https://www.python.org/downloads/) installer
 
 1. Select option `Add Python 3.X to PATH`
 2. (optional) install to a sub-folder on root of your drive (e.g. C:\Python3.X)
@@ -302,12 +302,14 @@ Make sure that only one single Robot Framework extension is installed.
 
 ##### IntelliBot #patched
 
+:::caution 
+It is **no longer recommended** to use IntelliBot.
+:::
+
 1. Press `Ctrl + Alt + S` to open the settings dialog
 2. Select `Plugins`
 3. Select the `Marketplace` tab
 4. Search for `IntelliBot #patched` and click on `Install`
-
-### RIDE
 
 ## Debugging Robot Framework Tests 
 
