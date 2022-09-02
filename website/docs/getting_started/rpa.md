@@ -19,7 +19,7 @@ The scripts below enable you to get a robot setup and running from a selection o
 curl -o rcc.exe https://downloads.robocorp.com/rcc/releases/latest/windows64/rcc.exe
 rcc create example
 cd example
-rcc run
+..\rcc run
 ```
 </TabItem>
 <TabItem value="MacOS" label="MacOS">
@@ -28,7 +28,7 @@ rcc run
 brew install robocorp/tools/rcc
 rcc create example
 cd example
-rcc run
+../rcc run
 ```
 </TabItem>
 <TabItem value="Linux" label="Linux">
@@ -38,7 +38,7 @@ curl -o rcc https://downloads.robocorp.com/rcc/releases/latest/linux64/rcc
 chmod a+x rcc
 rcc create example
 cd example
-rcc run
+../rcc run
 ```
 </TabItem>
 </Tabs>
