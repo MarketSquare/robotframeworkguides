@@ -28,6 +28,11 @@ import {
           </Section>
 
  <Section title="Libraries">
+             <Card
+              title="❓ Which Library?"
+              description="How to choose the right library for your use case"
+              to="/different_libraries/how_to_find_library"
+            />
             <Card
               title="🖥️ UI"
               description="Automate the User Interface"
@@ -42,11 +47,6 @@ import {
               title="🤖 RPA"
               description="Libraries for Robotic Process Automation (RPA)"
               to="/different_libraries/rpa"
-            />
-            <Card
-              title="📄 Documents and Images"
-              description="Checking and manipulating documents and images"
-              to="/different_libraries/images"
             />
           </Section>
 
