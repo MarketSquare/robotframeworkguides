@@ -48,7 +48,62 @@ sudo apt install python3 python3-pip
 python3 -V
 ```
 </TabItem>
+<TabItem value="MacOs" label="MacOs">
 
+We will use [Homebrew](https://brew.sh/) and [pyenv](https://github.com/pyenv/pyenv) to install Python.
+
+Install homebrew
+
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+Follow instructions to add brew to path
+(Those are shown after homebrew installation)
+
+```bash
+echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> $HOME/.profile
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+```
+
+Install pyenv
+
+```bash
+brew install pyenv
+```
+
+Add pyenv to Path
+
+```bash
+echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
+echo 'command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
+echo 'eval "$(pyenv init -)"' >> ~/.bashrc
+eval "$(pyenv init -)"
+```
+
+Add Python Build Dependencies
+```bash
+xcode-select --install
+brew install openssl readline sqlite3 xz zlib tcl-tk
+```
+Install a Python 3.10.6
+
+```bash
+pyenv install 3.10.6
+```
+Create a new folder somewhere for your example project
+
+```bash	
+mkdir my-sample-project
+cd my-sample-project
+```
+
+Tell pyenv to use Python 3.10.6 for current shell
+
+```bash	
+pyenv shell 3.10.6
+python --version
+```
+</TabItem>
 </Tabs>
 
 You should see something like this:
@@ -172,6 +227,37 @@ The virtual environment can be deactivated by typing `source .venv/bin/deactivat
 
 </TabItem>
 
+<TabItem value="MacOS" label="MacOS" default>
+We recommend to have a folder on your drive to store your projects, e.g. `~/projects`.  
+Open your `terminal`
+
+```cmd
+cd ~/projects
+mkdir MyProject
+cd MyProject
+```
+
+Tell pyenv to use Python 3.10.6 in that folder (or some other Python version)
+
+```bash
+pyenv local 3.10.6
+```
+Create and activate a new Virtual Environment and install robotframework
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install robotframework
+robot --version
+```
+You should see something like
+
+```cmd
+Robot Framework 5.x.y (Python 3.x.y)
+```
+
+The virtual environment can be deactivated by typing `source .venv/bin/deactivate`.
+</TabItem>
 </Tabs>
 
 ![Install Robot Framework in Virtual Environment](/img/getting_started/installvenvwin.gif)
@@ -275,7 +361,6 @@ Make sure that only a **single** Robot Framework extension is installed.
 
 Popular extensions for Robot Framework:
 - [Robot Framework Language Server](https://plugins.jetbrains.com/plugin/16086-robot-framework-language-server)
-- [Intellibot (patched)](https://plugins.jetbrains.com/plugin/17424-intellibot-patched)
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/srgZ3eQ6erw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -299,22 +384,20 @@ Make sure that only one single Robot Framework extension is installed.
 2. Select `Plugins`
 3. Select the `Marketplace` tab
 4. Search for `Robot Framework Language Server` and click on `Install`
+5. Add a Debug Configuration for Robot Framework to run current test suite  
+![Debug Config Current Test Suite](/img/getting_started/pycharm_conf_current_suite.png) 
+6. Add a Debug Configuration for Robot Framework to run current test case (via selected text)
+![Debug Config Current Test Case](/img/getting_started/pycharm_conf_selected_test.png)
 
-##### IntelliBot #patched
 
-:::caution 
-It is **no longer recommended** to use IntelliBot.
-:::
-
-1. Press `Ctrl + Alt + S` to open the settings dialog
-2. Select `Plugins`
-3. Select the `Marketplace` tab
-4. Search for `IntelliBot #patched` and click on `Install`
-
-## Debugging Robot Framework Tests 
+## Run and Debug Robot Framework Tests 
 
 ### Visual Studio Code with RobotCode
 
+#### Run
+![Run Tests](/img/getting_started/VSC_RBTCD_running_tests.gif)
+
+#### Debug
 Add a breakpoint to your test suite or resource file, by clicking on the left-hand side of the line.  
 ![Breakpoint](/img/VSC_AddBreakpoint.png)
 
@@ -331,6 +414,16 @@ Use `Debug Toolbar` to select actions like step over, step into, step out, conti
 Run Robot Frameworm commands while debugging from `Debug Console`.  
 Commands needs to start with `! `  
 ![Debug Console](/img/VSC_RBTCD_executeDebugCommands.png)
+
+### PyCharm with Robot Framework Language Server
+#### Run
+Run current test suite
+![Run Tests](/img/getting_started/pycharm_run_suite.gif)
+
+Run current test case (via selected text)
+![Run Tests](/img/getting_started/pycharm_run_selected.gif)
+#### Debug
+![Debug Tests](/img/getting_started/pycharm_debug.gif)
 ## Other Recommendations
 
 ### Managing Dependencies
