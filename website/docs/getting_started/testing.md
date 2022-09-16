@@ -90,17 +90,11 @@ Install a Python 3.10.6
 ```bash
 pyenv install 3.10.6
 ```
-Create a new folder somewhere for your example project
+
+Tell pyenv to use Python 3.10.6 globally
 
 ```bash	
-mkdir my-sample-project
-cd my-sample-project
-```
-
-Tell pyenv to use Python 3.10.6 for current shell
-
-```bash	
-pyenv shell 3.10.6
+pyenv global 3.10.6
 python --version
 ```
 </TabItem>
@@ -109,7 +103,7 @@ python --version
 You should see something like this:
 
 ```
-Python 3.10.2
+Python 3.10.6
 ```
 
 :::info
@@ -237,11 +231,18 @@ mkdir MyProject
 cd MyProject
 ```
 
-Tell pyenv to use Python 3.10.6 in that folder (or some other Python version)
+Tell pyenv to use Python 3.10.6 (if you haven't done so already).  
+Either globally
+```bash
+pyenv global 3.10.6
+```
+
+Or locally (for the current folder only)
 
 ```bash
 pyenv local 3.10.6
 ```
+
 Create and activate a new Virtual Environment and install robotframework
 
 ```bash
