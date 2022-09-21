@@ -20,6 +20,7 @@ import BugIcon from '/icons/bug.svg';
 import CarIcon from '/icons/car.svg';
 import HeartHandshakeIcon from '/icons/heart-handshake.svg';
 import HelpCircleIcon from '/icons/help-circle.svg';
+import ListIcon from '/icons/list.svg';
 import ListChecksIcon from '/icons/list-checks.svg';
 import MonitorIcon from '/icons/monitor.svg';
 import UsersIcon from '/icons/users.svg';
@@ -45,6 +46,12 @@ import UsersIcon from '/icons/users.svg';
               icon=<HelpCircleIcon/>
               description="How to choose the right library for your use case"
               to="/different_libraries/how_to_find_library"
+            />
+              <Card
+              title="Library Overview"
+              icon=<ListIcon/>
+              description="A list of different libraries available for Robot Framework"
+              to="/different_libraries/overview"
             />
             <Card
               title="UI"
