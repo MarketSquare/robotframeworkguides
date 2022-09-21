@@ -24,6 +24,7 @@ import ListIcon from '/icons/list.svg';
 import ListChecksIcon from '/icons/list-checks.svg';
 import MonitorIcon from '/icons/monitor.svg';
 import UsersIcon from '/icons/users.svg';
+import Code2Icon from '/icons/code-2.svg';
 
  <Section title="Getting Started">
             <Card
@@ -37,6 +38,12 @@ import UsersIcon from '/icons/users.svg';
               icon=<BotIcon/>
               description="How to set up Robot Framework for Robotic Process Automation (RPA)"
               to="/getting_started/rpa"
+            />
+            <Card
+              title="IDE"
+              icon=<Code2Icon/>
+              description="Install and set up your IDE for coding and debugging"
+              to="/getting_started/ide"
             />
           </Section>
 
