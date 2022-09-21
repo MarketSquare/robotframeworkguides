@@ -3,12 +3,6 @@ sidebar_position: 0
 sidebar_label: Robot Framework Guides
 title: Robot Framework Guides
 ---
-
-Welcome to the Robot Framework Guides!  
-We hope these guides will help you get started with Robot Framework **faster and easier**.  
-If you have any questions, please reach out to our awesome community on [Slack](https://robotframework.slack.com/).
-
-```mdx-code-block
 import {
   HomepageCard as Card,
   HomepageSection as Section,
@@ -25,8 +19,17 @@ import ListChecksIcon from '/icons/list-checks.svg';
 import MonitorIcon from '/icons/monitor.svg';
 import UsersIcon from '/icons/users.svg';
 import Code2Icon from '/icons/code-2.svg';
+import PackageIcon from '/icons/package.svg';
+import RocketIcon from '/icons/rocket.svg';
+import FileCodeIcon from '/icons/file-code.svg';
+import SearchIcon from '/icons/search.svg';
+import MicroscopeIcon from '/icons/microscope.svg';
 
- <Section title="Getting Started">
+Welcome to the Robot Framework Guides!  
+We hope these guides will help you get started with Robot Framework **faster and easier**.  
+If you have any questions, please reach out to our awesome community on [Slack](https://robotframework.slack.com/).
+
+ <Section title="Getting Started" description="Set up your machine to use Robot Framework">
             <Card
               title="Test Automation"
               icon=<BugIcon/>
@@ -47,18 +50,18 @@ import Code2Icon from '/icons/code-2.svg';
             />
           </Section>
 
- <Section title="Libraries">
-             <Card
-              title="Which Library?"
-              icon=<HelpCircleIcon/>
-              description="How to choose the right library for your use case"
-              to="/different_libraries/how_to_find_library"
-            />
+ <Section title="Libraries" description="Steering and Automating different technologies">
               <Card
               title="Library Overview"
               icon=<ListIcon/>
               description="A list of different libraries available for Robot Framework"
               to="/different_libraries/overview"
+            />
+             <Card
+              title="Which Library?"
+              icon=<HelpCircleIcon/>
+              description="How to choose the right library for your use case"
+              to="/different_libraries/how_to_find_library"
             />
             <Card
               title="UI"
@@ -80,7 +83,7 @@ import Code2Icon from '/icons/code-2.svg';
             />
           </Section>
 
- <Section title="Examples">
+ <Section title="Examples" description="Examples which show how to use Robot Framework and its Libraries">
             <Card
               title="Vehicle Insurance Application"
               icon=<CarIcon/>
@@ -101,7 +104,37 @@ import Code2Icon from '/icons/code-2.svg';
             />
           </Section>
 
- <Section title="About Robot Framework Guides">
+<Section title="Docker and CI" description="How to run Robot Framework in Containers and in CI Systems">
+            <Card
+              title="Docker Images"
+              icon=<PackageIcon/>
+              description="Docker Images which can be used for testing"
+              to="/using_rf_in_ci_systems/docker"
+            />
+            <Card
+              title="CI Systems"
+              icon=<RocketIcon/>
+              description="Examples for different CI Systems"
+              to="/using_rf_in_ci_systems/ci"
+            />
+          </Section>
+  
+  <Section title="Custom Libraries and APIs" description="How to extend Robot Framwork and unleash its full potential via the API">
+            <Card
+              title="Create a Library"
+              icon=<FileCodeIcon/>
+              description="How to create your own custom library"
+              to="/extending_robot_framework/static_library"
+            />
+            <Card
+              title="Parse Test Results"
+              icon=<MicroscopeIcon/>
+              description="How to parse test results with the Result Visitor API"
+              to="/parsing_results"
+            />
+          </Section>
+ 
+ <Section title="About Robot Framework Guides" description="Something about us and how to support the project">
             <Card
               title="About Us"
               icon=<UsersIcon/>
@@ -115,7 +148,6 @@ import Code2Icon from '/icons/code-2.svg';
               to="/contribute"
             />
           </Section>
-```
 
 
 

@@ -38,11 +38,17 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      colorMode: {
+        defaultMode: 'dark',
+        disableSwitch: false,
+        respectPrefersColorScheme: false,
+      },
       navbar: {
         title: 'Robot Framework Guides',
         logo: {
           alt: 'Robot Framework Logo',
           src: 'img/robot-framework.svg',
+          srcDark: 'img/robot-framework-dark.svg',
         },
         items: [
           {
