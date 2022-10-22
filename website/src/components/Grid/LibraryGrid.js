@@ -17,8 +17,16 @@ function LibraryGrid() {
                 hidden: true
               },
               { 
-                name: 'URL',
-                formatter: (_, row) => html(`<a href=${row.cells[2].data} target="blank" rel="noreferrer noopener">GitHub Page</a>`)
+                name: 'URLs',
+                formatter: (_, row) => 
+                {
+                    let html_content = ''
+                    for (const [key, value] of Object.entries(row.cells[2].data)) {
+                        html_content += `<div><a href=${value} target="blank" rel="noreferrer noopener">${key}</a></div>`
+                      }
+                      return html(html_content)
+                }
+                
               },
               { 
                 name: 'LocalPage',
@@ -33,43 +41,43 @@ function LibraryGrid() {
         data: [
             [
                 "Browser Library",
-                "Web testing library that uses popular Selenium tool internally.",
-                "https://github.com/MarketSquare/robotframework-browser",
+                "Robot Framework Browser library powered by Playwright. Aiming for speed, reliability and visibility.",
+                {GitHub: "https://github.com/MarketSquare/robotframework-browser", PyPI: "https://pypi.org/project/robotframework-browser/", Project: "https://robotframework-browser.org/", Docs: "https://marketsquare.github.io/robotframework-browser/Browser.html"},
                 "browser",
                 "UI, Web"
             ],
             [
                 "SeleniumLibrary",
                 "Web testing library that uses popular Selenium tool internally.",
-                "https://github.com/robotframework/SeleniumLibrary/",
+                {GitHub: "https://github.com/robotframework/SeleniumLibrary/", PyPI: "https://pypi.org/project/robotframework-seleniumlibrary/", Docs: "https://robotframework.org/SeleniumLibrary/SeleniumLibrary.html"},
                 "selenium",
                 "UI, Web"
             ],
             [
                 "RPA Framework",
                 "Collection of open-source libraries and tools for Robotic Process Automation (RPA), designed to be used both with Robot Framework and Python.",
-                "https://github.com/robocorp/rpaframework",
+                 {GitHub: "https://github.com/robocorp/rpaframework", PyPI: "https://pypi.org/project/rpaframework/", Project: "https://rpaframework.org/"},
                 "rpa",
                 "UI, Web, Desktop, API, Database, RPA"
             ],
             [
                 "Requests Library",
                 "A Robot Framework library aimed to provide HTTP api testing functionalities by wrapping the well known Python Requests Library",
-                "https://github.com/MarketSquare/robotframework-requests/",
+                 {GitHub: "https://github.com/MarketSquare/robotframework-requests/", PyPI: "https://pypi.org/project/robotframework-requests/", Docs: "https://marketsquare.github.io/robotframework-requests/doc/RequestsLibrary.html"},
                 "requests",
                 "API"
             ],
             [
                 "Appium Library",
                 "Android and iOS testing. Uses Appium internally.",
-                "https://github.com/serhatbolsu/robotframework-appiumlibrary",
+                 {GitHub: "https://github.com/serhatbolsu/robotframework-appiumlibrary", PyPI: "https://pypi.org/project/robotframework-appiumlibrary/", Docs: "https://serhatbolsu.github.io/robotframework-appiumlibrary/AppiumLibrary.html"},
                 "appium",
                 "Mobile, UI"
             ],
             [
                 "Database Library",
                 "Python based library for database testing.",
-                "https://github.com/franz-see/Robotframework-Database-Library",
+                 {GitHub: "https://github.com/franz-see/Robotframework-Database-Library", PyPI: "https://pypi.org/project/robotframework-databaselibrary/", Project: "http://franz-see.github.io/Robotframework-Database-Library/", Docs: "http://franz-see.github.io/Robotframework-Database-Library/api/1.2.2/DatabaseLibrary.html"},
                 "database",
                 "Database"
             ],
