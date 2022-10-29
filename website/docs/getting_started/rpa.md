@@ -133,7 +133,7 @@ You are raring to go, so go ahead and check out the resources and libraries -par
 ## RPA resources to get started
 
 For the resources and libraries part you can check out the following pages:
-* [RPA libraries](/robotframeworkguides/different_libraries/rpa)
+* [RPA libraries](/different_libraries/rpa)
 * [How to find the right library](/different_libraries/how_to_find_library)
 * Sources for RPA example in Robot Framework:
   * [Robocorp Portal](https://robocorp.com/portal/) 
