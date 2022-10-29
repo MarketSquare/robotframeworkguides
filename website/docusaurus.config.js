@@ -8,8 +8,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Robot Framework Guides',
   tagline: 'Yes, we are open source!',
-  url: 'http://marketsquare.github.io',
-  baseUrl: '/robotframeworkguides/',
+  url: 'https://guides.robotframework.org',
+  baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/robotframework.ico',
