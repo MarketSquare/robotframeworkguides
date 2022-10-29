@@ -4,8 +4,8 @@
   <ShortName>Robot Framework Guides</ShortName>
   <Description>Search Robot Framework Guides</Description>
   <InputEncoding>UTF-8</InputEncoding>
-  <Image width="16" height="16" type="image/x-icon">http://marketsquare.github.io/robotframeworkguides/img/robotframework.ico</Image>
-  <Url type="text/html" method="get" template="http://marketsquare.github.io/robotframeworkguides/search?q={searchTerms}"/>
-  <Url type="application/opensearchdescription+xml" rel="self" template="http://marketsquare.github.io/robotframeworkguides/opensearch.xml" />
-  <moz:SearchForm>http://marketsquare.github.io/robotframeworkguides/</moz:SearchForm>
+  <Image width="16" height="16" type="image/x-icon">https://guides.robotframework.org/img/robotframework.ico</Image>
+  <Url type="text/html" method="get" template="https://guides.robotframework.org/search?q={searchTerms}"/>
+  <Url type="application/opensearchdescription+xml" rel="self" template="https://guides.robotframework.org/opensearch.xml" />
+  <moz:SearchForm>https://guides.robotframework.org/</moz:SearchForm>
 </OpenSearchDescription>
