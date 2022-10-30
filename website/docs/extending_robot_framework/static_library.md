@@ -27,6 +27,8 @@ Use a Keyword with multiple arguments
     My Keyword    Argument 1    Argument 2    Named Argument=One Value
 ```
 
+<iframe src="https://robotframework.org/embed/?code-gh-url=https://github.com/MarketSquare/robotframeworkguides/blob/main/code-examples/extending_robot_framework/static_library/Static_Library_With_Class" width="100%" height="250"></iframe>
+
 ### Static Library withouth a Class
 
 ```python
@@ -56,6 +58,9 @@ Use Custom Keywords
     ${decoded}    Decode From Base64    ${base64}
     Log    ${decoded}
 ```	
+
+<iframe src="https://robotframework.org/embed/?code-gh-url=https://github.com/MarketSquare/robotframeworkguides/blob/main/code-examples/extending_robot_framework/static_library/Static_Library_Without_Class" width="100%" height="350"></iframe>
+
 
 ## Decorators
 You can add decorators like `@keyword` `@not_keyword` to mark your functions as keywords and e.g. provide another name for the keyword.
