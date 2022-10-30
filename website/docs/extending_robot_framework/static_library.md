@@ -27,7 +27,7 @@ Use a Keyword with multiple arguments
     My Keyword    Argument 1    Argument 2    Named Argument=One Value
 ```
 
-<iframe src="https://robotframework.org/embed/?code-gh-url=https://github.com/MarketSquare/robotframeworkguides/blob/main/code-examples/extending_robot_framework/static_library/Static_Library_With_Class" width="100%" height="250"></iframe>
+<iframe src="https://robotframework.org/embed/?code-gh-url=https://github.com/MarketSquare/robotframeworkguides/tree/main/code-examples/extending_robot_framework/static_library/Static_Library_With_Class" width="100%" height="250"></iframe>
 
 ### Static Library withouth a Class
 
@@ -59,7 +59,7 @@ Use Custom Keywords
     Log    ${decoded}
 ```	
 
-<iframe src="https://robotframework.org/embed/?code-gh-url=https://github.com/MarketSquare/robotframeworkguides/blob/main/code-examples/extending_robot_framework/static_library/Static_Library_Without_Class" width="100%" height="350"></iframe>
+<iframe src="https://robotframework.org/embed/?code-gh-url=https://github.com/MarketSquare/robotframeworkguides/tree/main/code-examples/extending_robot_framework/static_library/Static_Library_Without_Class" width="100%" height="350"></iframe>
 
 
 ## Decorators
