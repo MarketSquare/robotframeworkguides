@@ -1,0 +1,12 @@
+{
+    "name": "Static Library With A Clas",
+    "description": "readme.md",
+    "files": [
+        {
+            "fileName": "DemoLibrary.py"
+        },
+        {
+            "fileName": "TestSuite.robot"
+        }
+    ]
+}
