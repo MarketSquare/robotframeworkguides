@@ -1,9 +1,9 @@
 {
-    "name": "Static Library With A Class",
+    "name": "Static Library Without A Class",
     "description": "readme.md",
     "files": [
         {
-            "fileName": "DemoLibrary.py"
+            "fileName": "LibraryWithoutClass.py"
         },
         {
             "fileName": "TestSuite.robot"
