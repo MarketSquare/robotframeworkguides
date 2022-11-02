@@ -48,6 +48,13 @@ function LibraryGrid() {
             urls: { GitHub: "https://github.com/franz-see/Robotframework-Database-Library", PyPI: "https://pypi.org/project/robotframework-databaselibrary/", Project: "http://franz-see.github.io/Robotframework-Database-Library/", Docs: "http://franz-see.github.io/Robotframework-Database-Library/api/1.2.2/DatabaseLibrary.html" },
             tags: "Database"
         },
+        {
+            name: "Standard Library",
+            description: "Logging, File Handling, Operating System, Process, String, and XML and much more",
+            localpage: "standard",
+            urls: { GitHub: "https://github.com/robotframework/robotframework/tree/master/src/robot/libraries", Project: "https://robotframework.org/robotframework/#standard-libraries", Docs: "https://robotframework.org/robotframework/#standard-libraries" },
+            tags: "Process, File, OS, XML, String, Logging"
+        },
     ];
     const grid = new Grid({
         columns: [
