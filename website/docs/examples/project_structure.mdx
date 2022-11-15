@@ -1,0 +1,42 @@
+---
+sidebar_label: Project Structure
+title: Project Structure
+---
+
+## Root Folder
+
+- `requirements.txt` - Python dependencies or
+- `pyproject.toml` - Python dependencies
+- `Readme.md` - Project description
+- `.gitignore` - Lists files and folders to be ignored by git
+
+## Test Cases
+
+Test cases are located in the `tests` folder.  
+Depending on the project, the test cases can be organized in multiple `.robot` files and subfolders.
+
+- `tests/` - Test cases
+    - `search.robot` - Test case for searching
+    - `login.robot` - Test case for logging in
+    - `checkout/` - Folder containing Test cases for checkout
+        - `checkout_basic.robot` - Test cases for standard checkout
+        - `checkout_premium.robot` - Test cases for premium checkout
+    - ...
+
+## Resources
+
+Reusable keywords are stored in `.resource` files in the `resources` folder.  
+Also `Python` keywords in `.py` files can be stored there.
+
+- `resources/` - Reusable keywords
+    - `common.robot` - General Keywords (e.g. Login/Logout, Navigation, ...) are stored here
+    - `search.robot` - Keywords for searching are stored here
+    - `utils.py` - Python helper keywords are stored here
+    - ...
+
+## Reports & Logs
+
+
+
+
+
