@@ -10,7 +10,7 @@ Aiming for :rocket: speed, :white_check_mark: reliability and :microscope: visib
 See [keyword documentation](https://marketsquare.github.io/robotframework-browser/Browser.html) and
 [web page](https://robotframework-browser.org/) for more details.
 
-# Installation instructions
+## Installation instructions
 
 Only Python 3.7 or newer is supported.
 
