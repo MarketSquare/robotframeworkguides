@@ -24,6 +24,7 @@ import RocketIcon from '/icons/rocket.svg';
 import FileCodeIcon from '/icons/file-code.svg';
 import SearchIcon from '/icons/search.svg';
 import MicroscopeIcon from '/icons/microscope.svg';
+import LoginIcon from '/icons/log-in.svg';
 
 Welcome to the Robot Framework Guides!  
 We hope these guides will help you get started with Robot Framework **faster and easier**.  
@@ -91,22 +92,35 @@ If you have any questions, please reach out to our awesome community on [Slack](
 
  <Section title="Examples" description="Examples which show how to use Robot Framework and its Libraries">
             <Card
+              title="Examples Overview"
+              icon=<ListIcon/>
+              description="A list of examples for Robot Framework"
+              to="/different_libraries/overview"
+            />
+            
+            <Card
               title="Vehicle Insurance Application"
               icon=<CarIcon/>
-              description="Example for a vehicle insurance web application"
+              description="An vehicle insurance calculator web app that requires user inputs in multiple screens"
               to="/examples/insurance"
             />
             <Card
               title="ToDo App"
               icon=<ListChecksIcon/>
-              description="Example for a ToDo web application"
+              description="A simple todo app built in different frameworks and automated using Browser Library"
               to="/examples/todo"
             />
             <Card
               title="Restful Booker"
               icon=<BedIcon/>
-              description="Example for a room booking RESTful API"
+              description="A room booking app with a REST API"
               to="/examples/restfulbooker"
+            />
+            <Card
+              title="MFA Login"
+              icon=<LoginIcon/>
+              description="A Login page which requires a two-factor authentication with a TOTP code"
+              to="/examples/mfa_login"
             />
           </Section>
 
