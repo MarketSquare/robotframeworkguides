@@ -1,0 +1,30 @@
+---
+sidebar_label: Standard Library
+title: Standard Library
+---
+
+The Libraries which are part of the **Standard Library** are distributed with Robot Framework Core.  
+The **BuiltIn** library is the most important library of the Standard Library and is available by default.  
+Other libraries are available by importing them.
+
+
+import { StandardLibraryGrid } from "@site/src/components/Grid";
+
+<StandardLibraryGrid/>
+
+## Importing Libraries
+```robotframework	
+*** Settings ***
+Library  Collections
+Library  OperatingSystem
+Library  Process
+Library  String
+Library  Telnet
+Library  XML
+```
+
+## Examples
+
+### XML Library
+
+<iframe src="https://robotframework.org/embed/?code-gh-url=https://github.com/robotframework/live/tree/robocon_examples/Examples/ExampleXML" width="100%" height="600"></iframe>
