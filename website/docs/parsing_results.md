@@ -11,7 +11,7 @@ Robot Framework can create different output files after a test run.
 
 Sometimes you want to parse your test results, e.g. because you want to transfer them to a different system (like a test management tool).
 
-:::warning  
+:::tip  
 Don't try to parse the .xml files using some python xml module.
 :::
 
