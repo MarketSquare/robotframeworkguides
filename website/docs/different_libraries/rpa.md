@@ -1,19 +1,29 @@
 ---
 sidebar_position: 3
-sidebar_label: Libraries for RPA
-title: Libraries for RPA
+sidebar_label: RPA Framework
+title: RPA Framework
 ---
 
-First of all please do not forget that the libraries in RPA can be used for test automation and vice-versa.
-The list here is just to give a few recommendations on where to start.
+## Introduction
 
+[RPA Framework](https://rpaframework.org/) is a collection of open-source libraries and tools for
+Robotic Process Automation (RPA), and it is designed to be used with both
+[Robot Framework](https://robotframework.org) and [Python](https://python.org/). The goal is to offer well-documented and
+actively maintained core libraries for Software Robot Developers.
 
-### Rpaframework
+Learn more about RPA at [Robocorp Documentation](https://robocorp.com/docs).
 
-| Library | Tags |
-| :--------------------------------------: | :-----: |
-| [Rpaframework](https://rpaframework.org) | Web, Windows Desktop, HTTP API, Selenium, Playwright, Email, Excel, PDF, Email, Database, Notifiers, Slack, Dialogs, FTP, Twitter, OCR,...|
-|[SSH Library](https://github.com/robotframework/SSHLibrary#readme)| SSH |
-|[Appium](https://github.com/serhatbolsu/robotframework-appiumlibrary#readme)| Android, iOS, Mobile |
-|[SAP GUI](https://github.com/frankvanderkuur/robotframework-sapguilibrary#readme)| SAP |
-|[Mainframe3270](https://github.com/Altran-PT-GDC/Robot-Framework-Mainframe-3270-Library#readme)| Mainframe |
+**The project is:**
+
+- 100% Open Source
+- Sponsored by [Robocorp](https://robocorp.com/)
+- Optimized for Robocorp [Control Room](https://robocorp.com/docs/control-room) and [Developer Tools](https://robocorp.com/downloads)
+- Accepting external contributions
+
+## Links
+
+- Homepage: https://www.github.com/robocorp/rpaframework/
+- Documentation: https://rpaframework.org/
+- Library Documentation: https://rpaframework.org/#libraries
+- PyPI: https://pypi.org/project/rpaframework/
+- Library Documentation at Robocorp: https://robocorp.com/docs/libraries/rpa-framework
