@@ -144,7 +144,7 @@ We always recommend giving back to the open-source community, as you usually get
 
 For example:
 It is quite rare that the business value of an RPA process is in the library that interacts with an application or an API, so why not publish the connectivity part as open-source and get others to chip in on the maintenance and improvements? This way, you can focus more on the actual RPA problem.
-* [Releasing your own library](/releasing_your_own_libraries)
+* [Releasing your own library](/extending_robot_framework/releasing_your_own_libraries)
 * [Helpout with this documentation](/contribute)
 * Create example bots into the public repository and ping in the forums and Slacks
 
