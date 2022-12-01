@@ -26,6 +26,8 @@ import SearchIcon from '/icons/search.svg';
 import MicroscopeIcon from '/icons/microscope.svg';
 import LoginIcon from '/icons/log-in.svg';
 import FolderTreeIcon from '/icons/folder-tree.svg';
+import ToyBrickIcon from '/icons/toy-brick.svg';
+
 
 Welcome to the Robot Framework Guides!  
 We hope these guides will help you get started with Robot Framework **faster and easier**.  
@@ -139,7 +141,7 @@ If you have any questions, please reach out to our awesome community on [Slack](
             />
             <Card
               title="CI Systems"
-              icon=<RocketIcon/>
+              icon=<ToyBrickIcon/>
               description="Examples for different CI Systems"
               to="/using_rf_in_ci_systems/ci"
             />
@@ -147,10 +149,16 @@ If you have any questions, please reach out to our awesome community on [Slack](
   
   <Section title="Custom Libraries and APIs" description="How to extend Robot Framwork and unleash its full potential via the API">
             <Card
-              title="Create a Library"
+              title="Python Library"
               icon=<FileCodeIcon/>
-              description="How to create your own custom library"
-              to="/extending_robot_framework/static_library"
+              description="How to create your own library in Python"
+              to="/extending_robot_framework/python_library"
+            />
+            <Card
+              title="Package and Release a Library"
+              icon=<RocketIcon/>
+              description="How to package and release your own custom library"
+              to="/extending_robot_framework/releasing_your_own_libraries"
             />
             <Card
               title="Parse Test Results"
