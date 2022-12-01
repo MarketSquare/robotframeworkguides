@@ -573,6 +573,7 @@ table th {
 
 .tabs {
   border-bottom: 1px solid var(--docs-color-border);
+  background-color: var(--docs-color-background-100);
 }
 
 .tabs__item {
@@ -584,6 +585,7 @@ table th {
 
 .tabs__item--active {
   border-bottom: 2px solid var(--docs-color-primary-100);
+  background-color: var(--docs-color-background-300);
 }
 
 /* Mobile breakpoint */
