@@ -1,0 +1,285 @@
+---
+sidebar_position: 1
+sidebar_label: I'm looking for testing
+title: I'm looking for testing
+---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import {
+  HomepageCard as Card,
+  HomepageSection as Section,
+} from '@site/src/components/HomepageComponents';
+
+This chapter will help you to get started with Robot Framework.
+
+<Section>
+<Card
+title="Install Python"
+description="How to install Python "
+to="/getting_started/testing#install-python"
+/>
+<Card
+title="Install Robot Framework"
+description="How to install Robot Framework"
+to="/getting_started/testing#install-robot-framework"
+/>
+<Card
+title="Set up IDE"
+description="How to install and set up your IDE for coding and debugging"
+to="/getting_started/ide"
+/>
+</Section>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1jdjogCnsDk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Install Python
+
+<Tabs>
+<TabItem value="Windows" label="Windows" default>
+
+![Install Python Windows](/img/getting_started/installpywin.gif)  
+
+Download and run the [Python](https://www.python.org/downloads/) installer
+
+1. Select option `Add Python 3.X to PATH`
+2. (optional) install to a sub-folder on root of your drive (e.g. C:\Python3.X)
+3. Open a command line by
+    1. pressing `Windows key + R`
+    2. typing `cmd` and pressing `Enter`  
+
+```cmd
+python -V
+```
+![Check Python version](/img/getting_started/checkpythonwin.gif)
+</TabItem>
+<TabItem value="Linux" label="Linux">
+
+Open a terminal by either
+1. pressing `Ctrl` + `Alt` + `T`
+2. pressing the `Windows key` and typing `terminal`
+3. right-clicking in your file explorer and selecting `Open in Terminal`
+
+```bash
+sudo apt update
+sudo apt install python3 python3-pip
+python3 -V
+```
+</TabItem>
+<TabItem value="MacOs" label="MacOs">
+
+We will use [Homebrew](https://brew.sh/) and [pyenv](https://github.com/pyenv/pyenv) to install Python.
+
+Install homebrew
+
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+Follow instructions to add brew to path
+(Those are shown after homebrew installation)
+
+```bash
+echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> $HOME/.profile
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+```
+
+Install pyenv
+
+```bash
+brew install pyenv
+```
+
+Add pyenv to Path
+
+```bash
+echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
+echo 'command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
+echo 'eval "$(pyenv init -)"' >> ~/.bashrc
+eval "$(pyenv init -)"
+```
+
+Add Python Build Dependencies
+```bash
+xcode-select --install
+brew install openssl readline sqlite3 xz zlib tcl-tk
+```
+Install a Python 3.10.6
+
+```bash
+pyenv install 3.10.6
+```
+
+Tell pyenv to use Python 3.10.6 globally
+
+```bash	
+pyenv global 3.10.6
+python --version
+```
+</TabItem>
+</Tabs>
+
+You should see something like this:
+
+```
+Python 3.10.6
+```
+
+:::info
+
+Check out the [official Python Downloads page](https://www.python.org/downloads/) or the [Python Beginner's Guide](https://wiki.python.org/moin/BeginnersGuide/Download) for more information
+
+:::
+
+## Install Robot Framework
+
+<details>
+
+<summary>Assumptions and other notes</summary>  
+
+:::note python, python3, pip, pip3
+We assume that Python3 and pip are installed.  
+We use the commands `pip` and `python` to install packages or run Python scripts.  
+Depending on your setup, those commands may be `pip3` and `python3` or `pip` and `python`.
+:::
+
+:::note Terminal, Bash and cmd
+When we mention the word `terminal`, we mean both - a linux terminal (e.g. `bash`) or a windows command line (`cmd`).
+:::
+
+:::note Install globally vs. virtual environments
+Python allows you to install modules via `pip`.  
+By default, those modules are installed in the global Python environment.
+
+But especially when working on multiple projects, it is more convenient to have a separate Python environment for each project with all the required packages installed (like `robotframework` or additional libraries like `robotframework-seleniumlibrary`).  
+To separate the global Python environment from the project environment, you can use a `virtual environment`.  
+We will cover both approaches in the following chapters.
+:::
+
+:::note Show info about installed packages
+You can type `pip show robotframework` to get more information about the installed version of Robot Framework and the install location.
+:::
+
+</details>
+
+### Install Robot Framework globally
+<Tabs>
+<TabItem value="Install Robot Framework globally" label="Global" default>
+
+ Open your `terminal`
+
+```cmd
+pip install robotframework
+robot --version
+``` 
+
+![Install Robot Framework](/img/getting_started/installrfwin.gif)
+
+</TabItem>
+</Tabs>
+
+You should see something like
+
+```bash
+Robot Framework 5.x.y (Python 3.x.y)
+```
+### Install Robot Framework in a Virtual Environment
+
+<Tabs>
+<TabItem value="Windows" label="Windows" default>
+
+We recommend to have a folder on your drive to store your projects, e.g. `C:\projects`.  
+Open your `terminal`
+
+```cmd
+cd C:\projects
+mkdir MyProject
+cd MyProject
+python -m venv .venv
+.venv\Scripts\activate.bat
+pip install robotframework
+robot --version
+```
+You should see something like
+
+```cmd
+Robot Framework 5.x.y (Python 3.x.y)
+```
+
+You can type `pip show robotframework` to get more information about the installed version of Robot Framework and the install location.  
+The virtual environment can be deactivated by typing `venv\Scripts\deactivate.bat`.
+
+If you prefer to use `PowerShell` instead of `cmd`, you can use the following commands for activating and deactivating the virtual environment:  
+
+- Activate: `venv\Scripts\activate.ps1`
+- Deactivate: `venv\Scripts\deactivate.ps1`  
+
+</TabItem>
+
+<TabItem value="Linux" label="Linux">
+
+We recommend to have a folder on your drive to store your projects, e.g. `~/projects`.  
+Open your `terminal`
+
+```cmd
+cd ~/projects
+mkdir MyProject
+cd MyProject
+python -m venv .venv
+source .venv/bin/activate
+pip install robotframework
+robot --version
+```
+You should see something like
+
+```cmd
+Robot Framework 5.x.y (Python 3.x.y)
+```
+
+The virtual environment can be deactivated by typing `source .venv/bin/deactivate`.
+
+</TabItem>
+
+<TabItem value="MacOS" label="MacOS" default>
+We recommend to have a folder on your drive to store your projects, e.g. `~/projects`.  
+Open your `terminal`
+
+```cmd
+cd ~/projects
+mkdir MyProject
+cd MyProject
+```
+
+Tell pyenv to use Python 3.10.6 (if you haven't done so already).  
+Either globally
+```bash
+pyenv global 3.10.6
+```
+
+Or locally (for the current folder only)
+
+```bash
+pyenv local 3.10.6
+```
+
+Create and activate a new Virtual Environment and install robotframework
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install robotframework
+robot --version
+```
+You should see something like
+
+```cmd
+Robot Framework 5.x.y (Python 3.x.y)
+```
+
+The virtual environment can be deactivated by typing `source .venv/bin/deactivate`.
+</TabItem>
+</Tabs>
+
+![Install Robot Framework in Virtual Environment](/img/getting_started/installvenvwin.gif)
+
+## Other Recommendations
+
+### Managing Dependencies
