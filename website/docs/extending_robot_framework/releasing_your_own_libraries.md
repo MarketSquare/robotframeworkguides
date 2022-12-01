@@ -1,5 +1,5 @@
 ---
-sidebar_label: Create And Release RF Libraries
+sidebar_label: Create And Release Libraries
 title: Creating and Releasing Your Own Libraries
 ---
 
