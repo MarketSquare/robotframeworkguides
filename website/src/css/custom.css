@@ -773,3 +773,8 @@ img[src$='#terminal'] {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 }
+
+[data-theme='light'] img[src$='#gh-dark-mode-only'],
+[data-theme='dark'] img[src$='#gh-light-mode-only'] {
+  display: none;
+}
