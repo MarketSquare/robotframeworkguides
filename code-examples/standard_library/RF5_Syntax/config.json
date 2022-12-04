@@ -1,0 +1,9 @@
+{
+    "name": "Robot Framework 5 Syntax, TRY/EXCEPT, Inline IF/ELSE, WHILE Loops and more",
+    "description": "readme.md",
+    "files": [
+        {
+            "fileName": "TestSuite.robot"
+        }
+    ]
+}
