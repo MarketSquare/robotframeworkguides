@@ -2,6 +2,7 @@
 sidebar_position: 2
 sidebar_label: I'm looking for RPA
 title: I'm looking for RPA
+description: Use rcc to create a new RPA project
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
