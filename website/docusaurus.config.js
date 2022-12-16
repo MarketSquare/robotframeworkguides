@@ -1,8 +1,8 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require("./src/themes/rf-guides-light");
-const darkCodeTheme = require("./src/themes/rf-guides-dark");
+const lightCodeTheme = require('prism-react-renderer/themes/github');
+const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -16,7 +16,6 @@ const config = {
   organizationName: 'marketsquare', // Usually your GitHub org/user name.
   projectName: 'robotframeworkguides', // Usually your repo name.
   trailingSlash: false,
-
   presets: [
     [
       'classic',
