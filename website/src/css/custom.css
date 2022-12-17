@@ -13,6 +13,7 @@
    See css var + hsl color palette technique:
    https://blog.maximeheckel.com/posts/the-power-of-composition-with-css-variables/
     */
+   --ifm-font-family-base: "Roboto";
    --site-primary-hue-saturation: #00c0b5;
    --site-primary-hue-saturation-light: 167 56%; /* do we really need this extra one? */
    --site-color-favorite-background: #f6fdfd;
@@ -340,4 +341,93 @@
   font-size: 14px;
   color: var(--ifm-color-content-secondary);
   line-height: 1.5;
+}
+
+.theme-doc-sidebar-container {
+  margin-left: 20px;
+  border-right: none !important;
+  font-size: 14px !important;
+}
+
+.sidebar-item-link-level-2 a {
+  font-size: 13px !important;
+}
+
+.theme-doc-sidebar-item-category-level-1,
+.theme-doc-sidebar-item-link-level-1 {
+  border-bottom: 1px solid var(--ifm-background-surface-color);
+  padding-bottom: 8px;
+}
+
+.theme-doc-sidebar-item-category-level-1 .menu__list {
+  margin-bottom: 18px;
+}
+
+.pagination-nav__link {
+  background-color: var(--ifm-background-surface-color);
+  border: none;
+}
+.pagination-nav__link:hover {
+  background-color: var(--ifm-background-surface-color-hover);
+}
+.navbar {
+  padding: 12px 40px 12px 40px;
+  background: var(--ifm-background-color) AA;
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--ifm-background-surface-color);
+}
+.navbar-sidebar--show {
+  backdrop-filter: none !important;
+}
+.menu {
+  padding: 20px !important;
+}
+.menu__link {
+  color: var(--ifm-color-content-secondary);
+  padding: 8px 12px 8px 0;
+}
+.theme-doc-sidebar-item-link-level-2 .menu__link,
+.theme-doc-sidebar-item-category-level-2 .menu__link {
+  padding: 4px 0 4px 0;
+}
+.menu__link:hover,
+.menu__link--active,
+.menu__list-item-collapsible:hover {
+  color: var(--ifm-heading-color);
+  background-color: transparent;
+}
+.menu__link--active {
+  color: var(--ifm-color-primary);
+}
+.menu__caret,
+.menu__link--sublist-caret:after {
+  transform: scale(0.5);
+}
+
+.menu__list-item--collapsed .menu__link--sublist:after {
+  transform: scale(0.5) rotateZ(90deg);
+}
+
+.table-of-contents__link:hover {
+  color: var(--ifm-heading-color);
+}
+
+.theme-doc-sidebar-container {
+  margin-left: 20px;
+  border-right: none !important;
+  font-size: 14px !important;
+}
+
+.sidebar-item-link-level-2 a {
+  font-size: 13px !important;
+}
+
+.theme-doc-sidebar-item-category-level-1,
+.theme-doc-sidebar-item-link-level-1 {
+  border-bottom: 1px solid var(--ifm-background-surface-color);
+  padding-bottom: 8px;
+}
+
+.theme-doc-sidebar-item-category-level-1 .menu__list {
+  margin-bottom: 18px;
 }
