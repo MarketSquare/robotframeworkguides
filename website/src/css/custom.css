@@ -371,13 +371,21 @@
   background-color: var(--ifm-background-surface-color-hover);
 }
 .navbar {
-  padding: 12px 40px 12px 40px;
+  padding: 12px 30px 12px 30px;
   background: var(--ifm-background-color) AA;
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--ifm-background-surface-color);
 }
+@media screen and (max-width: 996px) {
+  .navbar {
+    padding: 12px 18px 12px 18px;
+  }
+}
 .navbar-sidebar--show {
   backdrop-filter: none !important;
+}
+.navbar__inner {
+  align-content: center;
 }
 .menu {
   padding: 20px !important;
