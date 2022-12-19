@@ -14,8 +14,6 @@
    https://blog.maximeheckel.com/posts/the-power-of-composition-with-css-variables/
     */
    --ifm-font-family-base: "Roboto";
-   --site-primary-hue-saturation: #00c0b5;
-   --site-primary-hue-saturation-light: 167 56%; /* do we really need this extra one? */
    --site-color-favorite-background: #f6fdfd;
    --site-color-tooltip: #fff;
    --site-color-tooltip-background: #353738;
@@ -40,18 +38,9 @@
   * other properties here.
   */
  [data-theme='light'] {
-   --ifm-color-primary: hsl(var(--site-primary-hue-saturation) 30%);
-   --ifm-color-primary-dark: hsl(var(--site-primary-hue-saturation) 26%);
-   --ifm-color-primary-darker: hsl(var(--site-primary-hue-saturation) 23%);
-   --ifm-color-primary-darkest: hsl(var(--site-primary-hue-saturation) 17%);
- 
-   --ifm-color-primary-light: hsl(var(--site-primary-hue-saturation-light) 39%);
-   --ifm-color-primary-lighter: hsl(
-     var(--site-primary-hue-saturation-light) 47%
-   );
-   --ifm-color-primary-lightest: hsl(
-     var(--site-primary-hue-saturation-light) 58%
-   );
+  --ifm-color-primary: #008682;
+  --ifm-color-primary-darker:#006461;
+  --ifm-color-primary-lighter: #00c0b5;
  }
  
  /*
@@ -59,18 +48,9 @@
   * other properties here.
   */
  [data-theme='dark'] {
-   --ifm-color-primary: var(--site-primary-hue-saturation);
-   --ifm-color-primary-dark: var(--site-primary-hue-saturation);
-   --ifm-color-primary-darker: var(--site-primary-hue-saturation);
-   --ifm-color-primary-darkest: hsl(var(--site-primary-hue-saturation) 32%);
- 
-   --ifm-color-primary-light: hsl(var(--site-primary-hue-saturation-light) 54%);
-   --ifm-color-primary-lighter: hsl(
-     var(--site-primary-hue-saturation-light) 62%
-   );
-   --ifm-color-primary-lightest: hsl(
-     var(--site-primary-hue-saturation-light) 73%
-   );
+   --ifm-color-primary: #00c0b5;
+   --ifm-color-primary-darker:#008682;
+   --ifm-color-primary-lighter: #80fffb;
  }
  
  .header-github-link:hover {
@@ -156,12 +136,8 @@
  }
  
  div[class^='announcementBar_'] {
-   --site-announcement-bar-stripe-color1: hsl(
-     var(--site-primary-hue-saturation) 85%
-   );
-   --site-announcement-bar-stripe-color2: hsl(
-     var(--site-primary-hue-saturation) 95%
-   );
+   --site-announcement-bar-stripe-color1: var (--ifm-color-primary-darker);
+   --site-announcement-bar-stripe-color2: var (--ifm-color-primary-lighter);
    background: repeating-linear-gradient(
      35deg,
      var(--site-announcement-bar-stripe-color1),
@@ -241,7 +217,7 @@
 
 .tabs__item {
   --ifm-tabs-padding-vertical: 0.75rem;
-  --ifm-tabs-color-active: var(--ifm-color-content-secondary);
+  --ifm-tabs-color-active: var(--ifm-color-content-secondary); 
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
