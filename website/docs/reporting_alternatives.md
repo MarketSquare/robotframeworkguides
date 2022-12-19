@@ -19,7 +19,7 @@ It is integrated with Robot Framework via a listener [robotframework-reportporta
 
 It is integrated with Robot Framework via a listener [robotframework-allure](https://github.com/allure-framework/allure-python)
 
-## Grafana
+### Grafana
 Grafana can be used to visualize test results in a dashboard.  
 https://grafana.com/grafana/dashboards/11541-robot-framework-grafana-dashboard-part-1/
 
@@ -35,7 +35,7 @@ https://cognitiveqe.com/robot-framework-grafana-dashboard/
 Blog post about Robot Framework, Jenkins Plugin, InfluxDB and Grafana
 https://www.eficode.com/blog/rf-jenkins-grafana
 
-## Robot Framework Metrics
+### Robot Framework Metrics
 
 [Robot Framework Metrics](https://github.com/adiralashiva8/robotframework-metrics) creates custom HTML report (dashboard view) by parsing robotframework output.xml file
 
