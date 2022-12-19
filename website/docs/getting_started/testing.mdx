@@ -296,4 +296,133 @@ The virtual environment can be deactivated by typing `source .venv/bin/deactivat
 
 ## Other Recommendations
 
-### Managing Dependencies
+### Managing Dependencies with poetry
+
+[Poetry](https://python-poetry.org/) is a tool for dependency management and packaging in Python.
+
+It allows you to declare the libraries your project depends on and it will manage (install/update) them for you.  
+You can use it when you start any new project **python** or **robotframework** project.
+
+Install poetry by following the [official instructions](https://python-poetry.org/docs/#installation).
+
+<Tabs>
+<TabItem value="Windows" label="Windows" default>
+
+Open PowerShell and run the following command:
+
+```cmd
+(Invoke-WebRequest -Uri https://install.python-poetry.org -UseBasicParsing).Content | py -
+```
+
+💡If you have installed Python through the Microsoft Store, replace `py` with `python` in the command above.
+  
+</TabItem>
+<TabItem value="Linux" label="Linux">
+
+Open your terminal and run the following command:
+
+```bash
+curl -sSL https://install.python-poetry.org | python3 -
+```	
+
+💡On some systems, `python` may still refer to Python 2 instead of Python 3. So we used `python3` in the command above. 
+
+</TabItem>
+<TabItem value="MacOS" label="MacOS" default>
+
+Open your terminal and run the following command:
+
+```bash
+curl -sSL https://install.python-poetry.org | python3 -
+```	
+
+💡On some systems, `python` may still refer to Python 2 instead of Python 3. So we used `python3` in the command above.
+</TabItem>
+</Tabs>
+
+Run poetry once to check if it's installed.
+
+```shell
+poetry --version
+```
+
+
+#### Virtual Environments folder
+
+Poetry will save the virtual enviromentson in the `.poetry/envs` folder. You can change that setting and store your virtual environment in the project folder by running
+   
+```shell
+poetry config virtualenvs.in-project true
+```
+
+#### Initialize a new project
+
+To initialize a new project, run the following command in your terminal:
+
+```shell
+poetry init
+```
+
+Poetry will ask you some questions about your project. You can leave the default values by pressing `Enter` or enter your own values.
+
+Example:
+  
+```shell
+This command will guide you through creating your pyproject.toml config.
+
+Package name [your-project-name]:
+Version [0.1.0]:
+Description []:
+Author [Your Name <your.email@example.com>, n to skip]:
+License []:
+Compatible Python versions [^3.10]:
+
+Would you like to define your main dependencies interactively? (yes/no) [yes] no
+Would you like to define your development dependencies interactively? (yes/no) [yes] no
+```
+
+After the initialization, you will see a new file called `pyproject.toml` in your project folder. This file contains all the information about your project and the dependencies.
+
+#### Add dependencies
+
+To add a dependency, run the following command in your terminal:
+
+```shell
+poetry add robotframework
+```
+
+You can also add multiple dependencies at once:
+
+```shell
+poetry add robotframework robotframework-browser robotframework-requests
+```
+
+On the first run, poetry will create a virtual environment for your project and install the dependencies.
+
+#### Run Commands in the Virtual Environment
+
+To run commands in the virtual environment, you can use the `poetry run` command.
+
+```shell
+poetry run robot --version
+```
+
+To e.g. install the playwright dependencies for robotframework-browser, you can run the following command:
+
+```shell
+poetry run rfbrowser init
+```
+
+You can also use the `poetry shell` command to open a shell in the virtual environment.  
+All commands you run in this shell will be executed in the virtual environment.
+
+```shell
+poetry shell
+(.venv) robot --version
+```
+
+Check out the [official documentation](https://python-poetry.org/docs/) for more information.
+
+There is also a great Lightning Talk **Project and package management: Poetry for robots** from RoboCon 2022  
+<iframe width="560" height="315" src="https://www.youtube.com/embed/UjzXCDcnTs0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
