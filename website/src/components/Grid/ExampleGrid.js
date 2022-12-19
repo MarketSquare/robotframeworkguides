@@ -49,7 +49,9 @@ function ExampleGrid() {
         columns: [
             {   name: "Icon",
                 id: "icon",
-                formatter: (cell) => html(`<img src="${cell}"/>`)
+                formatter: (_, row, column) => {
+                    return html(`<a href=${row.cells[3].data} target="_self" rel="noreferrer noopener"><img src="${row.cells[0].data}"/></a>`)
+                }
         },
             {
                 name: 'Name',
