@@ -7,6 +7,32 @@
 
  @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
 
+ @font-face {
+  font-family: 'OCRA';
+  src: url('/fonts/OCRA2.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Courier Code';
+  src: url('/fonts/CourierCode-Roman.woff') format('woff');
+  font-display: swap;
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Courier Code';
+  src: url('/fonts/CourierCode-Italic.woff') format('woff');
+  font-display: swap;
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Courier Code';
+  src: url('/fonts/CourierCode-Bold.woff') format('woff');
+  font-display: swap;
+  font-weight: 600;
+}
+
 
  :root {
    /*

@@ -29,4 +29,4 @@ Quick Get A JSON Body Test
     Should Be Equal As Strings    1  ${response.json()}[id]
 ```
 
-See examples for [Restful Booker](/examples/restfulbooker)
+See examples for [Restful Booker](/docs/examples/restfulbooker)

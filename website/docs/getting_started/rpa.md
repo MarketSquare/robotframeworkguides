@@ -52,7 +52,7 @@ The first run sets up the environment, so it takes a bit longer, but if you do t
 
 [RCC](https://github.com/robocorp/rcc#readme) is an open-source tool that handles everything essential around an RPA robot run on Windows, macOS, and Linux. With RCC, the machine running the robot does not even need Python installed.
 
-So, if you look back into [the first robot you ran](/getting_started/rpa#run-your-first-robot), you will see the following:
+So, if you look back into [the first robot you ran](/docs/getting_started/rpa#run-your-first-robot), you will see the following:
 1. The environment your bot needs is defined in: [conda.yaml](https://github.com/robocorp/rcc/blob/master/docs/recipes.md#what-is-in-condayaml)
 1. How your robot is executed is defined in: [robot.yaml](https://github.com/robocorp/rcc/blob/master/docs/recipes.md#what-is-in-robotyaml)
 1. The logic of your bot is in Robot Framework (`.robot`) or Python (`.py`) -files... or both.
@@ -63,7 +63,7 @@ With the above files [RCC](https://github.com/robocorp/rcc#readme) can set up an
 > RCC has a lot of cool tricks, so once you've gotten started, it is worth [check out some more](https://github.com/robocorp/rcc/tree/master/docs#readme)
 
 :rocket: So now you have your bot running and have a slight idea how you got there; what next?<br/> 
-You need to see and edit your bot code to get it doing what you need, so head-on to the [Editor and IDEs](/getting_started/rpa#editors-and-ides)
+You need to see and edit your bot code to get it doing what you need, so head-on to the [Editor and IDEs](/docs/getting_started/rpa#editors-and-ides)
 
 ## Editors and IDEs
 There is no shortage of editors for Robot Framework and Python, but for RPA work, we limit the list to get you started. In the end, what you create is just Robot Framework and Python code, so you are not limited to the tools mentioned here.
@@ -134,8 +134,8 @@ You are raring to go, so go ahead and check out the resources and libraries -par
 ## RPA resources to get started
 
 For the resources and libraries part you can check out the following pages:
-* [RPA libraries](/different_libraries/rpa)
-* [How to find the right library](/different_libraries/how_to_find_library)
+* [RPA libraries](/docs/different_libraries/rpa)
+* [How to find the right library](/docs/different_libraries/how_to_find_library)
 * Sources for RPA example in Robot Framework:
   * [Robocorp Portal](https://robocorp.com/portal/) 
 
@@ -145,8 +145,8 @@ We always recommend giving back to the open-source community, as you usually get
 
 For example:
 It is quite rare that the business value of an RPA process is in the library that interacts with an application or an API, so why not publish the connectivity part as open-source and get others to chip in on the maintenance and improvements? This way, you can focus more on the actual RPA problem.
-* [Releasing your own library](/extending_robot_framework/releasing_your_own_libraries)
-* [Helpout with this documentation](/contribute)
+* [Releasing your own library](/docs/extending_robot_framework/releasing_your_own_libraries)
+* [Helpout with this documentation](/docs/contribute)
 * Create example bots into the public repository and ping in the forums and Slacks
 
 

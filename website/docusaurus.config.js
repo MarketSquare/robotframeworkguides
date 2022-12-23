@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Robot Framework Guides',
+  title: 'ROBOT FRAMEWORK',
   tagline: 'Yes, we are open source!',
   url: 'https://guides.robotframework.org',
   baseUrl: '/',
@@ -22,7 +22,7 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          routeBasePath: '/',
+          routeBasePath: '/docs',
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl: 'https://github.com/MarketSquare/robotframeworkguides',
@@ -76,7 +76,7 @@ const config = {
             items: [
               {
                 label: 'Guides',
-                to: '/',
+                to: '/docs',
               },
             ],
           },

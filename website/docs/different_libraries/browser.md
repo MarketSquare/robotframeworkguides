@@ -47,4 +47,4 @@ Done!
 ```
 
 
-See examples for [ToDo App](/examples/todo), [MFA Login](/examples/mfa_login) and [Vehice Insurance](/examples/insurance).
+See examples for [ToDo App](/docs/examples/todo), [MFA Login](/docs/examples/mfa_login) and [Vehice Insurance](/docs/examples/insurance).
