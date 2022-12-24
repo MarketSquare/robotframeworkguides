@@ -57,7 +57,7 @@ const config = {
           },
 
           {
-            href: 'https://robotframework.slack.com/',
+            href: 'https://slack.robotframework.org/',
             label: 'Slack',
             position: 'right',
           },
@@ -89,7 +89,7 @@ const config = {
               },
               {
                 label: 'Slack',
-                href: 'https://robotframework.slack.com/',
+                href: 'https://slack.robotframework.org/',
               },
               {
                 label: 'Twitter',

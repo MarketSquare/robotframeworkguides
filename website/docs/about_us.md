@@ -20,7 +20,7 @@ We hope that people will find this guide useful and that it will help them to wr
 When I started using Robot Framework, I was always impressed with the documentation and the examples.
 The [User Guide](https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html) and the [Keyword Documentation](https://robotframework.org/robotframework/#standard-libraries) were very helpful and always open in by browser while working. 
 
-When I discovered the [Slack Channel](https://robotframework.slack.com/), I got another productivity boost. My questions there were answered quicker than by any professional support of any tool I've ever used.
+When I discovered the [Slack Channel](https://slack.robotframework.org/), I got another productivity boost. My questions there were answered quicker than by any professional support of any tool I've ever used.
 
 But there was also another thing I noticed:  
 Some of the question were repeating.
