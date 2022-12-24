@@ -12,7 +12,7 @@ const config = {
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/robotframework.ico',
+  favicon: 'img/rf_favicon.png',
   organizationName: 'marketsquare', // Usually your GitHub org/user name.
   projectName: 'robotframeworkguides', // Usually your repo name.
   trailingSlash: false,
