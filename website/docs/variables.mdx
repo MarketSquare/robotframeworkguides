@@ -1,0 +1,34 @@
+---
+sidebar_label: Variables
+title: Variables
+---
+
+## \*\*\* Variables \*\*\* Section
+
+Variables which are defined in the \*\*\* Variables \*\*\* section are available in all test cases and keywords in the same file.  
+Variables defined in the \*\*\* Variables \*\*\* section are **global** variables.  
+If a `.resource` or a `.robot` file with a \*\*\* Variables \*\*\* section is imported, the variables are also available globally.
+
+Example:
+
+```robotframework
+*** Variables ***
+${my_var}     my_value
+@{my_list}    Apple    Banana    Orange
+&{my_dict}    name=my_value1    password=my_value2
+
+*** Test Cases ***
+Test Case 1
+    Log    ${my_var}
+    Log    ${my_list}
+    Log    ${my_dict}
+    For    ${item}    IN    @{my_list}
+        Log    ${item}
+    End
+    Log    ${my_dict}[name]
+    Log    ${my_dict}[password]
+    For   ${key}    ${value}    IN    &{my_dict}
+        Log Many    ${key}    ${value}
+    End
+```
+<iframe src="https://robotframework.org/embed/?code-gh-url=https://github.com/MarketSquare/robotframeworkguides/tree/main/code-examples/standard_library/variables_section" width="100%" height="600"></iframe>
