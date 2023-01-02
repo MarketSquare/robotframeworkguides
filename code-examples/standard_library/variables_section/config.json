@@ -1,0 +1,9 @@
+{
+    "name": "Variables in Robot Framework",
+    "description": "readme.md",
+    "files": [
+        {
+            "fileName": "TestSuite.robot"
+        }
+    ]
+}
