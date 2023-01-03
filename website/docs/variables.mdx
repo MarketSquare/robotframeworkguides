@@ -13,8 +13,81 @@ Variables defined in the \*\*\* Variables \*\*\* section are **global** variable
 If a `.resource` or a `.robot` file with a \*\*\* Variables \*\*\* section is imported, the variables are also available globally.
 
 Example:
+```robotframework
+*** Variables ***
+${my_var}     my_value
+@{my_list}    Apple    Banana    Orange
+&{my_dict}    name=my_value1    password=my_value2
 
+*** Test Cases ***
+Test Case 1
+    Log    ${my_var}
+    Log    ${my_list}
+    Log    ${my_dict}
+    FOR    ${item}    IN    @{my_list}
+        Log    ${item}
+    END
+    Log    ${my_dict}[name]
+    Log    ${my_dict}[password]
+    FOR   ${key}    ${value}    IN    &{my_dict}
+        Log Many    ${key}    ${value}
+    END
+    My Keyword
+
+*** Keywords ***
+My Keyword
+    Log Many    ${my_var}    ${my_list}    ${my_dict}    
+```
+
+<details>
+  <summary>Let me run it</summary>
 <iframe src="https://robotframework.org/embed/?code-gh-url=https://github.com/MarketSquare/robotframeworkguides/tree/main/code-examples/standard_library/variables_section" width="100%" height="600"></iframe>
+</details>
+
+## Set Variables in Test Cases and Keywords
+
+Besides the \*\*\* Variables \*\*\* section, variables can also be set dynamically in test cases and keywords.
+Variables are set by the return value of a keyword.
+There are some Keywords which set variables values explicitly, like
+
+- [Set Variable](https://robotframework.org/robotframework/latest/libraries/BuiltIn.html#Set%20Variable)
+- [Set Test Variable](https://robotframework.org/robotframework/latest/libraries/BuiltIn.html#Set%20Test%20Variable)
+- [Set Suite Variable](https://robotframework.org/robotframework/latest/libraries/BuiltIn.html#Set%20Suite%20Variable)
+- [Set Global Variable](https://robotframework.org/robotframework/latest/libraries/BuiltIn.html#Set%20Global%20Variable)
+
+They can be used to either **set a value** of a variable or **change the scope** of a variable.
+
+Example:
+
+```robotframework
+*** Test Cases ***
+
+Test Case 1
+    ${my_local_var}    Set Variable    Hello World
+    Log    ${my_local_var}    # Pass: Logs the value of the variable
+    Set Suite Variable    ${my_suite_var}    I'm a suite variable
+    Set Global Variable    ${my_global_var}    I'm a global variable
+
+Test Case 2
+    Log    ${my_local_var}    # Fails: Variable only exists in the scope of Test Case 1
+    Log    ${my_suite_var}    # Pass: Variable exists for the scope of the whole suite
+    Log    ${my_global_var}   # Pass: Variable exists for the scope of the whole test run
+
+Test Case 3
+    My Keyword
+    Log    ${my_keyword_var}    # Fails: Variable only exists in the scope of My Keyword
+    Log    ${my_test_var}    # Pass: Variable  exists in the scope of the test case
+
+*** Keywords ***
+My Keyword
+    ${my_keyword_var}    Set Variable    Hello Keyword
+    Log    ${my_keyword_var}    # Pass: Logs the value of the variable
+    Set Test Variable    ${my_test_var}    I'm a test case variable   
+```
+<details>
+  <summary>Let me run it</summary>
+  <iframe src="https://robotframework.org/embed/?code-gh-url=https://github.com/MarketSquare/robotframeworkguides/tree/main/code-examples/standard_library/variable_scopes" width="100%" height="600"></iframe>
+ </details>
 
 ## When to use $ and @ and & and %?
 
