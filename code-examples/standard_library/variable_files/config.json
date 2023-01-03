@@ -1,6 +1,9 @@
 {
     "name": "Variables Files in Robot Framework",
     "description": "readme.md",
+    "requirements": [
+        "pyyaml"
+    ],
     "files": [
         {
             "fileName": "TestSuite.robot"
