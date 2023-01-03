@@ -1,0 +1,15 @@
+{
+    "name": "Variables Files in Robot Framework",
+    "description": "readme.md",
+    "files": [
+        {
+            "fileName": "TestSuite.robot"
+        },
+        {
+            "fileName": "PythonVariables.py"
+        },
+        {
+            "fileName": "YamlVariables.yaml"
+        }
+    ]
+}

@@ -1,0 +1,13 @@
+# These are scalars:
+base_url: https://qaserver.mycompany.com:8080
+admin_user: iAmAdMiN
+admin_password: eieioscoobydoo1234
+# Now, a list:
+my_list:
+     - Item 1
+     - Item two
+     - 3
+# Finally, a dictionary:
+a_dict:
+     key_1: A string
+     key_2: 1 # an int
