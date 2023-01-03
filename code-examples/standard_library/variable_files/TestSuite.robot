@@ -1,6 +1,7 @@
 *** Settings ***
 Variables    PythonVariables.py
 Variables    YamlVariables.yaml
+Variables    DynamicVariables.py
 
 *** Test Cases ***
 Access Python Variables
@@ -19,3 +20,12 @@ Access Yaml Variables
     Log Many   @{my_list}
     Log        ${my_dict}
     Log        ${my_dict}['key_1']
+
+Access Dynamic Variables
+    Log   ${USER}
+    Log   ${RANDOM_INT}
+    Log   ${CURRENT_TIME}
+    Log   ${AFTERNOON}
+    Log   ${AREA1}
+    Log   ${AREA2}
+     

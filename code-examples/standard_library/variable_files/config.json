@@ -13,6 +13,9 @@
             "fileName": "PythonVariables.py"
         },
         {
+            "fileName": "DynamicVariables.py"
+        },
+        {
             "fileName": "YamlVariables.yaml"
         }
     ]
