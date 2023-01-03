@@ -17,9 +17,9 @@ Access Python Variables
 
 Access Yaml Variables
     Log        ${base_url}
-    Log Many   @{my_list}
-    Log        ${my_dict}
-    Log        ${my_dict}['key_1']
+    Log Many   @{yaml_list}
+    Log        ${yaml_dict}
+    Log        ${yaml_dict}[key_1]
 
 Access Dynamic Variables
     Log   ${USER}
