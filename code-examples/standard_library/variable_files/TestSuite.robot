@@ -18,4 +18,4 @@ Access Yaml Variables
     Log        ${base_url}
     Log Many   @{my_list}
     Log        ${my_dict}
-    Log        ${my_dict}['key1']
+    Log        ${my_dict}['key_1']
