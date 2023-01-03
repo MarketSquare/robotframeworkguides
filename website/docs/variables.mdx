@@ -153,6 +153,61 @@ For Yaml files, the package `pyyaml` is required.
 pip install pyyaml
 ```
 
+`.py` files will be interpreted as Python Code, so you can create simple variables, lists or dictionaries and even complex objects like classes.  
+
+
+```python title="PythonVariables.py"
+class TestEnv:
+    ip = '123.4.5.6'
+    user = 'robot'
+    roles = ['admin', 'user']
+
+my_var = 'Hello World'
+my_list = ["Apple", "Banana", "Cherry"]
+my_dict = {'name': 'John', 'age': 36}
+```
+Even dynamic variables using are possible by executing any Python code inside the variable file.  
+
+```python title="DynamicVariables.py"
+import os
+import random
+import time
+import math
+
+USER = os.getlogin()                # current login name
+RANDOM_INT = random.randint(0, 10)  # random integer in range [0,10]
+CURRENT_TIME = time.asctime()       # timestamp like 'Thu Apr  6 12:45:21 2006'
+if time.localtime()[3] > 12:
+    AFTERNOON = True
+else:
+    AFTERNOON = False
+
+def get_area(diameter):
+    radius = diameter / 2
+    area = math.pi * radius * radius
+    return area
+
+AREA1 = get_area(1)
+AREA2 = get_area(2)
+```
+
+`.yaml` (or `.yml`) files will be interpreted as a dictionary.
+
+```yaml title="YamlVariables.yml"
+# These are scalars:
+base_url: https://qaserver.mycompany.com:8080
+admin_user: iAmAdMiN
+admin_password: eieioscoobydoo1234
+# Now, a list:
+yaml_list:
+     - Item 1
+     - Item two
+     - 3
+# Finally, a dictionary:
+yaml_dict:
+     key_1: A string
+     key_2: 1 # an int
+```	
 
 <details>
   <summary>Let me run it</summary>
