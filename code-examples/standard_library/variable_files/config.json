@@ -2,7 +2,7 @@
     "name": "Variables Files in Robot Framework",
     "description": "readme.md",
     "requirements": [
-        "pyyaml"
+        "robotframework==6.0"
     ],
     "files": [
         {
