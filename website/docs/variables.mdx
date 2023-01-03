@@ -9,8 +9,8 @@ For more information, please refer to the official [Robot Framework User Guide](
 ## \*\*\* Variables \*\*\* Section
 
 Variables which are defined in the \*\*\* Variables \*\*\* section are available in all test cases and keywords in the same file.  
-Variables defined in the \*\*\* Variables \*\*\* section are **global** variables.  
-If a `.resource` or a `.robot` file with a \*\*\* Variables \*\*\* section is imported, the variables are also available globally.
+Variables defined in the \*\*\* Variables \*\*\* section are **suite** variables.  
+If a `.resource` or a `.robot` file with a \*\*\* Variables \*\*\* section is imported into a test suite, the variables there also become **suite** variables.
 
 Example:
 ```robotframework
