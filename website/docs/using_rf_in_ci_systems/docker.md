@@ -23,7 +23,10 @@ docker run --rm -v $(pwd)/atest/test/:/test --ipc=host --user pwuser --security-
 
 https://github.com/ppodgorsek/docker-robot-framework
 
-The image contains latest robot-framework and a huge collection of helpful libraries.
+
+<details>
+  <summary>Check the list of included packages</summary>
+  The image contains latest robot-framework and a huge collection of helpful libraries.
 
 * [Robot Framework](https://github.com/robotframework/robotframework)
 * [Robot Framework Browser Library](https://github.com/MarketSquare/robotframework-browser)
@@ -42,6 +45,9 @@ The image contains latest robot-framework and a huge collection of helpful libra
 * Chromium
 * [Amazon AWS CLI](https://pypi.org/project/awscli/)
 
+</details>
+
+
 This container can be run using the following command:
 
 ``` bash
@@ -57,15 +63,36 @@ You can choose from a lot of different base images to build your own Docker imag
 
 ### Examples
 
-A very small image based on alpine, which only adds robotframework
-```Dockerfile
-FROM python:3-alpine
-RUN pip3 install robotframework
+
+#### Simple Python Dockerimage with Robot Framework
+
+A very simple python image, which only adds robotframework  
+
+``` Dockerfile title="Dockerfile"
+FROM python:3
+RUN pip install robotframework
 ```
+
+You can also add your python dependencies into a file `requirements.txt` and then install them using `pip install -r requirements.txt`.
+
+```txt title="requirements.txt"
+robotframework
+robotframework-requests
+robotframework-datadriver
+```
+
+``` Dockerfile title="Dockerfile"
+FROM python:3
+
+COPY requirements.txt ./
+RUN pip install --no-cache-dir -r requirements.txt
+```
+
+#### Dockerimage with Robot Framework and Browser Library
 
 An image containing robotframework and robotframework-browser.  
 It is based on `playwright` baseimage, as it contains necessary dependencies like nodejs and npm.
-```Dockerfile
+``` Dockerfile title="Dockerfile"
 FROM mcr.microsoft.com/playwright:focal
 USER root
 RUN apt-get update
@@ -76,20 +103,4 @@ RUN pip3 install --user robotframework-browser
 RUN ~/.local/bin/rfbrowser init
 ENV NODE_PATH=/usr/lib/node_modules
 ENV PATH="/home/pwuser/.local/bin:${PATH}"
-```
-
-You can add your python dependencies into a file `requirements.txt` and then install them using `pip3 install -r requirements.txt`.
-
-requirements.txt
-```txt
-robotframework
-robotframework-requests
-robotframework-datadriver
-```
-
-Dockerfile
-```Dockerfile
-FROM python:3-alpine
-COPY requirements.txt /tmp/requirements.txt
-RUN pip3 install -r /tmp/requirements.txt
 ```
