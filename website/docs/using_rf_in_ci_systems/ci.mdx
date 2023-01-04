@@ -53,7 +53,7 @@ stages:
   - smoke
   - regression
 
-image: ppodgorsek/robot-framework:latest
+image: marketsquare/robotframework-browser
 
 run-smoke-tests:
   stage: smoke
@@ -105,11 +105,11 @@ The scripts are executed in the (Docker)`image` specified in the configuration.
 ### Image
 
 ``` yaml title=".gitlab-ci.yml"
-image: ppodgorsek/robot-framework:latest
+image: marketsquare/robotframework-browser
 ```
 
 The image is used to run the jobs in the CI Pipeline. It is possible to use a different image for each job. The `image` specified at the top of the configuration is used as the default image for all jobs (unless a job-specific image is specified).  
-The default image used here is `ppodgorsek/robot-framework:latest`.
+The default image used here is `marketsquare/robotframework-browser`.
 
 ### Scripts
 
