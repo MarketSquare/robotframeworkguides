@@ -10,6 +10,10 @@ title: Docker Images for Robot Framework
 
 https://github.com/MarketSquare/robotframework-browser/tree/main/docker
 
+``` bash
+docker pull marketsquare/robotframework-browser
+```
+
 The image comes with latest robotframework-browser and robotframework, and with pre-initialized browsers and other dependencies for running headful tests in the container.
 
 Example usage:
