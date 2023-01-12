@@ -1,6 +1,10 @@
 *** Settings ***
 Test Template    Login with invalid credentials should fail
 
+Variables
+${VALID USER}    testuser
+${VALID PASSWORD}    secret
+
 *** Test Cases ***                USERNAME         PASSWORD
 Invalid User Name                 invalid          ${VALID PASSWORD}
 Invalid Password                  ${VALID USER}    invalid
