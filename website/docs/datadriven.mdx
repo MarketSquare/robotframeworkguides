@@ -1,0 +1,72 @@
+# DataDriven Tests
+
+## Using DataDriven Syntax in Robot Framework
+
+### DataDriven Syntax
+
+Another style to write test cases is the data-driven approach where test cases use only one higher-level keyword, often created as a user keyword, that hides the actual test workflow. These tests are very useful when there is a need to test the same scenario with different input and/or output data. It would be possible to repeat the same keyword with every test, but the test template functionality allows specifying the keyword to use only once.
+
+The test template functionality is implemented in Robot Framework using the DataDriver syntax. The DataDriver syntax is a special syntax that allows defining test templates and test data in the same file. The DataDriver syntax is enabled by default in Robot Framework, but it can be disabled by using the --no-dryrun command line option.
+
+``` robotframework
+*** Settings ***
+Test Template    Login with invalid credentials should fail
+
+*** Test Cases ***                USERNAME         PASSWORD
+Invalid User Name                 invalid          ${VALID PASSWORD}
+Invalid Password                  ${VALID USER}    invalid
+Invalid User Name and Password    invalid          invalid
+Empty User Name                   ${EMPTY}         ${VALID PASSWORD}
+Empty Password                    ${VALID USER}    ${EMPTY}
+Empty User Name and Password      ${EMPTY}         ${EMPTY}
+
+*** Keywords ***
+Login with invalid credentials should fail
+    [Arguments]    ${username}    ${password}
+    Log Many    ${username}    ${password}
+```
+
+### Using DataDriver Library
+
+The DataDriver library is a Robot Framework library that provides a keyword for reading test data from a CSV file. The DataDriver library is not included in the Robot Framework distribution, but it can be installed using pip.
+
+``` bash	
+pip install robotframework-datadriver
+```
+
+A simple Test Suite which logs the username and password from the CSV file.
+
+``` robotframework
+*** Settings ***
+Library           DataDriver
+Test Template     Login With User And Password
+
+*** Test Cases ***
+Login with user ${username} and password ${password}    Default    UserData
+
+*** Keywords ***
+Login With User And Password
+    [Arguments]    ${username}    ${password}
+    Log Many    ${username}    ${password}
+```
+
+The CSV file contains the test data.
+
+``` csv
+*** Test Cases ***;${username};${password};[Tags];[Documentation]
+Right user empty pass;demo;${EMPTY};1;This is a test case documentation of the first one.
+Right user wrong pass;demo;FooBar;2,3,foo;This test case has the Tags 2,3 and foo
+;${EMPTY};mode;1,2,3,4;This test case has a generated name based on template name.
+;${EMPTY};${EMPTY};;
+;${EMPTY};FooBar;;
+;FooBar;mode;foo,1;
+;FooBar;${EMPTY};foo;
+;FooBar;FooBar;foo,2;
+```
+
+Check the [DataDriver Library](https://github.com/Snooz82/robotframework-datadriver) repository for more information.
+
+<details>
+  <summary>Let me run it</summary>
+    <iframe src="https://robotframework.org/embed/?code-gh-url=https://github.com/MarketSquare/robotframeworkguides/tree/main/code-examples/datadriver" width="100%" height="600"></iframe>
+</details>
