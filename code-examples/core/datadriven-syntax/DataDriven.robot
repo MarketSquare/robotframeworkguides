@@ -1,7 +1,7 @@
 *** Settings ***
 Test Template    Login with invalid credentials should fail
 
-Variables
+*** Variables ***
 ${VALID USER}    testuser
 ${VALID PASSWORD}    secret
 
