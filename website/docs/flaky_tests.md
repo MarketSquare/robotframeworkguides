@@ -1,8 +1,8 @@
 ---
-sidebar_label: Dealing with flaky tests
-title: Dealing with flaky tests
+sidebar_label: Re-Execute failed tests
+title: Re-Execute failed tests
 ---
-## Re-Run Failed Tests and merge results
+## Re-Execute Failed Tests and merge results
 
 It is possible to run the same test suite(s) multiple times - but only re-run the failed tests. Afterwards the results can be merged into a single results file using `rebot`. 
 You can find the required steps in the [Robot Framework User Guide](https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#merging-outputs)
