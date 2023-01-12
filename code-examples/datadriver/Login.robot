@@ -8,4 +8,4 @@ Login with user ${username} and password ${password}    Default    UserData
 *** Keywords ***
 Login With User And Password
     [Arguments]    ${username}    ${password}
-    Log    ${username}    ${password}
+    Log Many    ${username}    ${password}
