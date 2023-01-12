@@ -1,0 +1,201 @@
+# Running tests in parallel
+
+## Pabot
+
+[Pabot](https://github.com/mkorpela/pabot) is a **parallel test runner** for Robot Framework.  
+It can be used to run tests in parallel on a single machine with multiple processes.
+
+Check out the video from RoboCon 2018
+<iframe width="560" height="315" src="https://www.youtube.com/embed/i0RV6SJSIn8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+### Installation
+
+```bash
+ pip install -U robotframework-pabot
+```
+
+### Usage
+
+By default, Pabot will split execution on suite level. That means that each process will run a single suite.  
+Test Cases from the suite will be executed sequentially.  
+If you want to split execution on test level, you can use `--testlevelsplit` option. This will split execution on test level, so that each process will run a single test case.  
+
+Split execution to suite files.
+
+     pabot [path to tests]
+
+Split execution on test level.
+
+     pabot --testlevelsplit [path to tests]
+
+Run with 8 parallel processes.
+
+     pabot --processes 8 [path to tests]
+
+The default number of processes depends on the number of CPU cores. (2 processes per core)  
+If no number pro processes is given, the default number of processes is used.
+
+<details>
+<summary>Command Line Options</summary>
+
+    pabot [--verbose|--testlevelsplit|--command .. --end-command|
+           --processes num|--pabotlib|--pabotlibhost host|--pabotlibport port|
+           --shard i/n|
+           --artifacts extensions|--artifactsinsubfolders|
+           --resourcefile file|--argumentfile[num] file|--suitesfrom file] 
+          [robot options] [path ...]
+
+Supports all [Robot Framework command line options](https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#all-command-line-options) and also following options (these must be before RF options):
+
+--verbose     
+  more output from the parallel execution
+
+--testlevelsplit          
+  Split execution on test level instead of default suite level.
+  If .pabotsuitenames contains both tests and suites then this
+  will only affect new suites and split only them.
+  Leaving this flag out when both suites and tests in
+  .pabotsuitenames file will also only affect new suites and
+  add them as suite files.
+
+--command [ACTUAL COMMANDS TO START ROBOT EXECUTOR] --end-command    
+  RF script for situations where robot is not used directly
+
+--processes   [NUMBER OF PROCESSES]          
+  How many parallel executors to use (default max of 2 and cpu count)
+
+--pabotlib          
+  Start PabotLib remote server. This enables locking and resource distribution between parallel test executions.
+
+--pabotlibhost   [HOSTNAME]          
+  Host name of the PabotLib remote server (default is 127.0.0.1)
+  If used with --pabotlib option, will change the host listen address of the created remote server (see https://github.com/robotframework/PythonRemoteServer)
+  If used without the --pabotlib option, will connect to already running instance of the PabotLib remote server in the given host. The remote server can be also started and executed separately from pabot instances:
+  
+      python -m pabot.pabotlib <path_to_resourcefile> <host> <port>
+      python -m pabot.pabotlib resource.txt 192.168.1.123 8271
+  
+  This enables sharing a resource with multiple Robot Framework instances.
+
+--pabotlibport   [PORT]          
+  Port number of the PabotLib remote server (default is 8270)
+  See --pabotlibhost for more information
+
+--resourcefile   [FILEPATH]          
+  Indicator for a file that can contain shared variables for distributing resources. This needs to be used together with pabotlib option. Resource file syntax is same as Windows ini files. Where a section is a shared set of variables.
+  
+--artifacts [FILE EXTENSIONS]   
+  List of file extensions (comma separated).    
+  Defines which files (screenshots, videos etc.) from separate reporting directories would be copied and included in a final report.   
+  Possible links to copied files in RF log would be updated (only relative paths supported).   
+  The default value is `png`.    
+  Examples:
+
+     --artifacts png,mp4,txt
+
+--artifactsinsubfolders   
+  Copy artifacts located not only directly in the RF output dir, but also in it's sub-folders.
+
+--argumentfile[INTEGER]   [FILEPATH]          
+  Run same suites with multiple [argumentfile](http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#argument-files) options.
+  For example:
+
+     --argumentfile1 arg1.txt --argumentfile2 arg2.txt
+
+--suitesfrom   [FILEPATH TO OUTPUTXML]          
+  Optionally read suites from output.xml file. Failed suites will run
+  first and longer running ones will be executed before shorter ones.
+
+--shard [INDEX]/[TOTAL]
+  Optionally split execution into smaller pieces. This can
+  be used for distributing testing to multiple machines.
+
+--chunk
+  Optionally chunk tests to PROCESSES number of robot runs. This can save time because all the suites will share the same setups and teardowns.
+
+Example usages:
+
+     pabot test_directory
+     pabot --exclude FOO directory_to_tests
+     pabot --command java -jar robotframework.jar --end-command --include SMOKE tests
+     pabot --processes 10 tests     
+     pabot --pabotlibhost 192.168.1.123 --pabotlibport 8271 --processes 10 tests
+     pabot --pabotlib --pabotlibhost 192.168.1.111 --pabotlibport 8272 --processes 10 tests
+     pabot --artifacts png,mp4,txt --artifactsinsubfolders directory_to_tests
+</details>
+
+### Examples
+
+Multiple Test Suites in a `tests/` directory
+
+```robotframework title="tests/SuiteA.robot"
+*** Test Cases ***
+Test Case 1
+    Log    Test Case 1
+    Sleep   10s
+  
+Test Case 2
+    Log    Test Case 2
+    Sleep   10s
+
+Test Case 3
+    Log    Test Case 3
+    Sleep   10s
+```
+
+```robotframework title="tests/SuiteB.robot"
+*** Test Cases ***
+Test Case A
+    Log    Test Case A
+    Sleep   10s
+  
+Test Case B
+    Log    Test Case B
+    Sleep   10s
+
+Test Case C
+    Log    Test Case D
+    Sleep   10s
+```
+
+```bash
+ pabot tests
+```
+
+Will run both suites in parallel, but will execute test cases sequentially.
+
+```bash
+ pabot --testlevelsplit tests
+```
+
+Will run both suites in parallel and will execute test cases in parallel.
+
+If `Test Suite Setups´ and `Test Suite Teardowns´ are used, they will be executed for each instance of the suite.
+
+```robotframework title="tests/SuiteA.robot"
+*** Settings ***
+Test Suite Setup    Log    Suite A Setup
+Test Suite Teardown    Log    Suite A Teardown
+Test Setup    Log    Test Setup
+Test Teardown    Log    Test Teardown
+
+*** Test Cases ***
+Test Case 1
+    Log    Test Case 1
+    Sleep   10s
+
+Test Case 2
+    Log    Test Case 2
+    Sleep   10s
+
+Test Case 3
+    Log    Test Case 3
+    Sleep   10s
+```
+
+When executed with the `--testlevelsplit` option, the `Test Suite Setup` and `Test Suite Teardown` will also be executed once for each parallel instance of the suite.
+The `Test Setup` and `Test Teardown` will be executed for each test case.
+
+```bash
+ pabot --testlevelsplit tests
+```
