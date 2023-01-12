@@ -4,9 +4,11 @@
 
 ### DataDriven Syntax
 
-Another style to write test cases is the data-driven approach where test cases use only one higher-level keyword, often created as a user keyword, that hides the actual test workflow. These tests are very useful when there is a need to test the same scenario with different input and/or output data. It would be possible to repeat the same keyword with every test, but the test template functionality allows specifying the keyword to use only once.
-
-The test template functionality is implemented in Robot Framework using the DataDriver syntax. The DataDriver syntax is a special syntax that allows defining test templates and test data in the same file. The DataDriver syntax is enabled by default in Robot Framework, but it can be disabled by using the --no-dryrun command line option.
+Test Cases can be written in a data-driven style where test cases use only one higher-level keyword, that hides the actual test workflow. These tests are very useful when there is a need to test the **same scenario** with **different input and/or output data**.  
+The `Test Template` setting defines the `Keyword` which is executed for every test case.  
+The `Test Cases` section just contains  
+- the Test Case Name
+- the arguments for the `Keyword` defined in the `Test Template` setting 
 
 ``` robotframework
 *** Settings ***
