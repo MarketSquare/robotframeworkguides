@@ -1,0 +1,39 @@
+# BDD (Behavior Driven Development)
+
+## What is BDD?
+
+The **Given-When-Then** syntax is a commonly used structure for writing user stories and acceptance criteria in behavior-driven development (BDD). It is used to describe the desired behavior of a system in a clear, concise, and consistent manner.
+
+The structure is broken down into three parts:
+
+- **Given**: This section describes the initial state or context of the system. It sets the scene for the scenario being tested.
+- **When**: This section describes the action or event that occurs. It specifies the trigger for the scenario being tested.
+- **Then**: This section describes the expected outcome or result of the scenario. It defines the acceptance criteria for the scenario being tested.
+
+Example:
+```robotframework
+Given a user is on the login page
+When the user enters their username and password and clicks the login button
+Then the user should be directed to the home page.
+```
+
+```robotframework
+*** Test Cases ***
+Login With Admin
+    Given I am on the login page
+    When I login with username "admin" and password "admin"
+    Then I should see the welcome page
+
+Login With Invalid User
+    Given I am on the login page
+    When I login with username "invalid" and password "invalid"
+    Then I should see the error message
+    And I should be able to login again
+```
+
+
+
+<details>
+  <summary>Let me run it</summary>
+    <iframe src="https://robotframework.org/embed/?code-gh-url=https://github.com/MarketSquare/robotframeworkguides/tree/main/code-examples/core/bdd-syntax" width="100%" height="600"></iframe>
+</details>
