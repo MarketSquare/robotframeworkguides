@@ -1,0 +1,12 @@
+{
+    "name": "Collections Library in Robot Framework",
+    "description": "readme.md",
+    "requirements": [
+        "robotframework"
+    ],
+    "files": [
+        {
+            "fileName": "TestSuite.robot"
+        }
+    ]
+}
