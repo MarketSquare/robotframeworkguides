@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
-sidebar_label: About Us
-title: About Us
+sidebar_label: About RF Guides
+title: About RF Guides
 ---
 
 ## Who we are
