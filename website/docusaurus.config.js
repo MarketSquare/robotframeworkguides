@@ -43,7 +43,7 @@ const config = {
         respectPrefersColorScheme: false,
       },
       navbar: {
-        title: 'Robot Framework Guides',
+        title: 'docs.robotframework.org',
         logo: {
           alt: 'Robot Framework Logo',
           src: 'img/robot-framework.svg',
