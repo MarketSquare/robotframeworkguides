@@ -4,8 +4,8 @@
   <ShortName>ROBOT FRAMEWORK</ShortName>
   <Description>Search ROBOT FRAMEWORK</Description>
   <InputEncoding>UTF-8</InputEncoding>
-  <Image width="16" height="16" type="image/x-icon">https://guides.robotframework.org/img/rf_favicon.png</Image>
-  <Url type="text/html" method="get" template="https://guides.robotframework.org/search?q={searchTerms}"/>
-  <Url type="application/opensearchdescription+xml" rel="self" template="https://guides.robotframework.org/opensearch.xml" />
-  <moz:SearchForm>https://guides.robotframework.org/</moz:SearchForm>
+  <Image width="16" height="16" type="image/x-icon">https://docs.robotframework.org/img/rf_favicon.png</Image>
+  <Url type="text/html" method="get" template="https://docs.robotframework.org/search?q={searchTerms}"/>
+  <Url type="application/opensearchdescription+xml" rel="self" template="https://docs.robotframework.org/opensearch.xml" />
+  <moz:SearchForm>https://docs.robotframework.org/</moz:SearchForm>
 </OpenSearchDescription>
