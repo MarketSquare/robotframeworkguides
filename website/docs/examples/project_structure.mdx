@@ -10,17 +10,19 @@ title: Project Structure
 - `Readme.md` - Project description
 - `.gitignore` - Lists files and folders to be ignored by git
 
-## Test Cases
+Depending on the project, the root folder can contain additional files, e.g. `.gitlab-ci.yml` for a GitLab CI Pipeline.
 
-Test cases are located in the `tests` folder.  
-Depending on the project, the test cases can be organized in multiple `.robot` files and subfolders.
+## Test Suites
 
-- `tests/` - Test cases
-    - `search.robot` - Test case for searching
-    - `login.robot` - Test case for logging in
-    - `checkout/` - Folder containing Test cases for checkout
-        - `checkout_basic.robot` - Test cases for standard checkout
-        - `checkout_premium.robot` - Test cases for premium checkout
+**Test Suites** are located in the `tests/` folder.  
+Depending on the project, the Test Suites can be organized in multiple `.robot` files and subfolders.
+
+- `tests/` - Test Suites folder
+    - `search.robot` - Test Suite for Search functionality
+    - `login.robot` - Test Suite for Log In functionality
+    - `checkout/` - Folder containing Test Suites for Checkout
+        - `checkout_basic.robot` - Test Suites for standard Checkout
+        - `checkout_premium.robot` - Test Suites for premium Checkout
     - ...
 
 ## Resources
@@ -34,9 +36,122 @@ Also `Python` keywords in `.py` files can be stored there.
     - `utils.py` - Python helper keywords are stored here
     - ...
 
-## Reports & Logs
+## Libraries
+
+Custom Python Keyword libraries can be stored in a separate `libraries/` folder, if needed.  
+Some projects like to seperate the `libraries/` from the `resources/`.
+
+### Examples
+
+Find some example project structures below.
+
+#### Simple Project with `tests/` and `resources/` folders:
+
+A flat project structure for a simple project with a few test cases and keywords.  
+All test suites are in the `tests/` folder and all keywords, variables and python libraries are in the `resources/` folder.  
+The project root folder contains the `.gitlab-ci.yml` file for CI/CD, the `.gitignore` file for git, the `README.md` file for documentation and the `requirements.txt` file for dependencies.
 
 
+```text
+my_project
+├── tests
+│   ├── suiteA.robot
+│   ├── suiteB.robot
+│   ├── ...
+│   
+├── resources
+│   ├── common.resource
+│   ├── some_other.resource
+│   ├── custom_library.py
+│   ├── variables.py
+│   ├── ...
+│
+├── .gitlab-ci.yml
+├── .gitignore
+├── README.md
+├── requirements.txt
+```	
+
+#### Project with `tests/`, `resources/` and `data/` folders:
+
+A project structure for a more complex project with a more test cases and keywords.  
+Test Suites are organized in subfolders in the `tests/` folder.
+Keywords, variables and python libraries are organized in subfolders in the `resources/` folder.
+Test Data files - like Python or Yaml Variable files - are organized in subfolders in the `data/` folder.  
+The project root folder contains the `.gitlab-ci.yml` file for CI/CD, the `.gitignore` file for git, the `README.md` file for documentation and the `requirements.txt` file for dependencies.
 
 
+```text
+my_project
+├── tests
+│   ├── authentication
+│   │   ├── login.robot
+│   │   ├── ...
+│   │
+│   ├── master-data
+│   │   ├── customers.robot
+│   │   ├── products.robot
+│   │   ├── ...
+│   │
+│   ├── order
+│   │   ├── order_creation.robot
+│   │   ├── order_processing.robot
+│   │   ├── ...
+│   
+├── resources
+│   ├── common.resource
+│   ├── search.resource
+│   ├── master-data
+│   │   ├── customers.resource
+│   │   ├── products.resource
+│   │   ├── ...
+│   │
+│   ├── ...
+│
+├── data
+│   ├── master-data
+│   │   ├── customers.py
+│   │   ├── products.py
+│   │   ├── ...
+│   │
+│   ├── order
+│   │   ├── order_creation.yaml
+│   │   ├── order_processing.yaml
+│   │   ├── ...
+│
+├── .gitlab-ci.yml
+├── .gitignore
+├── README.md
+├── requirements.txt
+```
+
+#### Project with `tests/`, `resources/` and `libraries/` folders
+
+```text
+├── run.sh
+├── config
+│   └── setup.yaml
+├── libraries
+│   ├── __init__.py
+│   ├── mylib_a.py
+│   └── mylib_b.py
+├── resources
+│   ├── common.resource
+│   ├── variables.resource
+│   ├── suiteA
+│   │   ├── suiteA.resource
+│   │   └── variablesA.resource
+│   └── suiteB
+│       ├── suiteB.resource
+│       └── variablesB.resource
+└── tests
+    ├── suiteA
+    │   ├── __init__.robot
+    │   ├── tests1.robot
+    │   └── tests2.robot
+    └── suiteB
+        ├── __init__.robot
+        ├── tests1.robot
+        └── tests2.robot
+```
 
