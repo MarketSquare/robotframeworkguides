@@ -51,8 +51,23 @@ const config = {
         },
         items: [
           {
+            label: 'Guides',
+            to: '/docs',
+            position: 'right',
+          },
+          {
             href: 'https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html',
             label: 'User Guide',
+            position: 'right',
+          },
+          {
+            href: 'https://robotframework.org/robotframework/#standard-libraries',
+            label: 'Standard Library',
+            position: 'right',
+          },
+          {
+            href: 'https://robot-framework.readthedocs.io/en/stable/',
+            label: 'API Documentation',
             position: 'right',
           },
 
@@ -77,6 +92,18 @@ const config = {
               {
                 label: 'Guides',
                 to: '/docs',
+              },
+              {
+                href: 'https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html',
+                label: 'User Guide',
+              },
+              {
+                href: 'https://robotframework.org/robotframework/#standard-libraries',
+                label: 'Standard Library',
+              },
+              {
+                href: 'https://robot-framework.readthedocs.io/en/stable/',
+                label: 'API Documentation',
               },
             ],
           },
