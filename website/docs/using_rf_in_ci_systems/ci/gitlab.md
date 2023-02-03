@@ -1,43 +1,4 @@
----
-sidebar_position: 2
-sidebar_label: CI Systems
-title: CI Systems
----
-
-import {
-  HomepageCard as Card,
-  HomepageSection as Section,
-} from '@site/src/components/HomepageComponents';
-
- <Section title="CI Systems">
-            <Card
-              title="GitLab"
-              description="The One DevOps Platform"
-              to="/docs/using_rf_in_ci_systems/ci#gitlab"
-            />
-            <Card
-              title="Jenkins"
-              description="An open source automation server which enables developers around the world to reliably build, test, and deploy their software"
-              to="/docs/using_rf_in_ci_systems/ci#jenkins"
-            />
-            <Card
-              title="GitHub Actions"
-              description="Automate, customize, and execute your software development workflows right in your repository with GitHub Actions."
-              to="/docs/using_rf_in_ci_systems/ci#github-actions"
-            />
-            <Card
-              title="Azure DevOps"
-              description="Plan smarter, collaborate better, and ship faster with a set of modern dev services"
-              to="/docs/using_rf_in_ci_systems/ci#azure-devops"
-            />
-            <Card
-              title="TeamCity"
-              description="TeamCity is a continuous integration server that integrates with all major IDEs, version control and issue tracking systems"
-              to="/docs/using_rf_in_ci_systems/ci#teamcity"
-            />
-          </Section>
-
-## GitLab
+# GitLab
 
 GitLab is a development platform that provides a Git repository manager providing wiki, issue-tracking and continuous integration and deployment pipeline features, using an open-source license, developed by GitLab Inc.
 
@@ -45,6 +6,8 @@ To set up a CI Pipeline which will run your (test) jobs on a GitLab Runner, you 
 
 A CI Pipeline is a set of `jobs` that are executed in a specific order.  
 `Stages` are used to group `jobs` together and to define the order in which they are executed.
+
+## Example
 
 An example for a CI Pipeline using a Dockerimage which runs Robot Framework jobs:
 
@@ -72,7 +35,7 @@ run-regression-tests:
             - reports
 ```
 
-### Stages
+## Stages
 
 ``` yaml title=".gitlab-ci.yml"
 stages:
@@ -84,7 +47,7 @@ The Pipeline has two stages: `smoke` and `regression`.
 The `smoke` stage will be executed first, followed by the `regression` stage.  
 Each stage can contain multiple jobs which will be executed in parallel (within the same stage).
 
-### Jobs
+## Jobs
 
 ``` yaml title=".gitlab-ci.yml"
 run-smoke-tests:
@@ -102,7 +65,7 @@ The job `run-regression-tests` is part of the `regression` stage.
 Each job can contain multiple `scripts` which will be executed in sequence.  
 The scripts are executed in the (Docker)`image` specified in the configuration.
 
-### Image
+## Image
 
 ``` yaml title=".gitlab-ci.yml"
 image: marketsquare/robotframework-browser
@@ -111,7 +74,7 @@ image: marketsquare/robotframework-browser
 The image is used to run the jobs in the CI Pipeline. It is possible to use a different image for each job. The `image` specified at the top of the configuration is used as the default image for all jobs (unless a job-specific image is specified).  
 The default image used here is `marketsquare/robotframework-browser`.
 
-### Scripts
+## Scripts
 
 ``` yaml title=".gitlab-ci.yml"
 script:
@@ -131,7 +94,7 @@ script:
   - robot --outputdir reports tests/smoke
 ```
 
-### Artifacts
+## Artifacts
 
 ``` yaml title=".gitlab-ci.yml"
 artifacts:
@@ -148,7 +111,7 @@ That's possible, because the `--outputdir` in the `robot` command was set to `re
 robot --outputdir reports tests/smoke
 ```  
 
-### Variables
+## Variables
 
 ``` yaml title=".gitlab-ci.yml"
 variables:
@@ -168,12 +131,3 @@ Also [predefined GitLab variables](https://docs.gitlab.com/ee/ci/variables/prede
 Especially for handling secrets, it is recommended to use `CI Variables` in your project settings.  
 
 Check out the [GitLab CI Variables](https://docs.gitlab.com/ee/ci/variables/README.html) documentation for more information.  
-
-
-## Jenkins
-
-## GitHub Actions
-
-## TeamCity
-
-## Azure DevOps
