@@ -27,6 +27,10 @@ import MicroscopeIcon from '/icons/microscope.svg';
 import LoginIcon from '/icons/log-in.svg';
 import FolderTreeIcon from '/icons/folder-tree.svg';
 import ToyBrickIcon from '/icons/toy-brick.svg';
+import ListStartIcon from '/icons/list-start.svg';
+import EarIcon from '/icons/ear.svg';
+import ComponentIcon from '/icons/component.svg';
+
 
 ![Docusaurus themed image](/img/rf_guides_light.svg#gh-light-mode-only)
 ![Docusaurus themed image](/img/rf_guides_dark.svg#gh-dark-mode-only)
@@ -153,19 +157,37 @@ If you have any questions, please reach out to our awesome community on [Slack](
               title="Python Library"
               icon=<FileCodeIcon/>
               description="How to create your own library in Python"
-              to="/docs/extending_robot_framework/python_library"
+              to="/docs/extending_robot_framework/custom-libraries/python_library"
             />
             <Card
               title="Package and Release a Library"
               icon=<RocketIcon/>
               description="How to package and release your own custom library"
-              to="/docs/extending_robot_framework/releasing_your_own_libraries"
+              to="/docs/extending_robot_framework/custom-libraries/releasing_your_own_libraries"
             />
             <Card
               title="Parse Test Results"
               icon=<MicroscopeIcon/>
               description="How to parse test results with the Result Visitor API"
               to="/docs/parsing_results"
+            />
+             <Card
+              title="Listeners"
+              icon=<EarIcon/>
+              description="Hook into the Robot Framework execution process"
+              to="/docs/extending_robot_framework/listeners_prerun_api/listeners"
+            />
+            <Card
+              title="PrerunModifiers"
+              icon=<ListStartIcon/>
+              description="Interact with and modify the RF Model before the execution process"
+              to="/docs/extending_robot_framework/listeners_prerun_api/prerunmodifier"
+            />
+            <Card
+              title="API"
+              icon=<ComponentIcon/>
+              description="Interact with the RF API to create new solutions and integrations"
+              to="/docs/extending_robot_framework/listeners_prerun_api/rf-api"
             />
           </Section>
  
