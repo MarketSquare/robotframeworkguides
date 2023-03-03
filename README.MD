@@ -25,6 +25,7 @@ This documentation project is powered by [Docusaurus](https://docusaurus.io/) an
 The basic steps to contribute to the project are:
 - Fork the project on GitHub
 - Clone the repository locally
+- Open the repository folder and open the folder `website/`
 - Install the project dependencies via `npm install`
 - Update existing documentation files with the new content or add new files
 - Run `npm start` to start [Development Server](https://docusaurus.io/docs/installation#running-the-development-server) to see changes in real time on [localhost](http://localhost:3000)
