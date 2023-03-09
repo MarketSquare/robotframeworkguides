@@ -1,15 +1,52 @@
-# Jenkins
+# Jenkins       
 
-## Installing Jenkins
+Jenkins is an open source automation server, which allows you to integrate into
+multiple different tools and platforms with various plugins.
 
-Do you have experience with installing **Jenkins** and want to share your expertise?  
-Here is how to [contribute](/docs/about/contribute).  
-You can also [raise an issue](https://github.com/MarketSquare/robotframeworkguides/issues/new) and describe the content you would like to see here.
+In order to run **jobs**, you need a **Jenkinsfile** written in Groovy. Each Jenkinsfile has some
+**stages**, which contain one or more **steps**. Each job is run one some **node**
+(or **agent**), which contains all the necessary software to run your job.
 
-## Jenkins configuration
+If you want to run Robot Framework in your Jenkins job, you need to have `robotframework` installed
+on the executing node. If you then want to publish your results, so that they are viewable
+in Jenkins, use the [Robot Framework plugin](https://plugins.jenkins.io/robot/). To get the most
+out of the plugin, please refer to the official plugin documentation.
 
-Using a Jenkins configuration file would be preferred as that way you can put the configuration to version control.
-Basic structure could be something like:
+By default, Jenkins won't allow you to open log files in the Jenkins UI. To allow this, you need
+to [change your CSP settings](https://plugins.jenkins.io/robot/#plugin-content-log-file-not-showing-properly).
+However, please note that **changing your CSP settings will potentially expose your Jenkins instance
+for security vulnerabilities.**
+
+## Examples
+
+### Jenkinsfile with a stage **Run Robot**
+
+```groovy
+pipeline {
+    agent { label "robot" } // run on an agent, which has Robot Framework installed
+
+    stages {
+        stage("Run Robot") {
+            steps {
+                // --nostatusrc prevents your job from failing automatically if any
+                // tests fail. This is then later handled with the RF plugin with
+                // pass thresholds
+                sh script: "robot --nostatusrc my_tests.robot", returnStatus: true
+            }
+        }
+    }
+
+    post {
+        always {
+            // `onlyCritical: false` is for RF 3.x compatibility. This will be deprecated
+            // and removed in the future.
+            robot outputPath: '.', passThreshold: 80.0, unstableThreshold: 70.0, onlyCritical: false
+        }
+    }
+}
+```
+
+###  Jenkinsfile with parameters and multiple stages 
 
 ```groovy
 pipeline {
@@ -78,10 +115,7 @@ pipeline {
                     ])
                 }
             }
-        }
-    }
-}
-```
+```   
 
 ## Special notes about running tests with Browser library behind firewall
 
@@ -102,5 +136,3 @@ These are steps you need to have in your Jenkins configuration. I recommend putt
 - ... and use instead the ones installed by root when the agent was initialised: ```export PLAYWRIGHT_BROWSERS_PATH=/home/jenkins/.cache/ms-playwright````
 
 Now you should be ready to execute tests.
-
-
