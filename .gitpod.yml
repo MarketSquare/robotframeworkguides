@@ -4,7 +4,7 @@ tasks:
       npm install
     command: |
       cd $GITPOD_REPO_ROOTS/website
-      npm run start
+      npm start
   - command: gp ports await 3000 && gp preview $(gp url 3000)/
 ports:
   - port: 3000
