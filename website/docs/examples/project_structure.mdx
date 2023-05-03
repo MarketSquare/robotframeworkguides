@@ -41,11 +41,11 @@ Also `Python` keywords in `.py` files can be stored there.
 Custom Python Keyword libraries can be stored in a separate `libraries/` folder, if needed.  
 Some projects like to seperate the `libraries/` from the `resources/`.
 
-### Examples
+## Examples
 
 Find some example project structures below.
 
-#### Simple Project with `tests/` and `resources/` folders:
+### Simple Project with `tests/` and `resources/` folders:
 
 A flat project structure for a simple project with a few test cases and keywords.  
 All test suites are in the `tests/` folder and all keywords, variables and python libraries are in the `resources/` folder.  
@@ -72,14 +72,30 @@ my_project
 ├── requirements.txt
 ```	
 
-#### Project with `tests/`, `resources/` and `data/` folders:
+The tests/suiteA.robot file looks like this:
+
+```robotframework
+*** Settings ***
+Resource  resources/common.resource
+Resource  resources/some_other.resource
+Library   resources/custom_library.py
+Variables resources/variables.py
+...
+```
+
+Tests can be run with the following command (assuming you are in the project root folder `my_project`):  
+
+```shell
+$ robot --pythonpath . tests
+```
+
+### Project with `tests/`, `resources/` and `data/` folders:
 
 A project structure for a more complex project with a more test cases and keywords.  
 Test Suites are organized in subfolders in the `tests/` folder.
 Keywords, variables and python libraries are organized in subfolders in the `resources/` folder.
 Test Data files - like Python or Yaml Variable files - are organized in subfolders in the `data/` folder.  
 The project root folder contains the `.gitlab-ci.yml` file for CI/CD, the `.gitignore` file for git, the `README.md` file for documentation and the `requirements.txt` file for dependencies.
-
 
 ```text
 my_project
@@ -125,33 +141,317 @@ my_project
 ├── requirements.txt
 ```
 
-#### Project with `tests/`, `resources/` and `libraries/` folders
+The tests/authentication/login.robot file looks like this:
 
-```text
-├── run.sh
-├── config
-│   └── setup.yaml
-├── libraries
-│   ├── __init__.py
-│   ├── mylib_a.py
-│   └── mylib_b.py
-├── resources
-│   ├── common.resource
-│   ├── variables.resource
-│   ├── suiteA
-│   │   ├── suiteA.resource
-│   │   └── variablesA.resource
-│   └── suiteB
-│       ├── suiteB.resource
-│       └── variablesB.resource
-└── tests
-    ├── suiteA
-    │   ├── __init__.robot
-    │   ├── tests1.robot
-    │   └── tests2.robot
-    └── suiteB
-        ├── __init__.robot
-        ├── tests1.robot
-        └── tests2.robot
+```robotframework
+*** Settings ***
+Resource  resources/common.resource
+Resource  resources/search.resource
+Resource  resources/master-data/customers.resource
+Variables data/master-data/customers.py
+...
 ```
 
+Tests can be run with the following command (assuming you are in the project root folder `my_project`):  
+
+```shell
+$ robot --pythonpath . tests
+```
+
+## Telling Robot Framework where to search libraries, resource and variable files
+
+Robot Framework searches for libraries, resource and variable files in  
+
+- the same directory as the test suite file (or resource file) which imports the library, resource or variable file
+- the directories listed in `PYTHONPATH` environment variable
+- the directories passed in `--pythonpath` command line argument
+
+The examples below will focus on resource files, but the same applies to libraries and variables.
+
+:::note  
+
+It is always possible to use absolute paths in the `Resource`,`Library` and `Variables` statements.  
+Especially with the `${CURDIR}` variable, it is easy to construct absolute paths relative to the current file.  
+However, this is not recommended, as it makes the tests less portable.
+
+:::
+
+You can find more information about the search order in the [Robot Framework User Guide](https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#configuring-where-to-search-libraries-and-other-extensions).
+
+### Good Practice: Use `--pythonpath` command line argument and `resources/` subfolder
+
+Before we look at the other options, let's look at the recommended approach.
+Organize your files in subfolders (e.g. `resources/`, `libraries/`, `data/`) and use the `--pythonpath` command line argument to add the project root folder to the search path.  
+
+In that case, resources can be imported with a relative path from the `resources/` folder (e.g. `Resource  resources/common.resource`) and libraries can be imported with a relative path from the `libraries/` folder (e.g. `Library  libraries/custom_library.py`).
+
+Let's assume we have the following project structure:
+
+```text
+my_project
+├── tests
+│   └── suiteA.robot
+└── resources
+    ├── general.resource
+    └── auth/
+        ├── login.resource
+        └── totp.py
+```
+
+The tests/suiteA.robot file looks like this:
+
+```robotframework
+*** Settings ***
+Resource  resources/general.resource
+Resource  resources/auth/login.resource
+Library   resources/auth/totp.py
+...
+```
+
+#### Run from shell
+
+You can run the tests with the following command (assuming you are in the project root folder `my_project`):  
+
+```shell
+$ robot --pythonpath . tests/suiteA.robot
+```
+
+:::tip
+
+The `.` in the `--pythonpath` argument means "the current directory".  
+In this case, the current directory is the project root folder `my_project`.
+
+:::
+
+#### Run from IDE
+
+To run the tests directly from your IDE, you also need to configure the `--pythonpath` argument in your IDE.  
+In `VS Code` with `RobotCode` extension, you can add the following line to your `settings.json` file.  
+You can also find the setting under `File > Preferences > Settings` by searching for `robotcode.robot.pythonPath`.  
+ 
+```json
+"robotcode.robot.pythonPath": [
+    "./"
+    ],
+```
+
+:::tip
+
+You can also add the `resources/` , `lib/` or `keyword/` folders  to the `pythonPath` setting:
+
+```json
+"robotcode.robot.pythonPath": [
+    "./",
+    "./lib",
+    "./resources",
+    "./keywords",
+    ],
+```
+
+That way, you can import libraries, resources and variables from the `resources/`, `lib/` and `keyword/` folders without the `resources/`, `lib/` or `keyword/` prefix.
+
+```robotframework
+*** Settings ***
+Resource  general.resource
+Resource  auth/login.resource
+Library   auth/totp.py
+...
+```
+
+:::  
+
+#### Run from CI/CD
+
+To run the tests from CI/CD, you also need to configure the `--pythonpath` argument in your CI/CD pipeline.
+    
+    ```yaml
+    robot:
+      stage: test
+      image: python:3.8
+      script:
+        - pip install -r requirements.txt
+        - robot --pythonpath . tests/
+    ```
+
+#### Using CI_PROJECT_DIR variable
+
+If you are using GitLab CI/CD, you can use the `CI_PROJECT_DIR` variable to construct the `--pythonpath` argument.  
+The `CI_PROJECT_DIR` variable contains the absolute path to the project root folder.  
+    
+    ```yaml
+    robot:
+      stage: test
+      image: python:3.8
+      script:
+        - pip install -r requirements.txt
+        - robot --pythonpath $CI_PROJECT_DIR tests/
+    ```  
+
+----
+
+### Resource file in the same directory as the Test Suite file
+
+Let's assume we have the following project structure:
+
+```text
+my_project
+└── tests
+    ├── suiteA.robot
+    └── general.resource
+```	
+
+The tests/suiteA.robot file looks like this:
+
+```robotframework
+*** Settings ***
+Resource  general.resource
+...
+```
+
+The tests/suiteA.robot file can import the general.resource file without any additional configuration.
+
+```shell
+$ robot tests/suiteA.robot
+```
+
+----
+
+### Using absolute paths with `${CURDIR}` and `resources/` subfolder
+
+Let's assume we have the following project structure:
+
+```text
+my_project
+├── tests
+│   └── suiteA.robot
+└── resources
+    └── general.resource
+```
+
+The tests/suiteA.robot file looks like this:
+
+```robotframework
+*** Settings ***
+Resource  ${CURDIR}/../resources/general.resource
+...
+```
+
+The `${CURDIR}` variable contains the absolute path to the directory of the current file.  
+The `..` in the path means "one directory up".  
+This way, the tests/suiteA.robot file can import the general.resource file without any additional configuration.
+
+```shell
+$ robot tests/suiteA.robot
+```
+
+#### More subfolders means more `..` in the path
+
+Let's assume we have the following project structure:
+
+```text
+my_project
+├── tests
+│   ├── suiteA.robot
+│   └── topicB
+│       └── suiteB.robot
+└── resources
+    └── auth
+        └── login.resource
+```
+
+The tests/suiteA.robot file looks like this:
+
+```robotframework
+*** Settings ***
+Resource  ${CURDIR}/../resources/auth/login.resource
+...
+```
+
+The tests/topicB/suiteB.robot file looks like this:
+
+```robotframework
+*** Settings ***
+Resource  ${CURDIR}/../../resources/auth/login.resource
+...
+```
+
+You can see that the number of `..` in the path depends on the number of subfolders between the test suite file and the resource file.  
+Because of that, it is recommended to use the `--pythonpath` command line argument instead of absolute paths.
+
+----
+
+### Using `--pythonpath` command line argument and `resources/` subfolder
+
+Let's assume we have the following project structure:
+
+```text
+my_project
+├── tests
+│   └── suiteA.robot
+└── resources
+    └── general.resource
+```	
+
+The tests/suiteA.robot file looks like this:
+
+```robotframework
+*** Settings ***
+Resource  resources/general.resource
+...
+```
+
+To run the tests, we need to tell Robot Framework where to search for the libraries, resource and variable files.
+If we run it without any arguments, we will get an error:
+
+```shell
+$ robot tests/suiteA.robot
+[Error] Error in file 'tests/suiteA.robot': ...
+Resource file 'resources/general.resource' does not exist.
+...
+```
+
+We can add the project root folder `my_project/` folder to the `--pythonpath` command line argument:
+
+```shell
+$ robot --pythonpath . tests/suiteA.robot
+```
+
+Now the tests run successfully.
+
+:::tip
+
+You can also add the `resources/` , `lib/` or `keyword/` folders  to the `--pythonpath` setting:
+
+```shell
+$ robot --pythonpath .:./lib:./resources:./keywords tests/suiteA.robot
+```
+
+That way, you can import libraries, resources and variables from the `resources/`, `lib/` and `keyword/` folders without the `resources/`, `lib/` or `keyword/` prefix.
+
+```robotframework
+*** Settings ***
+Resource  general.resource
+Resource  auth/login.resource
+Library   auth/totp.py
+...
+```
+
+:::
+
+
+### Using `PYTHONPATH` environment variable
+
+Alternatively, you can add the path to your project root folder to the `PYTHONPATH` environment variable.  
+Then you can run the tests without the `--pythonpath` command line argument (assuming you are in the project root folder `my_project`):  
+
+Bash
+```shell
+$ export PYTHONPATH=$PYTHONPATH:.
+$ robot tests/suiteA.robot
+```
+
+PowerShell
+```powershell
+> $env:PYTHONPATH += ";."
+> robot tests/suiteA.robot
+```
