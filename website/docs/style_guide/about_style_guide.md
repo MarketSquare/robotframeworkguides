@@ -4,7 +4,7 @@
 
 This style guide is a community driven set of sensible rules to write your Robot Framework code.
 
-As a starting point the existing standards from [Robot Framework](https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#getting-started) user guide, [Robocop](https://github.com/MarketSquare/robotframework-robocop) and [Robotidy](https://robotidy.readthedocs.io/en/stable/).
+As a starting point use the existing standards from [Robot Framework](https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#getting-started) user guide, [Robocop](https://github.com/MarketSquare/robotframework-robocop) and [Robotidy](https://robotidy.readthedocs.io/en/stable/).
 
 ## Robocon 2022 Presentation
 
@@ -46,20 +46,20 @@ Here are some good basic guidelines for formatting your Robot Framework code. As
 *** Keywords ***
 ```
 
-- Keywords within resource files should be alphabetized.
-- The recommended minimum line length is 120.
+- Keywords within resource files should be alphabetized or organized by functionality or purpose. The important part is to organize keywords in a thoughtful manner.
+- The recommended minimum maximum line length is 120.
 - It is reasonable to split a variable definition across multiple lines when it exceeds the recommended line length, or for the better readability of the code. See [Dividing data to several rows](https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#test-data-syntax)
 - Variable Syntax from the user guide [variable-priorities-and-scopes](https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#variable-priorities-and-scopes)
 
-  - It is recommended to use capital letters with all global variables.
-  - Variable Syntax caps for global, suite, test; lower for everything args and local
-  - Since these variables can be considered global in the test suite where they are used, it is recommended to use capital letters also with them.
-  - Also variables in the test case scope are to some extent global. It is thus generally recommended to use capital letters with them too.
-  - It is recommended to use lower-case letters with local variables.
+  - Global variables use upper-case letters.
+  - Suite variables use upper-case letters.
+  - Test variables use upper-case letters.
+  - Local variables use lower-case letters.
+  - Keyword arguments use lower-case letters.
 - Keyword syntax should be capital cased. (i.e. `This Keyword Is Capital Cased`)
 
 ---
 
-Version 0.1a
+Version 0.2a
 
 ---
