@@ -54,7 +54,7 @@ Here are some good basic guidelines for formatting your Robot Framework code. As
   - It is recommended to use capital letters with all global variables.
   - Variable Syntax caps for global, suite, test; lower for everything args and local
   - Since these variables can be considered global in the test suite where they are used, it is recommended to use capital letters also with them.
-  - Also variables in the test case scope are to some extend global. It is thus generally recommended to use capital letters with them too.
+  - Also variables in the test case scope are to some extent global. It is thus generally recommended to use capital letters with them too.
   - It is recommended to use lower-case letters with local variables.
 - Keyword syntax should be capital cased. (i.e. `This Keyword Is Capital Cased`)
 
