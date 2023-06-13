@@ -16,7 +16,7 @@ Guido Demmenie, Mannana Koberidze, Kelby Stine
 
 ### Special Thanks To
 
-Václav Fuksa, Many Kasiriha, Bartlomiej Hirz, Mateusz Nojek, René Rohner, Miikka Solmela
+Václav Fuksa, Many Kasiriha, Bartlomiej Hirsz, Mateusz Nojek, René Rohner, Miikka Solmela
 
 ### We are always looking for contributors
 
