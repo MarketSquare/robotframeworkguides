@@ -27,7 +27,7 @@ Václav Fuksa, Many Kasiriha, Bartlomiej Hirsz, Mateusz Nojek, René Rohner, Mii
 
 ## Basic Rules and Guidelines
 
-Here are some good basic guidelines for formatting your Robot Framework codes. As these are guidelines, use your best judgment in cases not covered by these recommendations.
+Here are some good basic guidelines for formatting your Robot Framework code. As these are guidelines, use your best judgment in cases not covered by these recommendations.
 
 - Separate pieces of the data, such as keywords and their arguments, with four (4) spaces.
 
