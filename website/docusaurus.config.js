@@ -16,6 +16,7 @@ const config = {
   organizationName: 'marketsquare', // Usually your GitHub org/user name.
   projectName: 'robotframeworkguides', // Usually your repo name.
   trailingSlash: false,
+  scripts: [{src: 'https://plausible.io/js/script.js', defer: true, 'data-domain': 'docs.robotframework.org'}],
   presets: [
     [
       'classic',
