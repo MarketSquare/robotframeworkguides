@@ -1,4 +1,7 @@
-# Robot Framework Style Guide
+---
+sidebar_label: Style Guide
+title: Introduction And Basic Guide
+---
 
 ## Purpose
 
@@ -8,7 +11,14 @@ As a starting point use the existing standards from [Robot Framework](https://ro
 
 ## Robocon 2022 Presentation
 
-[Robot Framework is not ...](https://youtu.be/Mpt_4MItha0)
+<iframe width="560"
+        height="315"
+        src="https://www.youtube.com/embed/Mpt_4MItha0"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+</iframe>
 
 ## Contributors
 
@@ -35,6 +45,7 @@ Here are some good basic guidelines for formatting your Robot Framework code. As
 
 ```robot
 *** Comments ***
+Optionally the comments section can be placed at the bottom of the file.
 
 *** Settings ***
 
@@ -60,6 +71,6 @@ Here are some good basic guidelines for formatting your Robot Framework code. As
 
 ---
 
-Version 0.2a
+Version 0.3a
 
 ---
