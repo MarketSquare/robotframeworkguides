@@ -1,6 +1,6 @@
 ---
 sidebar_label: Style Guide
-title: Robot Framework Style Guide
+title: Introduction And Basic Guide
 ---
 
 ## Purpose
@@ -45,6 +45,7 @@ Here are some good basic guidelines for formatting your Robot Framework code. As
 
 ```robot
 *** Comments ***
+Optionally the comments section can be placed at the bottom of the file.
 
 *** Settings ***
 
