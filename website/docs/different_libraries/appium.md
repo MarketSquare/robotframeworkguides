@@ -27,7 +27,7 @@ Install with pip:
 
 ## Device Setup
 
-After installing the library, you still need to setup an simulator/emulator or real device to use in tests. iOS and Android have separate paths to follow, and those steps better explained in [Appium Driver Setup Guide](http://appium.io/docs/en/about-appium/getting-started/?lang=en). Please follow the Driver-Specific Setup according to platform.
+After installing the library, you still need to setup an simulator/emulator or real device to use in tests. iOS and Android have separate paths to follow, and those steps better explained in [Appium Driver Setup Guide](https://appium.io/docs/en/2.1/quickstart/uiauto2-driver/). Please follow the Driver-Specific Setup according to platform.
 
 ## Example
 
