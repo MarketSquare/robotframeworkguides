@@ -2,6 +2,11 @@
 sidebar_label: Re-Execute failed tests
 title: Re-Execute failed tests
 ---
+
+[HOW TO! Rerun failed testcases in Robot Framework](https://youtu.be/537Os9GVXLk?si=nskKyTmLr0OEfXjJ)  
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/537Os9GVXLk?si=nskKyTmLr0OEfXjJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 ## Re-Execute Failed Tests and merge results
 
 It is possible to run the same test suite(s) multiple times - but only re-run the failed tests. Afterwards the results can be merged into a single results file using `rebot`. 
