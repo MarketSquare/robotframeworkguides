@@ -3,15 +3,8 @@
     "description": "readme.md",
     "requirements": [
         "robotframework",
-        "robotframework-soaplibrary",
-        "robotframework-stacktrace"
+        "robotframework-soaplibrary"
     ],
-    "robotArgs": {
-        "loglevel": "TRACE",
-        "listener": [
-            "RobotStackTracer"
-        ]
-    },
     "files": [
         {
             "fileName": "soap.robot"
