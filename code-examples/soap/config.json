@@ -1,0 +1,29 @@
+{
+    "name": "SoapLibrary",
+    "description": "readme.md",
+    "requirements": [
+        "robotframework",
+        "robotframework-soaplibrary",
+        "robotframework-stacktrace"
+    ],
+    "robotArgs": {
+        "loglevel": "TRACE",
+        "listener": [
+            "RobotStackTracer"
+        ]
+    },
+    "files": [
+        {
+            "fileName": "soap.robot"
+        },
+        {
+            "fileName": "xml.robot"
+        },
+        {
+            "fileName": "multiply.xml"
+        },
+        {
+            "fileName": "multiply_reference_response.xml"
+        }
+    ]
+}
