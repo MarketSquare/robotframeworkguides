@@ -1,0 +1,12 @@
+{
+    "name": "XML Library",
+    "description": "readme.md",
+    "files": [
+        {
+            "fileName": "xml.robot"
+        },
+        {
+            "fileName": "multiply.xml"
+        }
+    ]
+}
