@@ -2,7 +2,7 @@
     "name": "SoapLibrary",
     "description": "readme.md",
     "requirements": [
-        "robotframework"
+        "robotframework-soaplibrary"
     ],
     "files": [
         {
