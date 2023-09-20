@@ -4,6 +4,9 @@
     "files": [
         {
             "fileName": "suite.robot"
+        },
+        {
+            "fileName": "multiply.xml"
         }
     ]
 }
