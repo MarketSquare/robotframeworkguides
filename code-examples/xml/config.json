@@ -1,9 +1,9 @@
 {
-    "name": "XML Library",
+    "name": "XML Example",
     "description": "readme.md",
     "files": [
         {
-            "fileName": "suite.robot"
+            "fileName": "XML_Test_Suite.robot"
         },
         {
             "fileName": "multiply.xml"
