@@ -3,7 +3,7 @@
     "description": "readme.md",
     "files": [
         {
-            "fileName": "xml.robot"
+            "fileName": "suite.robot"
         },
         {
             "fileName": "multiply.xml"
