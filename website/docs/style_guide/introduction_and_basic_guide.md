@@ -1,7 +1,4 @@
----
-sidebar_label: Style Guide
-title: Introduction And Basic Guide
----
+# Introduction And Basic Guide
 
 ## Purpose
 
