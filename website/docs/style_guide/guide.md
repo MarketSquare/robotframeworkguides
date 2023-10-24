@@ -35,7 +35,7 @@ User Guide Reference: <https://robotframework.org/robotframework/latest/RobotFra
 
 ### Settings Section Order
 
-User Guide Reference: <https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#setting-section-1>
+User Guide Reference [Settings Section](https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#setting-section-1)
 
 ```robot
 *** Settings ***
@@ -76,7 +76,7 @@ ${COMPOSITE_VARIABLES}  ${VARIABLE} with other variables.
 
 ### Test Case / Task Section Order
 
-User Guide Reference: <https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#test-case-section>
+User Guide Reference [Test Case Section](https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#test-case-section)
 
 ```robot
 Test Case
@@ -95,7 +95,7 @@ Test Case
 
 ### Keyword Section Order
 
-User Guide Reference: <https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#keyword-section-1>
+User Guide Reference [Keyword Section](https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#keyword-section-1)
 
 ```robot
 Keyword
@@ -131,10 +131,14 @@ In order to make keyword search within a resource file easier alphabetize your k
 
 These are the recommended vertical space guidelines for `.robot` and `.resource` files.
 
+:::note
+
 - The guidelines of larger sections will supercede the guidelines of the subsections.
 - Vertical White Space
 : Any line that contains no characters.
 - Commented lines are not considered white space.
+
+:::
 
 ---
 
@@ -199,7 +203,7 @@ These are the recommended vertical space guidelines for `.robot` and `.resource`
 
     Suite Setup  
     Suite Teardown  
-    Test/Task Setup  
+    Test Setup  
     Test/Task Teardown  
     Test/Task Template  
     Test/Task Timeout  
