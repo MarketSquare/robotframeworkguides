@@ -40,35 +40,32 @@ Václav Fuksa, Many Kasiriha, Bartlomiej Hirsz, Mateusz Nojek, René Rohner, Mii
 
 Here are some good basic guidelines for formatting your Robot Framework code. As these are guidelines, use your best judgment in cases not covered by these recommendations.
 
-- Separate pieces of the data, such as keywords and their arguments, with four (4) spaces.
-
-- Robot and Resource file section order:
+- Separate pieces of the data, such as keywords and their arguments, with **four (4) spaces**.
+- `.robot` and `.resource` file section order:
 
 ```robot
-*** Comments ***
-Optionally the comments section can be placed at the bottom of the file.
+*** Comments ***    # Optionally the comments section can be placed at the bottom of the file.
 
 *** Settings ***
 
 *** Variables ***
 
-*** Test Cases / Tasks ***
-(not available in resource files)
+*** Test Cases ***
+*** Tasks ***
 
 *** Keywords ***
 ```
 
-- Keywords within resource files should be alphabetized or organized by functionality or purpose. The important part is to organize keywords in a thoughtful manner.
+- Keywords within resource files should be alphabetized *or* organized by functionality or purpose. The important part is to organize keywords in a thoughtful manner.
 - The recommended minimum maximum line length is 120.
 - It is reasonable to split a variable definition across multiple lines when it exceeds the recommended line length, or for the better readability of the code. See [Dividing data to several rows](https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#test-data-syntax)
 - Variable Syntax from the user guide [variable-priorities-and-scopes](https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#variable-priorities-and-scopes)
-
-  - Global variables use upper-case letters.
-  - Suite variables use upper-case letters.
-  - Test variables use upper-case letters.
-  - Local variables use lower-case letters.
-  - Keyword arguments use lower-case letters.
-- Keyword syntax should be capital cased. (i.e. `This Keyword Is Capital Cased`)
+  - **Global** variables use **upper-case** letters.
+  - **Suite** variables use **upper-case** letters.
+  - **Test** variables use **upper-case** letters.
+  - **Local** variables use **lower-case** letters.
+  - **Keyword arguments** use **lower-case** letters.
+- **Keywords** should be **capital cased**. (i.e. `This Keyword Is Capital Cased`)
 
 ---
 
