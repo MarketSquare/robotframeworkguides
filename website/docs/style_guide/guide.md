@@ -6,6 +6,8 @@ Recommended approaches to ordering `.robot` and `.resource` files.
 
 Vertical order refers to the recommended order of settings, sections, variables, keywords.
 
+---
+
 ### Section Order
 
 User Guide Reference: <https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#test-data-sections>
@@ -20,7 +22,8 @@ User Guide Reference: <https://robotframework.org/robotframework/latest/RobotFra
 *** Variables ***
 
 
-*** Test Cases / Tasks ***
+*** Test Cases *** 
+*** Tasks ***
 
 
 *** Keywords ***
@@ -55,6 +58,8 @@ Test/Task Template
 Test/Task Tags
 ```
 
+---
+
 ### Variables Section Order
 
 Simple variables (scalar, list, dictionary) variables should be listed first.
@@ -66,6 +71,8 @@ ${VARIABLE}  This is a Variable
 ${COMPOSITE_VARIABLES}  ${VARIABLE} with other variables.
 
 ```
+
+---
 
 ### Test Case / Task Section Order
 
@@ -84,6 +91,8 @@ Test Case
     [Teardown]
 ```
 
+---
+
 ### Keyword Section Order
 
 User Guide Reference: <https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#keyword-section-1>
@@ -98,8 +107,6 @@ Keyword
     Keyword Calls
     [Teardown]
 ```
-
----
 
 #### Keyword Order - Best Practices
 
@@ -131,21 +138,19 @@ These are the recommended vertical space guidelines for `.robot` and `.resource`
 
 ---
 
-### Spacing after the Section Header line
+### Sections
 
-There should be no space immediately after each section header line.
+####  Spacing after the Section Header line
 
----
+> There should be no space immediately after each section header line.
 
-### Spacing After Sections
+####  Spacing After Sections
 
-There should be 2 lines of white space after the last line of each section, except the last section of the file.
+> There should be 2 lines of white space after the last line of each section, except the last section of the file.
 
-The last section of a file should have 1 line of white space.
+> The last section of a file should have 1 line of white space.
 
----
-
-#### Example of Section Header and Section Spacing
+#####  Example of Section Header and Section Spacing
 
 ```robot
     *** Comments ***
@@ -175,53 +180,13 @@ The last section of a file should have 1 line of white space.
 
 ---
 
-### Spacing After Keywords
+### Settings
 
-There should be 1 line of white space after the last line in a keyword code block.
+####  Spacing Between Settings Within The Settings Section
 
----
+> It is recommended to allow 1 line of white space between common lines of settings.
 
-### Spacing Between Keyword Calls
-
-In most cases there should be no white space between keyword calls.
-
----
-
-### Spacing Between Code Blocks Within Keyword Calls
-
-Ocassionally keywords can be grouped in subsections of logical code blocks. In these instances it is acceptable to have 1 space between these code blocks, but no more than 1 space.
-
----
-
-### Spacing After Test Cases or Tasks
-
-There should be 1 line of white space after each Test Case or Task.
-
----
-
-### Spacing Between Code Blocks Within Test Cases or Tasks
-
-Ocassionally Test Cases or Tasks can be grouped in subsections of logical code blocks. In these instances it is acceptable to have 1 space between these code blocks.
-
----
-
-### Spacing After Templated Test Cases
-
-There should be 1 line of white space after each Templated Test Case.
-
----
-
-### Spacing Between Templated Test Case Data
-
-No lines of white space should exist between lines of test data in Templated Tests.
-
-### Spacing Between Settings Within The Settings Section
-
-It is recommended to allow 1 line of white space between common lines of settings.
-
----
-
-#### Example of Settings Section Vertical Spacing
+#####  Example of Settings Section Vertical Spacing
 
 ```robot
     *** Settings ***
@@ -243,27 +208,59 @@ It is recommended to allow 1 line of white space between common lines of setting
     Test Tags
 ```  
 
----
+####  Spacing Between Settings Within A Test Case or Task or Keyword
 
-### Spacing Between Settings Within A Test Case or Task or Keyword
-
-No lines of white space should exist between the settings of a Test Case or Task or Keyword.
+> No lines of white space should exist between the settings of a Test Case or Task or Keyword.
 
 ---
 
-### Spacing Of Line Continuations
+### Variables
 
-No lines of white space should exist between lines of code using line continuation (...) syntax.
-
----
-
-### Spacing Between Variables In The Variables Section
+####  Spacing Between Variables In The Variables Section
 
 There should be no lines of white space between variables within the Variables section.
 
 ---
 
-### Examples
+### Test Cases or Tasks
+
+####  Spacing After Test Cases or Tasks
+
+> There should be 1 line of white space after each Test Case or Task.
+
+####  Spacing Between Code Blocks Within Test Cases or Tasks
+
+> Ocassionally Test Cases or Tasks can be grouped in subsections of logical code blocks. In these instances it is acceptable to have 1 space between these code blocks.
+
+####  Spacing After Templated Test Cases
+
+> There should be 1 line of white space after each Templated Test Case.
+
+####  Spacing Between Templated Test Case Data
+
+> No lines of white space should exist between lines of test data in Templated Tests.
+
+---
+
+### Keywords
+
+####  Spacing After Keywords
+
+> There should be 1 line of white space after the last line in a keyword code block.
+
+####  Spacing Between Keyword Calls
+
+> In most cases there should be no white space between keyword calls.
+
+####  Spacing Between Code Blocks Within Keyword Calls
+
+> Ocassionally keywords can be grouped in subsections of logical code blocks. In these instances it is acceptable to have 1 space between these code blocks, but no more than 1 space.
+
+####  Spacing Of Line Continuations
+
+> No lines of white space should exist between lines of code using line continuation (...) syntax.
+
+####  Examples
 
 Key to examples:
 
@@ -272,14 +269,12 @@ Key to examples:
 ③ No Space in the settings section of Tests/Tasks or Keywords  
 ④ No space after settings section of Tests/Tasks or Keywords  
 ⑤ No spaces between template Test/Task data lines  
-⑥ One Space Between Keywords
+⑥ One Space Between Keywords  
 ⑦ No space between continuation lines  
 ⑧ One Space for separating code blocks  
 ⑨ One Space at the very end of the file
 
----
-
-#### Example Robot File Vertical White Spacing
+#####  Example Robot File Vertical White Spacing
 
 ```robot
 *** Comments ***
@@ -359,9 +354,7 @@ Test Teardown Keywords
 ⑨
 ```
 
----
-
-#### Example Resource File Vertical Spacing
+#####  Example Resource File Vertical Spacing
 
 ```robot
 *** Settings ***
