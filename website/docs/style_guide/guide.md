@@ -12,7 +12,7 @@ Vertical order refers to the recommended order of settings, sections, variables,
 
 ### Section Order
 
-User Guide Reference: <https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#test-data-sections>
+User Guide Reference: [Test Data Section](https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#test-data-sections)
 
 ```robot
 *** Comments ***
