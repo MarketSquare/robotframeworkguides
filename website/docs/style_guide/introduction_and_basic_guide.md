@@ -31,8 +31,7 @@ Václav Fuksa, Many Kasiriha, Bartlomiej Hirsz, Mateusz Nojek, René Rohner, Mii
 
 ### We are always looking for contributors
 
-
-- If you have feedback please: 
+- If you have feedback please:
   - Reach out to any one of us on the RobotFramework Slack channel: `#style-guide`
   - Create an issue on [robotframework-style-guide](https://github.com/MarketSquare/robotframework-style-guide)
 - We meet up once every two weeks to talk about style guide topics
