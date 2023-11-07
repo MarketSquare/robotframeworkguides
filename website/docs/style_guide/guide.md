@@ -829,21 +829,21 @@ List variable in `Variables` section on a single line:
 
 ```robot
 *** Variables ***
-@{LONG_LIST}       apple    banana    peach    grape    avocado    kiwi    some very long name of the fruit which exceeds the recommended line length
+@{LONG LIST}       apple    banana    peach    grape    avocado    kiwi    some very long name of the fruit which exceeds the recommended line length
 ```
 
 It is recommended to either accomodate all items on a single line or to list each item on a new line:
 
 ```robot
 *** Variables ***
-@{SHORT_LIST}    apple    banana    peach    grape
+@{SHORT LIST}    apple    banana    peach    grape
 
-@{SHORT_LIST}    apple
+@{SHORT LIST}    apple
 ...              banana
 ...              peach
 ...              grape
 
-@{LONG_LIST}     apple
+@{LONG LIST}     apple
 ...              banana
 ...              peach
 ...              grape
@@ -859,7 +859,7 @@ In this case, it is recommended to define the item separately:
 
 ```robot
 *** Variables ***
-${LONG_ITEM}    some very long name of the
+${LONG ITEM}    some very long name of the
 ...             fruit which exceeds
 ...             the recommended line length
 
@@ -878,7 +878,7 @@ Dictionary variable in `Variables` section on a single line:
 
 ```robot
 *** Variables ***
-&{LONG_DICT}     name=robot    age=14    ccupation=framework    version=latest    address=https://robotframework.org/    documentation=This text is so long that it does not fit on one line
+&{LONG DICT}     name=robot    age=14    ccupation=framework    version=latest    address=https://robotframework.org/    documentation=This text is so long that it does not fit on one line
 ```
 
 It is recommended to place all key-value pairs of a dictionary
@@ -886,14 +886,14 @@ either on a single line or each on a new line:
 
 ```robot
 *** Variables ***
-&{SHORT_DICT}    name=robot    age=14    ccupation=framework
+&{SHORT DICT}    name=robot    age=14    occupation=framework
 
-&{SHORT_DICT}    name=robot
----              age=14
+&{SHORT DICT}    name=robot
+...              age=14
 ...              occupation=framework
 
-&{LONG_DICT}     name=robot
----              age=14
+&{LONG DICT}     name=robot
+...              age=14
 ...              occupation=framework
 ...              version=latest
 ...              address=https://robotframework.org/
@@ -904,7 +904,7 @@ Similarly to the list items, a key-value pair of the dictionary cannot be split 
 
 ```robot
 *** Variables ***
-${LONG_VALUE}    This text is so long
+${LONG VALUE}    This text is so long
 ...              it cannot be fit on one line
 
 &{DICT}          name=robot
@@ -934,7 +934,7 @@ Definition on a single line:
 ```robot
 *** Keywords ***
 My Keyword
-    ${SCALAR}=    Set Variable    This sentence is really, really, really, really, really, really, really long
+    ${SCALAR}    Set Variable    This sentence is really, really, really, really, really, really, really long
 ```
 
 Definition split accross multiple lines (note use of built-in keyword [Catenate](http://robotframework.org/robotframework/latest/libraries/BuiltIn.html#Catenate.).
@@ -943,9 +943,9 @@ This is exception for scalars in the `Keywords` and `Test Cases` sections):
 ```robot
 *** Keywords ***
 My Keyword
-    ${SCALAR}=    Catenate    This sentence is really,
-    ...                       really, really, really, really,
-    ...                       really, really long
+    ${SCALAR}    Catenate    This sentence is really,
+    ...                      really, really, really, really,
+    ...                      really, really long
 ```
 
 ##### List Variable Creation
@@ -955,7 +955,7 @@ Definition on a single line:
 ```robot
 *** Keywords ***
 My Keyword
-    ${LIST}=    Create List    Mercury    Venus    Earth    Mars    Jupiter    Saturn    Uranus    Neptune
+    ${LIST}    Create List    Mercury    Venus    Earth    Mars    Jupiter    Saturn    Uranus    Neptune
 ```
 
 Definition on multiple lines:
@@ -963,14 +963,14 @@ Definition on multiple lines:
 ```robot
 *** Keywords ***
 My Keyword
-    ${LIST}=    Create List    Mercury
-    ...                        Venus
-    ...                        Earth
-    ...                        Mars
-    ...                        Jupiter
-    ...                        Saturn
-    ...                        Uranus
-    ...                        Neptune
+    ${LIST}    Create List    Mercury
+    ...                       Venus
+    ...                       Earth
+    ...                       Mars
+    ...                       Jupiter
+    ...                       Saturn
+    ...                       Uranus
+    ...                       Neptune
 ```
 
 ##### Dictionary Variable Creation
@@ -988,12 +988,12 @@ Definition split accross multiple lines:
 ```robot
 *** Keywords ***
 My Keyword
-    &{DICTIONARY}=    Create Dictionary    a=1
-    ...                                    b=${2}
-    ...                                    c=${3}
-    ...                                    d="some long string"
-    ...                                    e=${SOME_LIST}
-    ...                                    f=pwoirpworuwruopwuroiewr
+    &{DICTIONARY}    Create Dictionary    a=1
+    ...                                   b=${2}
+    ...                                   c=${3}
+    ...                                   d="some long string"
+    ...                                   e=${SOME_LIST}
+    ...                                   f=pwoirpworuwruopwuroiewr
 ```
 
 ##### Assigning Multiple Variables
@@ -1009,9 +1009,9 @@ Definition split on multiple lines:
 
 ```robot
 My Keyword With Multiple Variable Assignment
-    ${SCALAR1}    ${SCALAR2}    ${SCALAR3}=    Set Variable    First long item
-    ...                                                        Second long item
-    ...                                                        Third long item
+    ${SCALAR1}    ${SCALAR2}    ${SCALAR3}    Set Variable    First long item
+    ...                                                       Second long item
+    ...                                                       Third long item
 ```
 
 #### Test Case / Tasks Section
