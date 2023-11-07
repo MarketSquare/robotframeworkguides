@@ -446,10 +446,6 @@ My Nested Keyword
 
 ### Generic
 
-#### Line Continuation
-
-> [look over there](./line_continuation.md)
-
 #### Line Length
 
 > A line length of 120 characters is recommended. [Robocop: #line-too-long](https://robocop.readthedocs.io/en/stable/rules.html#line-too-long)
