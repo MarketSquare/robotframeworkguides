@@ -26,7 +26,7 @@ const config = {
           routeBasePath: '/docs',
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl: 'https://github.com/MarketSquare/robotframeworkguides',
+          editUrl: 'https://github.com/MarketSquare/robotframeworkguides/edit/main/website',
         },
         blog: false,
         theme: {
