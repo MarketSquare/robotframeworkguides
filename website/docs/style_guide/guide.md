@@ -10,7 +10,7 @@ Vertical order refers to the recommended order of settings, sections, variables,
 
 ---
 
-### Section Order
+### Sections
 
 User Guide Reference: [Test Data Section](https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#test-data-sections)
 
@@ -35,7 +35,7 @@ User Guide Reference: [Test Data Section](https://robotframework.org/robotframew
 
 ---
 
-### Settings Section Order
+### Settings
 
 User Guide Reference [Settings Section](https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#setting-section-1)
 
@@ -62,7 +62,7 @@ Test/Task Tags
 
 ---
 
-### Variables Section Order
+### Variables
 
 Simple variables (scalar, list, dictionary) variables should be listed first.
 Composite variables (variables composed of other variables) should be listed after simple variables.
@@ -70,13 +70,13 @@ Composite variables (variables composed of other variables) should be listed aft
 ```robot
 *** Variables ***
 ${VARIABLE}  This is a Variable
-${COMPOSITE_VARIABLES}  ${VARIABLE} with other variables.
+${COMPOSITE VARIABLES}  ${VARIABLE} with other variables.
 
 ```
 
 ---
 
-### Test Case / Task Section Order
+### Test Cases Or Tasks
 
 User Guide Reference [Test Case Section](https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#test-case-section)
 
@@ -95,7 +95,7 @@ Test Case
 
 ---
 
-### Keyword Section Order
+### Keyword
 
 User Guide Reference [Keyword Section](https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#keyword-section-1)
 
@@ -110,26 +110,26 @@ Keyword
     [Teardown]
 ```
 
-#### Keyword Order - Best Practices
+#### Keywords - Best Practices
 
 It is a good idea to put static variable assignments before keyword calls.
 
 ```robot
 Keyword With Static Variables
     [Arguments]    ${argument}
-    ${static_variable}             Set Variable               This is a static variable.
-    Set Local Variable             ${other_static_variable}   Another way to set a static variable.
-    ${dynamic_variable}            Catenate                   SEPARATOR=${SPACE}    ${static_variable}                             ${other_static_variable}    ${argument}
-    ${another_dynamic_variable}    Evaluate                   $static_variable.upper()
-    Log To Console                 ${dynamic_variable}
-    Should Not Be Equal            ${static_variable}         ${other_static_variable} 
+    ${static variable}             Set Variable               This is a static variable.
+    Set Local Variable             ${other static variable}   Another way to set a static variable.
+    ${dynamic variable}            Catenate                   SEPARATOR=${SPACE}    ${static variable}                             ${other static variable}    ${argument}
+    ${another dynamic variable}    Evaluate                   $static variable.upper()
+    Log To Console                 ${dynamic variable}
+    Should Not Be Equal            ${static variable}         ${other static variable} 
 ```
 
 #### Keyword Organization
 
 In order to make keyword search within a resource file easier alphabetize your keywords. Some IDEs have an outline side bar (i.e. VSCode) and by alphabetizing the keywords they appear in the side menu in the same way.
 
-## Vertical White Space
+## Vertical Spacing
 
 These are the recommended vertical space guidelines for `.robot` and `.resource` files.
 
@@ -302,9 +302,9 @@ Test Tags           example-tag
 
 
 *** Variables ***
-${EXAMPLE_SCALAR_VARIABLE}          This is a suite scope scalar variable
-@{EXAMPLE_LIST_VARIABLE}            This    is    a    suite    scope    list    variable
-&{EXAMPLE_DICTIONARY_VARIABLE}      This=is a
+${EXAMPLE SCALAR VARIABLE}          This is a suite scope scalar variable
+@{EXAMPLE LIST VARIABLE}            This    is    a    suite    scope    list    variable
+&{EXAMPLE DICTIONARY VARIABLE}      This=is a
 ⑦ ...                               suite=scope
 ...                                 dictionary=variable
 ①
@@ -313,31 +313,31 @@ ${EXAMPLE_SCALAR_VARIABLE}          This is a suite scope scalar variable
 An Example Test Case
 ③   [Documentation]    Test documentation
     [Tags]    standard-example-tag
-④   ${RESULT_LIST}    This Is A Complex Keyword With Sections    ${EXAMPLE_SCALAR_VARIABLE}
-    Log To Console    ${RESULT_LIST}
+④   ${RESULT LIST}    This Is A Complex Keyword With Sections    ${EXAMPLE SCALAR VARIABLE}
+    Log To Console    ${RESULT LIST}
 ②
 A More Complex Test Case
 ③   [Documentation]    Test documentation
     [Tags]    standard-example-tag
-    [Setup]    Set Test Variable    ${EXPECTED_LENGTH}    2
-    ${IS_LARGER_THAN_FOUR}    Create List
+    [Setup]    Set Test Variable    ${EXPECTED LENGTH}    2
+    ${IS LARGER THAN FOUR}    Create List
 ⑧
     ## Adding vertical white space can be used to separate test code blocks
-    FOR    ${item}    IN    @{EXAMPLE_LIST_VARIABLE}
+    FOR    ${item}    IN    @{EXAMPLE LIST VARIABLE}
         IF    len($item)> 4
             This Is A Complex Keyword With Sections    ${item}
-            Append To List    ${IS_LARGER_THAN_FOUR}    ${item}
+            Append To List    ${IS LARGER THAN FOUR}    ${item}
         END
     END
-    Length Should Be    ${IS_LARGER_THAN_FOUR}    ${EXPECTED_LENGTH}
+    Length Should Be    ${IS LARGER THAN FOUR}    ${EXPECTED LENGTH}
 ②
 An Example Templated Test
 ③   [Documentation]    Templated test documentation.
     [Tags]    templated-example-tag
     [Template]    This Is A Complex Keyword With Sections
-⑤   ${EXAMPLE_DICTIONARY_VARIABLE}[This]
-    ${EXAMPLE_DICTIONARY_VARIABLE}[suite]
-    ${EXAMPLE_DICTIONARY_VARIABLE}[dictionary]
+⑤   ${EXAMPLE DICTIONARY VARIABLE}[This]
+    ${EXAMPLE DICTIONARY VARIABLE}[suite]
+    ${EXAMPLE DICTIONARY VARIABLE}[dictionary]
 ①
 
 *** Keywords ***
@@ -370,33 +370,33 @@ Library             Collections
 ①
 
 *** Variables ***
-${EXAMPLE_RESOURCE_SCALAR}      This is a really really really really really really really
+${EXAMPLE RESOURCE SCALAR}      This is a really really really really really really really
 ⑦ ...                          really really really really really really really long string.
 ①
 
 *** Keywords ***
 A Small Keyword
     [Documentation]    Small keyword documentation.
-    ${small_variable}    Catenate    SEPARATOR=    Such    a    small    keyword
-    RETURN    ${small_variable}
+    ${small variable}    Catenate    SEPARATOR=    Such    a    small    keyword
+    RETURN    ${small variable}
 ⑥
 This Is A Complex Keyword With Sections
 ③   [Documentation]    Complex keyword documentation.
-    [Arguments]    ${an_argument}
-    ${local_list}    Create List
-    ${get_small_value}    A Small Keyword
-    ${words}    Split String    ${get_small_value}
+    [Arguments]    ${an argument}
+    ${local list}    Create List
+    ${get small value}    A Small Keyword
+    ${words}    Split String    ${get small value}
     FOR    ${word}    IN    @{words}
         ${characters}    Split String To Characters    ${word}
 ⑧
         ## Insert a vertical whitespace here to separate logical sections within a keyword.
         FOR    ${character}    IN    @{characters}
             IF    $character in 'aeiou'
-                Append To List    ${local_list}    ${character}_${an_argument}
+                Append To List    ${local list}    ${character} ${an argument}
             END
         END
     END
-    RETURN    ${local_list}
+    RETURN    ${local list}
 ⑨
 ```
 
@@ -406,7 +406,7 @@ This Is A Complex Keyword With Sections
 
 Separation of tokens should be **4 spaces** as described in the the recommended file format: [space separated format](https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#space-separated-format).
 
-### Separation
+#### Separation
 
 - **Separator** >= 4 spaces represented by `····` in the following examples.
 
@@ -418,7 +418,7 @@ My Test
     Keyword One····argument1····argument2
 ```
 
-### Indentation
+#### Indentation
 
 - **Indentation** n time 4 spaces (where n is the level of indentation and n never exceeds 5, hence nesting depth cannot exceed 4 steps in a Keyword
 
@@ -456,7 +456,7 @@ My Nested Keyword
 
 ---
 
-### Settings Section
+### Settings
 
 #### Indentation Within Settings Section
 
@@ -507,7 +507,7 @@ Test Tags     mytag
 
 ---
 
-### Variables Section
+### Variables
 
 #### Indentation Within Variables Section
 
@@ -521,7 +521,7 @@ ${VAR2}    2
 
 ---
 
-### Test Cases, Tasks, Keywords Section
+### Test Cases or Tasks and Keywords
 
 #### Indentation Wthin Test Cases, Tasks, Keywords Section
 
@@ -637,7 +637,7 @@ Some Keyword
     Called Keyword Two    ## TODO fix weird behaviour.
 ```
 
-## Line Continuation For Arguments, Variables, Keywords, Test Cases / Tasks
+## Line Continuation
 
 ---
 
@@ -683,11 +683,11 @@ Optional arguments, due to having a default value, follow the same line continua
 ```robot
 *** Keywords ***
 Custom Keyword With Various Optional Arguments
-    [Arguments]    ${first_arg}=the first argument
-    ...            ${second_arg}=${123}
-    ...            ${third_arg}=${some_list}
-    ...            ${fourth_arg}=${some_dict}
-    ...            ${fifth_arg}=the last argument
+    [Arguments]    ${first arg}=the first argument
+    ...            ${second arg}=${123}
+    ...            ${third arg}=${some list}
+    ...            ${fourth arg}=${some dict}
+    ...            ${fifth arg}=the last argument
     Do Something
 ```
 
@@ -721,7 +721,7 @@ Get Capital Of "${country}" And First "${number}" Cities With Biggest Population
     Do Something
 ```
 
-#### Line Continuation For Arguments In Test Cases / Tasks
+#### Line Continuation For Arguments In Test Cases or Tasks
 
 In Test Cases, the first argument should be placed on the same line as the Keyword to which it belongs.
 Every other argument should be placed on a new continuation line and separated from the cantinuation character
@@ -751,11 +751,11 @@ Test Case With Many Keywords And Arguments
     Use One More Keyword With Various Arguments
     ...    abc
     ...    123
-    ...    optional_arg=12345
-    ...    another_optional_arg=Hello
-    Use Keyword With "two" Embedded Arguments And "three" Required Arguments    first_arg
-    ...    second_arg
-    ...    third_arg
+    ...    optional arg=12345
+    ...    another optional arg=Hello
+    Use Keyword With "two" Embedded Arguments And "three" Required Arguments    first arg
+    ...    second arg
+    ...    third arg
     Do Final Steps
 ```
 
@@ -774,7 +774,7 @@ Test Case With Compact Contents
 
 ---
 
-### Line Continuation For Variables
+### Variables
 
 It is reasonable to split a variable definition across multiple lines when it exceeds the recommended line length,
 or for the better readability of the code.
@@ -853,7 +853,7 @@ It is recommended to either accomodate all items on a single line or to list eac
 ```
 
 Please note that the item values of the iterable cannot be split using line continuation character. Therefore,
-it is not possible to divide the last item in the above example with the ellipses (`...`.)
+it is not possible to divide the last item in the above example with the ellipses (`...`).
 
 In this case, it is recommended to define the item separately:
 
@@ -869,7 +869,7 @@ ${LONG ITEM}    some very long name of the
 ...             grape
 ...             avocado
 ...             kiwi
-...             $(LONG_ITEM)
+...             $(LONG ITEM)
 ```
 
 ###### Dictionaries
@@ -912,7 +912,7 @@ ${LONG VALUE}    This text is so long
 ...              occupation=framework
 ...              version=latest
 ...              address=https://robotframework.org/
-...              documentation=${LONG_VALUE}
+...              documentation=${LONG VALUE}
 ```
 
 #### Keywords Section
@@ -980,7 +980,7 @@ Definition on a single line:
 ```robot
 *** Keywords ***
 My Keyword
-    &{DICTIONARY}=    Create Dictionary    a=1    b=${2}    c=${3}    d="some long string"    e=${SOME_LIST}    f=pwoirpworuwruopwuroiewr
+    &{DICTIONARY}    Create Dictionary    a=1    b=${2}    c=${3}    d=some long string    e=${SOME LIST}    f=pwoirpworuwruopwuroiewr
 ```
 
 Definition split accross multiple lines:
@@ -991,8 +991,8 @@ My Keyword
     &{DICTIONARY}    Create Dictionary    a=1
     ...                                   b=${2}
     ...                                   c=${3}
-    ...                                   d="some long string"
-    ...                                   e=${SOME_LIST}
+    ...                                   d=some long string
+    ...                                   e=${SOME LIST}
     ...                                   f=pwoirpworuwruopwuroiewr
 ```
 
@@ -1001,6 +1001,7 @@ My Keyword
 Definition on a single line:
 
 ```robot
+*** Keywords ***
 My Keyword With Multiple Variable Assignment
     ${SCALAR1}    ${SCALAR2}    ${SCALAR3}=    Set Variable    First long item    Second long item    Third long item
 ```
@@ -1008,12 +1009,13 @@ My Keyword With Multiple Variable Assignment
 Definition split on multiple lines:
 
 ```robot
+*** Keywords ***
 My Keyword With Multiple Variable Assignment
     ${SCALAR1}    ${SCALAR2}    ${SCALAR3}    Set Variable    First long item
     ...                                                       Second long item
     ...                                                       Third long item
 ```
 
-#### Test Case / Tasks Section
+#### Test Cases or Tasks Section
 
 In test cases, line continuation follows the same guidelines, as in the `Keywords` section.
