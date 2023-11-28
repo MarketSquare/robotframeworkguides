@@ -73,6 +73,6 @@ Here are some good basic guidelines for formatting your Robot Framework code. As
 
 ---
 
-Version 0.4b
+Version 0.5b
 
 ---

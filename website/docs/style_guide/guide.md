@@ -1,6 +1,6 @@
 # Style Guide
 
-Version 0.4b
+Version 0.5b
 
 ## Vertical Order
 
@@ -135,7 +135,7 @@ These are the recommended vertical space guidelines for `.robot` and `.resource`
 
 :::note
 
-- The guidelines of larger sections will supercede the guidelines of the subsections.
+- The guidelines of larger sections will supersede the guidelines of the subsections.
 - Vertical White Space
 : Any line that contains no characters.
 - Commented lines are not considered white space.
@@ -146,7 +146,7 @@ These are the recommended vertical space guidelines for `.robot` and `.resource`
 
 ### Sections
 
-#### Spacing After The Section Header line
+#### Spacing After The Section Header Line
 
 > There should be no space immediately after each section header line.
 
@@ -191,7 +191,7 @@ These are the recommended vertical space guidelines for `.robot` and `.resource`
 
 > It is recommended to allow 1 line of white space between common lines of settings.
 
-##### Example of Settings Section Vertical Spacing
+##### Example Of Settings Section Vertical Spacing
 
 ```robot
     *** Settings ***
@@ -213,7 +213,7 @@ These are the recommended vertical space guidelines for `.robot` and `.resource`
     Test Tags
 ```  
 
-#### Spacing Between Settings Within A Test Case or Task or Keyword
+#### Spacing Between Settings Within A Test Case, Task Or Keyword
 
 > No lines of white space should exist between the settings of a Test Case or Task or Keyword.
 
@@ -229,13 +229,13 @@ There should be no lines of white space between variables within the Variables s
 
 ### Test Cases Or Tasks
 
-#### Spacing After Test Cases or Tasks
+#### Spacing After Test Cases Or Tasks
 
 > There should be 1 line of white space after each Test Case or Task.
 
-#### Spacing Between Code Blocks Within Test Cases or Tasks
+#### Spacing Between Code Blocks Within Test Cases Or Tasks
 
-> Ocassionally Test Cases or Tasks can be grouped in subsections of logical code blocks. In these instances it is acceptable to have 1 space between these code blocks.
+> Occasionally Test Cases or Tasks can be grouped in subsections of logical code blocks. In these instances it is acceptable to have 1 space between these code blocks.
 
 #### Spacing After Templated Test Cases
 
@@ -259,7 +259,7 @@ There should be no lines of white space between variables within the Variables s
 
 #### Spacing Between Code Blocks Within Keyword Calls
 
-> Ocassionally keywords can be grouped in subsections of logical code blocks. In these instances it is acceptable to have 1 space between these code blocks, but no more than 1 space.
+> Occasionally keywords can be grouped in subsections of logical code blocks. In these instances it is acceptable to have 1 space between these code blocks, but no more than 1 space.
 
 #### Spacing Of Line Continuations
 
@@ -271,13 +271,13 @@ Key to examples:
 
 > ① Two spaces between sections  
 ② One space between Tests/Tasks  
-③ No Space in the settings section of Tests/Tasks or Keywords  
+③ No space in the settings section of Tests/Tasks or Keywords  
 ④ No space after settings section of Tests/Tasks or Keywords  
 ⑤ No spaces between template Test/Task data lines  
-⑥ One Space Between Keywords  
+⑥ One space Between Keywords  
 ⑦ No space between continuation lines  
-⑧ One Space for separating code blocks  
-⑨ One Space at the very end of the file
+⑧ One space for separating code blocks  
+⑨ One space at the very end of the file
 
 ##### Example Robot File Vertical White Spacing
 
@@ -420,9 +420,9 @@ My Test
 
 #### Indentation
 
-- **Indentation** n time 4 spaces (where n is the level of indentation and n never exceeds 5, hence nesting depth cannot exceed 4 steps in a Keyword
+- **Indentation** n time 4 spaces (where n is the level of indentation) and n never exceeds 5, hence nesting depth cannot exceed 4 steps in a keyword.
 
-*Example with additional vertical lines for visual clearification: where n == 4 because the keyword also counts in the nesting.*
+*Example with additional vertical lines for visual clarification: where n == 4 because the keyword also counts in the nesting.*
 
 ```robot
 *** Keywords ***
@@ -437,10 +437,6 @@ My Nested Keyword
 |    |    |    |    |
 0    1    2    3    4
 ```
-
-- Space between Vars and = ? (and whether to use "=" at all)
-- Indentation of Blocks
-  - High Level Blocks = Required indention of Keywords within Test Cases
 
 ---
 
@@ -479,7 +475,7 @@ Arguments to Libraries should be aligned if there are multiple libraries that ha
 After the first argument to libraries all other arguments should either:
 
 - be separated with 4 spaces
-- be aligned in colums
+- be aligned in columns
 
 ##### Separated With 4 Spaces
 
@@ -511,7 +507,7 @@ Test Tags     mytag
 
 #### Indentation Within Variables Section
 
-The `*** Variables ***` secion should always be left aligned without any indentation [Robocop: #variable-should-be-left-aligned](https://robocop.readthedocs.io/en/stable/rules.html#variable-should-be-left-aligned)
+The `*** Variables ***` section should always be left aligned without any indentation [Robocop: #variable-should-be-left-aligned](https://robocop.readthedocs.io/en/stable/rules.html#variable-should-be-left-aligned)
 
 ```robot
 *** Variables ***
@@ -521,9 +517,9 @@ ${VAR2}    2
 
 ---
 
-### Test Cases or Tasks and Keywords
+### Test Cases, Tasks And Keywords
 
-#### Indentation Wthin Test Cases, Tasks, Keywords Section
+#### Indentation Within Test Cases, Tasks And Keywords Section
 
 The test case, task and keyword names should always start at the first character on a line. Test steps, task steps and keywords called from within keyword should be indented.
 
@@ -656,7 +652,7 @@ General guidelines:
 - No empty continuation lines between arguments (i.e., lines containing only `'...'`)
 - If many arguments are required, consider representing them as a list or a dictionary.
 
-#### Line Continuation For Arguments In Keyword definition
+#### Line Continuation For Arguments In Keyword Definition
 
 > In Keywords, the very first argument should be placed on the same line as `[Arguments]` setting. Every other argument
 should be placed on a new continuation line and aligned with the argument on the previous line.
@@ -721,10 +717,10 @@ Get Capital Of "${country}" And First "${number}" Cities With Biggest Population
     Do Something
 ```
 
-#### Line Continuation For Arguments In Test Cases or Tasks
+#### Line Continuation For Arguments In Test Cases Or Tasks
 
 In Test Cases, the first argument should be placed on the same line as the Keyword to which it belongs.
-Every other argument should be placed on a new continuation line and separated from the cantinuation character
+Every other argument should be placed on a new continuation line and separated from the continuation character
 by exactly four spaces. Following arguments should be aligned with the argument on the previous line.
 This is different from the argument formatting in the Keywords definition.
 The reason is that test cases might include several Keywords with arguments and overly sparse
@@ -760,7 +756,7 @@ Test Case With Many Keywords And Arguments
 ```
 
 If Test Cases include Keywords with relatively short names and with only a few arguments,
-then arguments can be accomodated on a single line if the maximum length of the line is not
+then arguments can be accommodated on a single line if the maximum length of the line is not
 exceeded. Mixing single-line and vertical listing should be avoided within the same test case,
 and either one or the other should be chosen:
 
@@ -832,7 +828,7 @@ List variable in `Variables` section on a single line:
 @{LONG LIST}       apple    banana    peach    grape    avocado    kiwi    some very long name of the fruit which exceeds the recommended line length
 ```
 
-It is recommended to either accomodate all items on a single line or to list each item on a new line:
+It is recommended to either accommodate all items on a single line or to list each item on a new line:
 
 ```robot
 *** Variables ***
@@ -878,7 +874,7 @@ Dictionary variable in `Variables` section on a single line:
 
 ```robot
 *** Variables ***
-&{LONG DICT}     name=robot    age=14    ccupation=framework    version=latest    address=https://robotframework.org/    documentation=This text is so long that it does not fit on one line
+&{LONG DICT}     name=robot    age=14    occupation=framework    version=latest    address=https://robotframework.org/    documentation=This text is so long that it does not fit on one line
 ```
 
 It is recommended to place all key-value pairs of a dictionary
@@ -937,7 +933,7 @@ My Keyword
     ${SCALAR}    Set Variable    This sentence is really, really, really, really, really, really, really long
 ```
 
-Definition split accross multiple lines (note use of built-in keyword [Catenate](http://robotframework.org/robotframework/latest/libraries/BuiltIn.html#Catenate.).
+Definition split across multiple lines (note use of built-in keyword [Catenate](http://robotframework.org/robotframework/latest/libraries/BuiltIn.html#Catenate.).
 This is exception for scalars in the `Keywords` and `Test Cases` sections):
 
 ```robot
@@ -983,7 +979,7 @@ My Keyword
     &{DICTIONARY}    Create Dictionary    a=1    b=${2}    c=${3}    d=some long string    e=${SOME LIST}    f=pwoirpworuwruopwuroiewr
 ```
 
-Definition split accross multiple lines:
+Definition split across multiple lines:
 
 ```robot
 *** Keywords ***
@@ -1016,6 +1012,6 @@ My Keyword With Multiple Variable Assignment
     ...                                                       Third long item
 ```
 
-#### Test Cases or Tasks Section
+#### Test Cases Or Tasks Section
 
 In test cases, line continuation follows the same guidelines, as in the `Keywords` section.
