@@ -1,6 +1,6 @@
 # Style Guide
 
-Version 0.4b
+Version 0.5b
 
 ## Vertical Order
 
