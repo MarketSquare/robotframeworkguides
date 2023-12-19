@@ -6,6 +6,8 @@ title: Requests Library
 🏠 ``RequestsLibrary`` is a [Robot Framework](https://robotframework.org/) library
 aimed to provide HTTP api testing functionalities by wrapping the well known [Python Requests Library](https://github.com/kennethreitz/requests).
 
+See [Keyword Documentation](https://marketsquare.github.io/robotframework-requests/doc/RequestsLibrary.html) for available keywords and more information about the library in general.
+
 ## Install stable version
 ```sh
 pip install robotframework-requests
