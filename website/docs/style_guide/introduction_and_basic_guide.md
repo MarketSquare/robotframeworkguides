@@ -23,7 +23,7 @@ As a starting point use the existing standards from [Robot Framework](https://ro
 
 ## Contributors
 
-Guido Demmenie, Mannana Koberidze, Kelby Stine
+Guido Demmenie, Manana Koberidze, Kelby Stine
 
 ### Special Thanks To
 
