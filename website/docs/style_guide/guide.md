@@ -1,6 +1,6 @@
 # Style Guide
 
-Version 0.5b
+Version 0.6b
 
 ## Vertical Order
 
@@ -105,9 +105,11 @@ Keyword
     [Tags]
     [Arguments]
     [Timeout]
+    [Setup]
     Static Variable Assignments
     Keyword Calls
     [Teardown]
+    RETURN
 ```
 
 #### Keywords - Best Practices
