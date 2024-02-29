@@ -4,7 +4,7 @@ sidebar_position: 5
 
 # Style Guide
 
-Version 0.7b
+Version 0.8b
 
 ## Introduction
 
@@ -12,7 +12,9 @@ Version 0.7b
 
 This style guide is a community driven set of sensible rules to write your Robot Framework code.
 
-As a starting point use the existing standards from [Robot Framework](https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#getting-started) user guide, [Robocop](https://github.com/MarketSquare/robotframework-robocop) and [Robotidy](https://robotidy.readthedocs.io/en/stable/).
+As a starting point, use the existing standards from
+[Robot Framework](https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#getting-started) user guide,
+[Robocop](https://robocop.readthedocs.io/en/stable/), and [Robotidy](https://robotidy.readthedocs.io/en/stable/).
 
 ### Robocon 2022 Presentation
 
@@ -56,6 +58,9 @@ Vertical order refers to the recommended order of settings, sections, variables,
 
 User Guide Reference: [Test Data Section](https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#test-data-sections)
 
+<Tabs>
+  <TabItem  value="tests" label="Tests">
+
 ```robot
 *** Comments ***
 
@@ -66,20 +71,42 @@ User Guide Reference: [Test Data Section](https://robotframework.org/robotframew
 *** Variables ***
 
 
-*** Test Cases *** 
+*** Test Cases ***
+
+
+*** Keywords ***
+```
+
+  </TabItem>
+  <TabItem  value="tasks" label="RPA">
+
+```robot
+*** Comments ***
+
+
+*** Settings ***
+
+
+*** Variables ***
+
+
 *** Tasks ***
 
 
 *** Keywords ***
-
-
 ```
+
+  </TabItem>
+</Tabs>
 
 ---
 
 ### Settings
 
-User Guide Reference [Settings Section](https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#setting-section-1)
+User Guide Reference: [Settings Section](https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#setting-section-1)
+
+<Tabs>
+  <TabItem  value="tests" label="Tests">
 
 ```robot
 *** Settings ***
@@ -94,12 +121,61 @@ Variables
 
 Suite Setup
 Suite Teardown
-Test/Task Setup
-Test/Task Teardown
-Test/Task Timeout
-Test/Task Template
+Test Setup
+Test Teardown
+Test Template
+Test Timeout
 
-Test/Task Tags
+Test Tags
+```
+
+  </TabItem>
+  <TabItem  value="tasks" label="RPA">
+
+```robot
+*** Settings ***
+Documentation
+Metadata
+
+Library    BuiltIn
+Library    3rd Party
+Library    Custom
+Resource
+Variables
+
+Suite Setup
+Suite Teardown
+Task Setup
+Task Teardown
+Task Template
+Task Timeout
+
+Task Tags
+```
+
+  </TabItem>
+</Tabs>
+
+For easier navigation, libraries in each group can be sorted alphabetically.
+Additionally, extra new lines can be used to separate the builtin, 3rd party and custom libraries.
+
+```robot
+*** Settings ***
+...
+Library    BuiltIn
+Library    Collections
+Library    DateTime
+Library    OperatingSystem
+
+Library    Browser
+Library    JSONLibrary
+Library    SSHLibrary
+
+Library    Acustom
+Library    Bcustom
+Library    Ccustom
+Library    Dcustom
+...
 ```
 
 ---
@@ -120,15 +196,15 @@ ${COMPOSITE VARIABLES}  ${VARIABLE} with other variables.
 
 ### Test Cases Or Tasks
 
-User Guide Reference [Test Case Section](https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#test-case-section)
+User Guide Reference: [Test Case Section](https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#test-case-section)
 
 ```robot
 Test Case
     [Documentation]
     [Tags]
+    [Timeout]
     [Setup]
     [Template]
-    [Timeout]
     Static Variable Assignments
     Keyword Calls
     Verification Keyword Call
@@ -139,7 +215,7 @@ Test Case
 
 ### Keyword
 
-User Guide Reference [Keyword Section](https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#keyword-section-1)
+User Guide Reference: [Keyword Section](https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#keyword-section-1)
 
 ```robot
 Keyword
@@ -151,7 +227,6 @@ Keyword
     Static Variable Assignments
     Keyword Calls
     [Teardown]
-    RETURN
 ```
 
 #### Keywords - Best Practices
@@ -166,7 +241,7 @@ Keyword With Static Variables
     ${dynamic variable}            Catenate                   SEPARATOR=${SPACE}    ${static variable}                             ${other static variable}    ${argument}
     ${another dynamic variable}    Evaluate                   $static variable.upper()
     Log To Console                 ${dynamic variable}
-    Should Not Be Equal            ${static variable}         ${other static variable} 
+    Should Not Be Equal            ${static variable}         ${other static variable}
 ```
 
 #### Keyword Organization
@@ -201,6 +276,9 @@ These are the recommended vertical space guidelines for `.robot` and `.resource`
 
 ##### Example Of Section Header And Section Spacing
 
+<Tabs>
+  <TabItem  value="tests" label="Tests">
+
 ```robot
     *** Comments ***
     Comments
@@ -218,14 +296,36 @@ These are the recommended vertical space guidelines for `.robot` and `.resource`
     Test Case
 
 
+    *** Keywords ***
+    Keyword
+```
+
+  </TabItem>
+  <TabItem  value="tasks" label="RPA">
+
+```robot
+    *** Comments ***
+    Comments
+
+
+    *** Settings ***
+    Documentation
+
+
+    *** Variables ***
+    ${VARIABLE}    a variable
+
+
     *** Tasks ***
-    Task
+    Tasks
 
 
     *** Keywords ***
-    Keyword 
-
+    Keyword
 ```
+
+  </TabItem>
+</Tabs>
 
 ---
 
@@ -237,25 +337,54 @@ These are the recommended vertical space guidelines for `.robot` and `.resource`
 
 ##### Example Of Settings Section Vertical Spacing
 
+<Tabs>
+  <TabItem  value="tests" label="Tests">
+
 ```robot
     *** Settings ***
-    Documentation  
-    Metadata 
+    Documentation
+    Metadata
 
-    Library  
-    Resource  
-    Variables  
+    Library
+    Resource
+    Variables
 
-    Suite Setup  
-    Suite Teardown  
-    Test Setup  
-    Test/Task Teardown  
-    Test/Task Template  
-    Test/Task Timeout  
+    Suite Setup
+    Suite Teardown
+    Test Setup
+    Test Teardown
+    Test Template
+    Test Timeout
 
-    Default Tags  
+    Default Tags
     Test Tags
-```  
+```
+
+  </TabItem>
+  <TabItem  value="tasks" label="RPA">
+
+```robot
+    *** Settings ***
+    Documentation
+    Metadata
+
+    Library
+    Resource
+    Variables
+
+    Suite Setup
+    Suite Teardown
+    Task Setup
+    Task Teardown
+    Task Template
+    Task Timeout
+
+    Default Tags
+    Task Tags
+```
+
+  </TabItem>
+</Tabs>
 
 #### Spacing Between Settings Within A Test Case, Task Or Keyword
 
@@ -324,6 +453,9 @@ Key to examples:
 ⑨ One space at the very end of the file
 
 ##### Example Robot File Vertical White Spacing
+
+<Tabs>
+  <TabItem  value="tests" label="Tests">
 
 ```robot
 *** Comments ***
@@ -403,6 +535,90 @@ Test Teardown Keywords
 ⑨
 ```
 
+  </TabItem>
+  <TabItem  value="tasks" label="RPA">
+
+```robot
+*** Comments ***
+This is the comments section
+①
+
+*** Settings ***
+Documentation       This is documentation
+⑦ ...               robot -d Results -i example-tag Tasks
+
+Library             Collections
+Resource            ../Resources/ExampleResource.resource
+
+Suite Setup         Suite Setup Keywords
+Suite Teardown      Suite Teardown Keywords
+Task Setup          Task Setup Keywords
+Task Teardown       Task Teardown Keywords
+
+Task Tags           example-tag
+
+
+*** Variables ***
+${EXAMPLE SCALAR VARIABLE}          This is a suite scope scalar variable
+@{EXAMPLE LIST VARIABLE}            This    is    a    suite    scope    list    variable
+&{EXAMPLE DICTIONARY VARIABLE}      This=is a
+⑦ ...                               suite=scope
+...                                 dictionary=variable
+①
+
+*** Tasks ***
+An Example Task
+③   [Documentation]    Task documentation
+    [Tags]    standard-example-tag
+④   ${RESULT LIST}    This Is A Complex Keyword With Sections    ${EXAMPLE SCALAR VARIABLE}
+    Log To Console    ${RESULT LIST}
+②
+A More Complex Task
+③   [Documentation]    Task documentation
+    [Tags]    standard-example-tag
+    [Setup]    Set Task Variable    ${EXPECTED LENGTH}    2
+    ${IS LARGER THAN FOUR}    Create List
+⑧
+    ## Adding vertical white space can be used to separate task code blocks
+    FOR    ${item}    IN    @{EXAMPLE LIST VARIABLE}
+        IF    len($item)> 4
+            This Is A Complex Keyword With Sections    ${item}
+            Append To List    ${IS LARGER THAN FOUR}    ${item}
+        END
+    END
+    Length Should Be    ${IS LARGER THAN FOUR}    ${EXPECTED LENGTH}
+②
+An Example Templated Task
+③   [Documentation]    Templated task documentation.
+    [Tags]    templated-example-tag
+    [Template]    This Is A Complex Keyword With Sections
+⑤   ${EXAMPLE DICTIONARY VARIABLE}[This]
+    ${EXAMPLE DICTIONARY VARIABLE}[suite]
+    ${EXAMPLE DICTIONARY VARIABLE}[dictionary]
+①
+
+*** Keywords ***
+Suite Setup Keywords
+    [Documentation]    A keyword for setting up a suite
+    Log To Console    Setting up ${SUITE NAME} keywords
+⑥
+Suite Teardown Keywords
+    [Documentation]    A keyword for tearing down a suite
+    Log To Console    Tearing down suite keywords
+⑥
+Task Setup Keywords
+    [Documentation]    A keyword for setting up a task
+    Log To Console    Setting up ${TASK NAME} keywords
+⑥
+Task Teardown Keywords
+    [Documentation]    A keyword for tearing down a task
+    Log To Console    Tearing down task keywords
+⑨
+```
+
+  </TabItem>
+</Tabs>
+
 ##### Example Resource File Vertical Spacing
 
 ```robot
@@ -456,11 +672,26 @@ Separation of tokens should be **4 spaces** as described in the the recommended 
 
 Separation thus is the vertical space between tokens, where tokens are any keywords, variables, constructs.
 
+<Tabs>
+  <TabItem  value="tests" label="Tests">
+
 ```robot
 *** Test Cases ***
 My Test
     Keyword One····argument1····argument2
 ```
+
+  </TabItem>
+  <TabItem  value="tasks" label="RPA">
+
+```robot
+*** Tasks ***
+My Task
+    Keyword One····argument1····argument2
+```
+
+  </TabItem>
+</Tabs>
 
 #### Indentation
 
@@ -526,7 +757,7 @@ After the first argument to libraries all other arguments should either:
 ```robot
 *** Settings ***
 Library       String
-Library       DataDriver    my_data_file.csv    dialect=UserDefined    delimiter=.  
+Library       DataDriver    my_data_file.csv    dialect=UserDefined    delimiter=.
 Library       Telnet    timeout=3s    newline=CLRF    encoding=UTF-8
 Resource      ${resourcedir}/mykeywords.resource
 Resource      ${resourcedir}/myotherkeywords.resource
@@ -538,7 +769,7 @@ Test Tags     mytag
 ```robot
 *** Settings ***
 Library       String
-Library       DataDriver    my_data_file.csv    dialect=UserDefined    delimiter=.  
+Library       DataDriver    my_data_file.csv    dialect=UserDefined    delimiter=.
 Library       Telnet        timeout=3s          newline=CLRF           encoding=UTF-8
 Resource      ${resourcedir}/mykeywords.resource
 Resource      ${resourcedir}/myotherkeywords.resource
@@ -567,19 +798,28 @@ ${VAR2}    2
 
 The test case, task and keyword names should always start at the first character on a line. Test steps, task steps and keywords called from within keyword should be indented.
 
-``` robot
+<Tabs>
+  <TabItem  value="tests" label="Tests">
+
+```robot
 *** Test Cases ***
 My First Test Case
     Test Step One
     ${myvar}    Test Step Two That Returns A Value
 ```
 
-``` robot
+  </TabItem>
+  <TabItem  value="tasks" label="RPA">
+
+```robot
 *** Tasks ***
 My First Task
     Task Step One
     ${myvar}    Task Step Two That Returns A Value
 ```
+
+  </TabItem>
+</Tabs>
 
 ``` robot
 *** Keywords ***
@@ -788,8 +1028,7 @@ Test Case With Many Keywords And Arguments
     ...    @{mylist}
     Do A Lot Of Stuff
     More Stuff
-    Use One More Keyword With Various Arguments
-    ...    abc
+    Use One More Keyword With Various Arguments    abc
     ...    123
     ...    optional arg=12345
     ...    another optional arg=Hello
@@ -1115,7 +1354,7 @@ Variable Casing Test
 Same Variable Different Scope Test
     [Documentation]    The SUITE variable is overwritten by an argument then TEST scoped variable of same name.
     A Keyword With Arguments    This will be printed.
-    Should Not Be Equal     ${I AM A VARIABLE}    This is a SUITE scoped variables 
+    Should Not Be Equal     ${I AM A VARIABLE}    This is a SUITE scoped variables
 
 
 *** Keywords ***
@@ -1263,7 +1502,7 @@ ${VARIABLES_PATH}    ${RESOURCE_PATH}/Variables
 ```
 
   </TabItem>
-</Tabs>  
+</Tabs>
 
 ---
 
@@ -1310,7 +1549,7 @@ ${VARIABLES PATH}    ${RESOURCE PATH}/Variables
 ```
 
   </TabItem>
-</Tabs>  
+</Tabs>
 
 ---
 
@@ -1368,7 +1607,7 @@ A Keyword of Variables
 ```
 
   </TabItem>
-</Tabs>  
+</Tabs>
 
 Treat keyword arguments as local variables for naming purposes.
 
@@ -1506,7 +1745,7 @@ Create Json Body Option Two
 ```
 
   </TabItem>
-</Tabs>  
+</Tabs>
 
 #### Embedded Variables
 
@@ -1527,7 +1766,7 @@ Set Suite Variables
     Set Suite Variable    ${EMBED VAR}   embedded
     Set Suite Variable    ${VARIABLE ${EMBED VAR}}    good embedded variable
     Set Suite Variable    ${FOO}    eggs
-    Set Suite Variable    ${BAR}    spam  
+    Set Suite Variable    ${BAR}    spam
     Set Suite Variable    ${VARIABLE ${FOO} ${BAR}}    questionable variable
     Set Suite Variable    ${VAR}    one
     Set Suite Variable    ${WITHIN ${VAR}}  two
@@ -1544,7 +1783,7 @@ Set Suite Variables
     Set Suite Variable    ${EMBED_VAR}   embedded
     Set Suite Variable    ${VARIABLE_${EMBED_VAR}}    good embedded variable
     Set Suite Variable    ${FOO}    eggs
-    Set Suite Variable    ${BAR}    spam  
+    Set Suite Variable    ${BAR}    spam
     Set Suite Variable    ${VARIABLE_${FOO}_${BAR}}    questionable variable
     Set Suite Variable    ${VAR}    one
     Set Suite Variable    ${WITHIN_${VAR}}  two
@@ -1553,7 +1792,7 @@ Set Suite Variables
 ```
 
   </TabItem>
-</Tabs>  
+</Tabs>
 
 #### Variables with Attributes
 
@@ -1565,7 +1804,7 @@ The variable itself should follow the casing rules of its scope.
 ```robot
 Attribute Variables
     ${local variable.name}    Set Variable              this is a variable
-    ${local variable.foo}     Set Variable              this is an local attribute
+    ${local variable.foo}     Set Variable              this is a local attribute
     Set Suite Variable        ${SUITE VARIABLE.name}    this is a suite variable
-    ${SUITE VARIABLE.bar}     Set Variable              this is an suite attribute
+    ${SUITE VARIABLE.bar}     Set Variable              this is a suite attribute
 ```
