@@ -1,18 +1,6 @@
 {
     "name": "DataDriven Syntax",
     "description": "readme.md",
-    "requirements": [
-        "robotframework==6.0",
-        "robotframework-stacktrace",
-        "robotframework-retryfailed"
-    ],
-    "robotArgs": {
-        "loglevel": "TRACE",
-        "listener": [
-            "RetryFailed",
-            "RobotStackTracer"
-        ]
-    },
     "files": [
         {
             "fileName": "DataDriven.robot"
