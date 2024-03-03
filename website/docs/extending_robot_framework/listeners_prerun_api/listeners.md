@@ -55,7 +55,7 @@ One main difference between both versions is:
     - changes will have a direct effect on the execution of the test suite
     - beside reporting and monitoring, you can use it to e.g. skip tests, modify test data, etc.
 
-However, some methods like `start_keyword` and `end_keyword` are only available in the v2.
+However, some methods like `library_import`, `resource_import` and `variables_import` are only available in the v2.
 
 
 
