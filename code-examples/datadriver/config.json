@@ -2,18 +2,8 @@
     "name": "DataDriver",
     "description": "readme.md",
     "requirements": [
-        "robotframework==6.0",
-        "robotframework-datadriver",
-        "robotframework-stacktrace",
-        "robotframework-retryfailed"
+        "robotframework"
     ],
-    "robotArgs": {
-        "loglevel": "TRACE",
-        "listener": [
-            "RetryFailed",
-            "RobotStackTracer"
-        ]
-    },
     "files": [
         {
             "fileName": "Login.robot"
