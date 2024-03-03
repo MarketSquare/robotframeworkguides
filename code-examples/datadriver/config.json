@@ -2,7 +2,8 @@
     "name": "DataDriver",
     "description": "readme.md",
     "requirements": [
-        "robotframework"
+        "robotframework",
+        "robotframework-datadriver"
     ],
     "files": [
         {
