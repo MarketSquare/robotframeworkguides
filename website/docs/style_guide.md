@@ -4,7 +4,7 @@ sidebar_position: 5
 
 # Style Guide
 
-Version 0.8b
+Version 0.9b
 
 ## Introduction
 
