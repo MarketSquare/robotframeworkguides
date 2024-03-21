@@ -31,13 +31,13 @@ Login with correct Username and Password
     Close Browser
 
 Add Tasks And Set To Complete
-    Open Browser    url=https://todomvc.com/examples/angularjs/#/    browser=chrome
-    Input Text    class:new-todo    Complete Robot Framework Training
-    Press Keys    class:new-todo    RETURN
-    Input Text    class:new-todo    Write Automated Tests
-    Press Keys    class:new-todo    RETURN
-    Input Text    class:new-todo    Take a nap
-    Press Keys    class:new-todo    RETURN
+    Open Browser    url=https://todomvc.com/examples/angular/dist/browser/#    browser=chrome
+    Input Text    css:.new-todo    Complete Robot Framework Training
+    Press Keys    css:.new-todo    RETURN
+    Input Text    css:.new-todo    Write Automated Tests
+    Press Keys    css:.new-todo    RETURN
+    Input Text    css:.new-todo    Take a nap
+    Press Keys    css:.new-todo    RETURN
     Element Text Should Be    class:todo-count    3 items left
     Click Element    xpath: //*[contains(text(), "Complete Robot Framework Training")]/../input
     Element Text Should Be    class:todo-count    2 items left
