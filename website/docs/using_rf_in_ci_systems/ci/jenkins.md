@@ -131,7 +131,7 @@ These are steps that needs to be done by the person administrating the Jenkins a
 ### Preparing the Jenkins configuration file
 
 These are steps you need to have in your Jenkins configuration. I recommend putting those as commands in the same shell command set together with test execution ("command to run your tests")
-- ```npm config set registry https://local-site-for-node-modules``` <-- here you need a server that is providing all required node modules; if it doesn't exist proxy config might work as well
+- ```npm config set registry https://local-site-for-node-modules``` \<-- here you need a server that is providing all required node modules; if it doesn't exist proxy config might work as well
 - Additional commands that might be needed could be ```npm config set strict-ssl false``` or ```npm config set always-auth true```depending how the server is configured
 - Then run ```rfbrowser init --skip-browsers``` to avoid the installation of browsers that may appear hard over the firewall
 - ... and use instead the ones installed by root when the agent was initialised by pointing with ```PLAYWRIGHT_BROWSERS_PATH```` to the location defined
