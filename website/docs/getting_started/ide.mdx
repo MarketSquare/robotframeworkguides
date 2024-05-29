@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 4
 sidebar_label: Set up your IDE
 title: Set up your IDE
 description: Install an IDE and Extensions for code-completion and debugging
@@ -28,8 +28,8 @@ import {
           </Section>
 
 ## Install IDE and Extensions
-Several IDEs and Code Editors support the development of Robot Framework tests.  
-The support ranges from simple code-highlighting, code-completion to test execution and debugging.  
+Several IDEs and Code Editors support the development of Robot Framework tests.
+The support ranges from simple code-highlighting, code-completion to test execution and debugging.
 We list several IDEs and Extensions here, but there are many more.
 
 ### Visual Studio Code
@@ -39,7 +39,7 @@ It provides extensions for a lot of different languages and technologies.
 
 ![VS Code](/img/vscode_site.png)
 
-Popular extensions for Robot Framework:  
+Popular extensions for Robot Framework:
 - [Robot Code](https://marketplace.visualstudio.com/items?itemName=d-biehl.robotcode)
 - [Robot Framework Language Server](https://marketplace.visualstudio.com/items?itemName=robocorp.robotframework-lsp)
 
@@ -60,7 +60,7 @@ See the [VS Code setup guide](https://code.visualstudio.com/docs/setup/setup-ove
 
 <TabItem value="Linux Snap" label="Linux Snap">
 
-1. Open a terminal 
+1. Open a terminal
 2. Execute `sudo snap install code --classic`
 3. Start Visual Studio Code by executing `code`
 
@@ -69,7 +69,7 @@ See the [VS Code setup guide](https://code.visualstudio.com/docs/setup/setup-ove
 
 1. Download the deb package from [Visual Studio Code](https://code.visualstudio.com/download)
 2. Open a terminal
-3. Type `sudo dpkg -i <path_to_deb_package>`  
+3. Type `sudo dpkg -i <path_to_deb_package>`
 e.g. `sudo dpkg -i ~/Downloads/code_1.65.2-1646927742_amd64.deb`
 4. Start Visual Studio Code by executing `code`
 
@@ -78,7 +78,7 @@ e.g. `sudo dpkg -i ~/Downloads/code_1.65.2-1646927742_amd64.deb`
 
 1. Download the rpm package from [Visual Studio Code](https://code.visualstudio.com/download)
 2. Open a terminal
-3. Type `sudo rpm -i <path_to_rpm_package>`  
+3. Type `sudo rpm -i <path_to_rpm_package>`
 e.g. `sudo rpm -i ~/Downloads/code-1.65.2-1646927812.el7.x86_64.rpm`
 4. Start Visual Studio Code by executing `code`
 
@@ -88,7 +88,7 @@ e.g. `sudo rpm -i ~/Downloads/code-1.65.2-1646927812.el7.x86_64.rpm`
 
 #### Visual Studio Code Extensions
 
-:::caution 
+:::caution
 Make sure that only a **single** Robot Framework extension is installed.
 :::
 
@@ -149,13 +149,13 @@ Make sure that only one single Robot Framework extension is installed.
 2. Select `Plugins`
 3. Select the `Marketplace` tab
 4. Search for `Robot Framework Language Server` and click on `Install`
-5. Add a Debug Configuration for Robot Framework to run current test suite  
-![Debug Config Current Test Suite](/img/getting_started/pycharm_conf_current_suite.png) 
+5. Add a Debug Configuration for Robot Framework to run current test suite
+![Debug Config Current Test Suite](/img/getting_started/pycharm_conf_current_suite.png)
 6. Add a Debug Configuration for Robot Framework to run current test case (via selected text)
 ![Debug Config Current Test Case](/img/getting_started/pycharm_conf_selected_test.png)
 
 
-## Run and Debug Robot Framework Tests 
+## Run and Debug Robot Framework Tests
 
 ### Visual Studio Code with RobotCode
 
@@ -163,21 +163,21 @@ Make sure that only one single Robot Framework extension is installed.
 ![Run Tests](/img/getting_started/VSC_RBTCD_running_tests.gif)
 
 #### Debug
-Add a breakpoint to your test suite or resource file, by clicking on the left-hand side of the line.  
+Add a breakpoint to your test suite or resource file, by clicking on the left-hand side of the line.
 ![Breakpoint](/img/VSC_AddBreakpoint.png)
 
-Right-Click on the `Play` button  
+Right-Click on the `Play` button
 ![Play Button](/img/VSC_RBTCD_PlayBtn.png)
 
-Select `Debug Test` from the context menu.  
-Test Execution will begin and stop at the breakpoint.  
+Select `Debug Test` from the context menu.
+Test Execution will begin and stop at the breakpoint.
 ![Debug Test](/img/VSC_RBTCD_Debug.png)
 
-Use `Debug Toolbar` to select actions like step over, step into, step out, continue, pause, etc.  
+Use `Debug Toolbar` to select actions like step over, step into, step out, continue, pause, etc.
 ![Debug Toolbar](/img/VSC_DebugToolbar.png)
 
-Run Robot Frameworm commands while debugging from `Debug Console`.  
-Commands needs to start with `! `  
+Run Robot Frameworm commands while debugging from `Debug Console`.
+Commands needs to start with `! `
 ![Debug Console](/img/VSC_RBTCD_executeDebugCommands.png)
 
 ### PyCharm with Robot Framework Language Server

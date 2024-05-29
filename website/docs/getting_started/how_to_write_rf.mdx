@@ -1,0 +1,47 @@
+---
+sidebar_position: 3
+sidebar_label: Writing Your First Test
+title: Writing Your First Test
+description: The beginnings of the robot framework syntax
+tags:
+    - beginner
+    - syntax
+---
+import CodeBlock from '@theme/CodeBlock';
+
+# Writing Your First Test
+Robot Framework is a versatile and powerful test automation framework that uses plain text syntax. It is designed to be easy to read and write, making it accessible to both technical and non-technical users. In this guide, we’ll cover the basics of Robot Framework syntax to get you started.
+
+## File name
+You can name your files anything you like, as long as they have the .robot extension. For example: 'MyFirstTest.robot'.
+
+## Sections
+A Robot Framework test suite consists of multiple test cases organized within a single file. The basic structure of a test suite file includes the following sections:
+
+1. Settings
+1. Test Cases/Tasks
+{/* Ìf more content is added, the titles above should get deeplinks */}
+Although there are additional sections available, the Test Cases/Tasks section is mandatory for running a test.
+### Settings
+The Settings section is where you define the libraries, resource files, and other settings needed for your test suite.
+```robotframework
+*** Settings ***
+Library    SeleniumLibrary
+```
+
+The libraries contain the keywords (functions) that Robot Framework uses to execute tests. Each library includes documentation of the keywords it provides. To use these, importing the library is necessary.
+
+### Test Cases/Tasks
+The Test Cases or Tasks section is where you define your individual test cases/tasks. Each test case/task is a sequence of keywords (actions).
+
+```robotframework
+*** Test Cases ***
+Open Browser And Go To Homepage
+    [Documentation]    This test case opens the browser and navigates to the homepage of Robot Framework.
+    Open Browser    chrome
+    Go To    https://www.robotframework.org
+    Title Should Be    Robot Framework
+```
+
+## Everything together
+<iframe src="https://robotframework.org/embed/?code-gh-url=https://github.com/MarketSquare/robotframeworkguides/tree/main/code-examples/my_first_test" width="100%" height="600"></iframe>

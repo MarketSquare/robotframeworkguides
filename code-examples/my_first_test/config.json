@@ -1,0 +1,12 @@
+{
+    "name": "MyFirstTest",
+    "description": "readme.md",
+    "requirements": [
+        "robotframework"
+    ],
+    "files": [
+        {
+            "fileName": "MyFirstTest.robot"
+        }
+    ]
+}
