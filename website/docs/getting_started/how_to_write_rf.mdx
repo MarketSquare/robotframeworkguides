@@ -1,7 +1,7 @@
 ---
 sidebar_position: 3
-sidebar_label: Writing Your First Test
-title: Writing Your First Test
+sidebar_label: Writing Your First Code
+title: Writing Your First Code
 description: The beginnings of the robot framework syntax
 tags:
     - beginner
@@ -9,7 +9,7 @@ tags:
 ---
 import CodeBlock from '@theme/CodeBlock';
 
-# Writing Your First Test
+# Writing Your First Code
 Robot Framework is a versatile and powerful test automation framework that uses plain text syntax. It is designed to be easy to read and write, making it accessible to both technical and non-technical users. In this guide, we’ll cover the basics of Robot Framework syntax to get you started.
 
 ## File name
@@ -26,22 +26,45 @@ Although there are additional sections available, the Test Cases/Tasks section i
 The Settings section is where you define the libraries, resource files, and other settings needed for your test suite.
 ```robotframework
 *** Settings ***
-Library    SeleniumLibrary
+Library    String
 ```
 
-The libraries contain the keywords (functions) that Robot Framework uses to execute tests. Each library includes documentation of the keywords it provides. To use these, importing the library is necessary.
+The libraries contain the keywords (functions/steps) that Robot Framework uses to execute tests. Each library includes documentation of the keywords it provides. To use these, importing the library is necessary.
 
 ### Test Cases/Tasks
-The Test Cases or Tasks section is where you define your individual test cases/tasks. Each test case/task is a sequence of keywords (actions).
-
+The Test Cases or Tasks section is where you define your individual test cases/tasks. Each test case/task is a sequence of keywords. These keywords determine the steps or actions that your test or task performs. There is no limit to the number of steps a testcase can have, but there are good practices and it is good to create conventions with your co-workers to ensure readability.
 ```robotframework
 *** Test Cases ***
-Open Browser And Go To Homepage
-    [Documentation]    This test case opens the browser and navigates to the homepage of Robot Framework.
-    Open Browser    chrome
-    Go To    https://www.robotframework.org
-    Title Should Be    Robot Framework
+Create A Random String
+    Log To Console    We are going to generate a random string
+    Generate Random String  10
+    Log To Console    We finished generating a random string
 ```
 
+## Indentation
+You can see in the provided examples that Robot Framework code is separated by spaces. To be able to correctly differentiate Robot Framework needs **at least 2 spaces**. A few examples that you can see in the code we have seen until now:
+```robotframework
+Library    String
+```
+- `Library` in the Settings section is unindented. This indicates that `Library` is the setting we are declaring.
+- Between `Library` and `String` are several spaces. This indicates that `String` is a library that we need for our tests.
+
+```robotframework
+Create A Random String
+    Log To Console    We are going to generate a random string
+    Generate Random String  10
+    Log To Console    We finished generating a random string
+```
+- `Create A Random String` in the Test Cases section is unindented. This indicates that it is a testcase name
+- The lines below `Create A Random String` are indented. Indicating that these are keywords that we use in our testcase
+- Between `Generate Random String` and `10` are several spaces. This indicates that 10 is an argument for our keyword, meaning our random string will be 10 characters long.
+- Our `Log To Console` keywords are followed by a few spaces and a sentence. The spaces ensure that the following sentence is the text that we want to log to our console.
+
+So you can see that spacing and indentation is extremely important in Robot Framework. It is neccesary to show the difference between a keyword and arguments that we use in our keywords. And also to differentiate between our test names and the keywords of our test.
+Remember, to be able to correctly differentiate Robot Framework needs at least 2 spaces. More is also allowed. In the [Style Guide](../style_guide.md#horizontal-spacing) you can find more about conventions regarding spacing.
 ## Everything together
 <iframe src="https://robotframework.org/embed/?code-gh-url=https://github.com/MarketSquare/robotframeworkguides/tree/main/code-examples/my_first_test" width="100%" height="600"></iframe>
+
+
+{/* TODO: review newly added indentation text
+TODO: add page on front page between RPA and IDE, same Icon as IDE */}

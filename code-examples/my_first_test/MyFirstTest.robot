@@ -1,9 +1,8 @@
 *** Settings ***
-Library    SeleniumLibrary
+Library    String
 
 *** Test Cases ***
-Open Browser And Go To Homepage
-    [Documentation]    This test case opens the browser and navigates to the homepage of Robot Framework.
-    Open Browser    chrome
-    Go To    https://www.robotframework.org
-    Title Should Be    Robot Framework
+Create A Random String
+    Log To Console    We are going to generate a random string
+    ${random_string}    Generate Random String  10
+    Log To Console    We finished generating a random string
