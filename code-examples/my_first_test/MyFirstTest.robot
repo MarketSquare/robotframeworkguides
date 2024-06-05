@@ -4,5 +4,5 @@ Library    String
 *** Test Cases ***
 Create A Random String
     Log To Console    We are going to generate a random string
-    ${random_string}    Generate Random String  10
+    Generate Random String  10
     Log To Console    We finished generating a random string
