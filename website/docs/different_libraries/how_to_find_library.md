@@ -25,7 +25,7 @@ There are two main libraries which can automate web applications in a web browse
 
 ## Desktop Applications
 
-### Does if offer a User Interface ?
+### Does it offer a User Interface?
 Automation via the User Interface is a common approach, even though it can be very unstable, slow and heavy on the maintenance.  
 But if your Application offers a User Interface, there is also the possibility to automate it via that User Interface.  
 That's where the used technology becomes important.
@@ -42,7 +42,7 @@ There are libraries out there for general windows desktop automation or image ba
 - [Zoomba Library](https://github.com/Accruent/robotframework-zoomba)
 - [AutoIT Library](https://github.com/nokia/robotframework-autoitlibrary)
 
-But if you know that it's wiritten in Java - check out some SWING or SWT Libraries!
+But if you know that it's written in Java - check out some SWING or SWT Libraries!
 
 #### Java Specific UI Libraries
 
