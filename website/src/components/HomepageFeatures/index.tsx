@@ -48,7 +48,7 @@ const FeatureList: FeatureItem[] = [
     Svg: require('@site/static/img/api_doc_image.svg').default,
     description: (
       <>
-      Want to use the API to intearct with the <strong>Robot Framework Model</strong> create your own tools? This is the place to start.
+      Want to use the API to interact with the <strong>Robot Framework Model</strong> create your own tools? This is the place to start.
       </>
     ),
     to: "https://robot-framework.readthedocs.io/en/stable/",
