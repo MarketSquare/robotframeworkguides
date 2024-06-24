@@ -4,7 +4,7 @@ sidebar_position: 5
 
 # Style Guide
 
-Version 0.9b
+Version 0.10b
 
 ## Introduction
 
@@ -1808,3 +1808,381 @@ Attribute Variables
     Set Suite Variable        ${SUITE VARIABLE.name}    this is a suite variable
     ${SUITE VARIABLE.bar}     Set Variable              this is a suite attribute
 ```
+
+## Test Templates
+
+User Guide Reference:
+[Test Templates](https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#test-templates)
+
+General rules
+
+- There should be no empty lines between test iterations (however, a single empty line can be
+used to separate the iterations in logical groups).
+- Data columns and their titles should be aligned vertically with respect to each other.
+- Each column should be left-aligned.
+- Any two column should be separated by 4 spaces from each other.
+- Data column names should be capitalised.
+
+The Template Keyword follows the same common rules as any other Keyword.
+
+---
+
+### Untitled Data Columns
+
+- The first row of the test data should be placed on a new line immediately after
+the test case name (this reserves the whole line for the test case name).
+- The first column should be indented by 4 spaces.
+
+<Tabs>
+  <TabItem value="Single test no column titles" label="Example 1">
+
+```robot
+*** Settings ***
+Documentation    Templated test case.
+Test Template    Template Keyword
+
+
+*** Test Cases ***
+Test Case
+    00000         aaaaa      AAAAAAAAAA
+    1111111111    bbb        BBBBBBBBBBBBBB
+    ${EMPTY}      aaaa       AAAAAAA
+    ${EMPTY}      bbbbbbb    BBB
+    ${NONE}       a          AAAAAAAAAA
+    ${NONE}       bbb        BBBBBBBBBBBBBB
+
+
+*** Keywords ***
+Template Keyword
+    [Arguments]    ${arg1}    ${arg2}    ${arg3}
+    Log Many    ${arg1}    ${arg2}    ${arg3}
+
+```
+
+  </TabItem>
+    <TabItem value="Two tests no column titles" label="Example 2">
+
+```robot
+*** Settings ***
+Documentation    Two templated test cases.
+Test Template    Template Keyword
+
+
+*** Test Cases ***
+Test Case
+    00000         aaaaa          AAAAAAAAAA
+    1111111111    bbb            BBBBBBBBBBBBBB
+    ${EMPTY}      aaaa           AAAAAAA
+    ${EMPTY}      bbbbbbb        BBB
+    ${NONE}       a              AAAAAAAAAA
+    ${NONE}       bbb            BBBBBBBBBBBBBB
+
+Another Test Case With Long Name
+    0000000000    aa             AAAAAA
+    1111          bbbbbbbbbbb    BB
+    ${EMPTY}      a              AAAAAAA
+    ${EMPTY}      bbb            BBBBBB
+    ${NONE}       aa             AAAAAAAAAAAAA
+    ${NONE}       bbbbbb         B
+
+
+*** Keywords ***
+Template Keyword
+    [Arguments]    ${arg1}    ${arg2}    ${arg3}
+    Log Many    ${arg1}    ${arg2}    ${arg3}
+
+```
+
+  </TabItem>
+</Tabs>
+
+In **Example 1**, the longest item in the first column is `1111111111`, therefore, corresponding item in the next
+column, `bbb` is separated by 4 spaces from it, and the rest of the data in the second column is vertically aligned
+with `bbb`. The same logic applies to the third column. For easier navigation, all data rows with constant values are
+listed first, next with `${EMPTY}` and `${NONE}`. In **Example 2**, there are multiple test cases in one file, and the
+data in all test cases are aligned with respect to each other.
+
+### Titled Data Columns
+
+If it is decided to name the data columns, then the similar alignment rules apply as in the case of unnamed columns.
+The only exception is that it is more reasonable to place the first data row next to the test case name. The idea is to
+maintain compact layout and the continuity of the test data columns under the column titles.
+
+<Tabs>
+  <TabItem value="One test column titles" label="Example 1">
+
+```robot
+*** Settings ***
+Documentation    Templated test case with the column titles.
+Test Template    Template Keyword
+
+
+*** Test Cases ***    COLUMN1       COLUMN2    COLUMN3
+Test Case             00000         aaaaa      AAAAAAAAAA
+                      1111111111    bbb        BBBBBBBBBBBBBB
+                      ${EMPTY}      aaaa       AAAAAAA
+                      ${EMPTY}      bbbbbbb    BBB
+                      ${NONE}       a          AAAAAAAAAA
+                      ${NONE}       bbb        BBBBBBBBBBBBBB
+
+
+*** Keywords ***
+Template Keyword
+    [Arguments]    ${arg1}    ${arg2}    ${arg3}
+    Log Many    ${arg1}    ${arg2}    ${arg3}
+```
+
+  </TabItem>
+    <TabItem value="Two tests column titles" label="Example 2">
+
+```robot
+*** Settings ***
+Documentation    Two templated test cases with the column titles.
+Test Template    Template Keyword
+
+
+*** Test Cases ***                  COLUMN1       COLUMN2        COLUMN3
+Test Case                           00000         aaaaa          AAAAAAAAAA
+                                    1111111111    bbb            BBBBBBBBBBBBBB
+                                    ${EMPTY}      aaaa           AAAAAAA
+                                    ${EMPTY}      bbbbbbb        BBB
+                                    ${NONE}       a              AAAAAAAAAA
+                                    ${NONE}       bbb            BBBBBBBBBBBBBB
+
+Another Test Case With Long Name    00000         a              AAAAAAAAAA
+                                    1111111111    bbbbbbbbbbb    BBBBBBBBBBBBBB
+                                    ${EMPTY}      aa             AAAAAAA
+                                    ${EMPTY}      bbbb           BBB
+                                    ${NONE}       aaaaaaaaaa     AAAAAAAAAA
+                                    ${NONE}       bb             BBBBBBBBBBBBBB
+
+
+*** Keywords ***
+Template Keyword
+    [Arguments]    ${arg1}    ${arg2}    ${arg3}
+    Log Many    ${arg1}    ${arg2}    ${arg3}
+```
+
+  </TabItem>
+</Tabs>
+
+### Individually Named Tests
+
+- Each test case and its test data should be placed on the same line.
+
+<Tabs>
+  <TabItem value="Simple example" label="Example 1">
+
+```robot
+*** Settings ***
+Documentation    Template example. Here, we have three separate test cases.
+Test Template    Template Keyword
+Test Tags        example
+
+
+*** Test Cases ***
+Test                            abc123        aaaa          AAAAAAAAAA
+Another Test                    1111111111    bbb           BBBBBBBBBBBBBB
+One More Test With Long Name    222           cc            CCCCCCCCCCCCCCC
+
+
+*** Keywords ***
+Template Keyword
+    [Arguments]    ${arg1}    ${arg2}    ${arg3}
+    Log Many    ${arg1}    ${arg2}    ${arg3}
+```
+
+  </TabItem>
+  <TabItem value="Example with grouped test cases" label="Example 2">
+
+```robot
+*** Settings ***
+Documentation    Here, we have many test cases. They are grouped according to
+...              the ARG values. Columns are titled.
+Test Template    Template Keyword
+Test Tags        example
+
+
+*** Test Cases ***              ARG           SECOND ARG    ANOTHER ARG
+Test                            abc123        aaaa          AAAAAAAAAA
+Another Test                    1111111111    bbb           BBBBBBBBBBBBBB
+One More Test With Long Name    222           cc            CCCCCCCCCCCCCCC
+
+Test With Empty                 ${EMPTY}      aaaa          AAAAAAAAAA
+Another Test With Empty         ${EMPTY}      bbb           BBBBBBBBBBBBBB
+One More Test With Empty        ${EMPTY}      cc            CCCCCCCCCCCCCCC
+
+Test With None                  ${NONE}       aaaa          AAAAAAAAAA
+Another Test With None          ${NONE}       bbb           BBBBBBBBBBBBBB
+One More Test With None         ${NONE}       cc            CCCCCCCCCCCCCCC
+
+
+*** Keywords ***
+Template Keyword
+    [Arguments]    ${arg1}    ${arg2}    ${arg3}
+    Log Many    ${arg1}    ${arg2}    ${arg3}
+```
+
+  </TabItem>
+</Tabs>
+
+It is a good idea to sort rows in some logical order if applicable, especially if the number of test cases is big.
+This will ease finding the relevant raws when adding/removing data. Empty lines can be used as an exception to separate
+tests into logical groups as in **Example 2**.
+
+### Documentation And Tags
+
+In special cases, there might be a need to specify Documentation and Tags for each test case.
+To achieve consistent formatting, they can be represented in columns just like test data,
+by passing them as arguments to the Template Keyword:
+
+```robot
+*** Settings ***
+Documentation    Different Tags and Documentation for each test case.
+Test Template    Template Keyword
+
+
+*** Test Cases ***    ARG1    ARG2    [Documentation]           [Tags]
+TestA                 aaa     AAA     Prints some message       tagA
+TestB                 bbb     BBB     Prints another message    tagB
+
+
+*** Keywords ***
+Template Keyword
+    [Arguments]    ${arg1}    ${arg2}    ${documentation}    ${tag}
+    [Setup]    Set Tags And Documentation    ${documentation}    ${tag}
+    Log Many   ${arg1}    ${arg2}
+
+Set Tags And Documentation
+   [Arguments]    ${documentation}    ${tag}
+   Set Test Documentation    ${documentation}
+   Set Tags    ${tag}
+```
+
+Square brackets around the column titles, `[Documentation]` and `[Tags]`, are merely to resemble the Settings
+syntax. This is to distinguish them from the test data.
+
+### Per-Test Case Templates
+
+When there are different templates set for different test cases, the data is aligned within *each* test case.
+This is because they are using different templates and therefore, are independent.
+
+```robot
+*** Settings ***
+Documentation    Here, each test case is using its own template.
+Test Tags        example
+
+
+*** Test Cases ***
+Test Case With TemplateA
+    [Template]    TemplateA
+    aa           123
+    a            Hello Word!
+    aaaaaaaaa    @{TEST TAGS}
+    aaaa         ${NONE}
+
+Test Case With TemplateB
+    [Template]    TemplateB
+    bbbbbbbbbbb    456          ${1.5}
+    bbbbbb         ${EMPTY}     anything
+    bbb            something    7899999999999
+    bbbbbbbb       ${2}         ${EMPTY}
+
+
+*** Keywords ***
+TemplateA
+    [Documentation]    aaa
+    [Tags]    A
+    [Arguments]    ${arg1}    ${arg2}
+    Log Many    ${arg1}    ${arg2}
+
+TemplateB
+    [Documentation]    bbb
+    [Tags]    B
+    [Arguments]    ${arg_one}    ${arg_two}    ${arg_three}
+    Log Many    ${arg_one}    ${arg_two}    ${arg_three}
+```
+
+### Template with embedded arguments
+
+In case of the templates with embedded arguments, the same rules are valid as in the case of other
+template Keywords.
+
+<Tabs>
+  <TabItem value="Embedded args" label="Example 1">
+
+```robot
+*** Settings ***
+Documentation    Template Keyword with embedded arguments.
+Test Template    Joining "${start}" And "${end}" Should Give Us "${word}"
+Test Tags        embedded
+
+
+*** Test Cases ***
+Templated Test Case With Embedded Args
+    Gn      omes      Gnomes
+    L       ove       Love
+    Rob     ot        Robot
+    Fram    ework!    Framework!
+
+
+*** Keywords ***
+Joining "${start}" And "${end}" Should Give Us "${word}"
+    ${result}    Catenate    SEPARATOR=    ${start}    ${end}
+    Should Be Equal    ${result}    ${word}
+```
+
+  </TabItem>
+    <TabItem value="Embedded args titled columns" label="Example 2">
+
+```robot
+*** Settings ***
+Documentation    Template Keyword with embedded arguments.
+...              Data columns are titled.
+Test Template    Joining "${start}" And "${end}" Should Give Us "${word}"
+Test Tags        embedded
+
+
+*** Test Cases ***                        START    END       WORD
+Templated Test Case With Embedded Args    Gn       omes      Gnomes
+                                          L        ove       Love
+                                          Rob      ot        Robot
+                                          Fram     ework!    Framework!
+
+
+*** Keywords ***
+Joining "${start}" And "${end}" Should Give Us "${word}"
+    ${result}    Catenate    SEPARATOR=    ${start}    ${end}
+    Should Be Equal    ${result}    ${word}
+```
+
+  </TabItem>
+    <TabItem value="Embedded args per-case" label="Example 3">
+
+```robot
+*** Settings ***
+Documentation    Template Keyword with embedded arguments per test case.
+Test Tags        embedded
+
+
+*** Test Cases ***
+Templated Test Case With Embedded Args
+    [Template]    Joining "${start}" And "${end}" Should Give Us "${word}"
+    Gn      omes      Gnomes
+    L       ove       Love
+    Rob     ot        Robot
+    Fram    ework!    Framework!
+
+
+*** Keywords ***
+Joining "${start}" And "${end}" Should Give Us "${word}"
+    ${result}    Catenate    SEPARATOR=    ${start}    ${end}
+    Should Be Equal    ${result}    ${word}
+```
+
+  </TabItem>
+</Tabs>
+
+### Task Templates
+
+Task Templates follow the same rules as Test Templates.
