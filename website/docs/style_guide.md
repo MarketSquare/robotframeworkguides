@@ -1698,7 +1698,7 @@ Commandline Variables and by extension variable files should be treated as Globa
 
 #### Environment Variables
 
-https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#environment-variables
+- <https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#environment-variables>
 
 Environment Variables should be treated as Global Variables. (i.e. Always UPPER CASED, UPPER_CASED)
 
