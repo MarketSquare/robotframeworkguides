@@ -34,7 +34,7 @@ Use a Keyword with multiple arguments
 
 <iframe src="https://robotframework.org/embed/?code-gh-url=https://github.com/MarketSquare/robotframeworkguides/tree/main/code-examples/extending_robot_framework/static_library/Static_Library_With_Class" width="100%" height="250"></iframe>
 
-### Static Library withouth a Class
+### Static Library without a Class
 
 ```python
 import base64
