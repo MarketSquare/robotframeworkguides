@@ -152,7 +152,7 @@ class CopyTest(SuiteVisitor):
         """Copy and modify tests in the test suite."""
         for test in suite.tests:
             if "copy" not in test.tags:
-                test_case = suite.tests.append(test.copy())
+                test_case = suite.tests.append(test.deepcopy())
                 test_case.tags.add("copy")
                 test_case.name = f"{test_case.name} (copy)"
 ```
