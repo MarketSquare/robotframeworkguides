@@ -130,4 +130,4 @@ It is possible to define variables in the configuration, either at the top of th
 Also [predefined GitLab variables](https://docs.gitlab.com/ee/ci/variables/predefined_variables.html) or variables defined for your project settings can be used.  
 Especially for handling secrets, it is recommended to use `CI Variables` in your project settings.  
 
-Check out the [GitLab CI Variables](https://docs.gitlab.com/ee/ci/variables/README.html) documentation for more information.  
+Check out the [GitLab CI Variables](https://docs.gitlab.com/ee/ci/variables/) documentation for more information.  
