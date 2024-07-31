@@ -1,18 +1,6 @@
 {
     "name": "BDD Syntax",
     "description": "readme.md",
-    "requirements": [
-        "robotframework==7.0",
-        "robotframework-stacktrace",
-        "robotframework-retryfailed"
-    ],
-    "robotArgs": {
-        "loglevel": "TRACE",
-        "listener": [
-            "RetryFailed",
-            "RobotStackTracer"
-        ]
-    },
     "files": [
         {
             "fileName": "BDD.robot"
