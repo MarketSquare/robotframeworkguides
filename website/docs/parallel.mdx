@@ -2,7 +2,7 @@
 
 ## Pabot
 
-[Pabot](https://github.com/mkorpela/pabot) is a **parallel test runner** for Robot Framework.  
+[Pabot](https://github.com/mkorpela/pabot) is a **parallel test runner** for Robot Framework.
 It can be used to run tests in parallel on a single machine with multiple processes.
 
 Check out the video from RoboCon 2018
@@ -16,41 +16,47 @@ Check out the video from RoboCon 2018
 
 ### Usage
 
-By default, Pabot will split execution on suite level. That means that each process will run a single suite.  
-Test Cases from the suite will be executed sequentially.  
-If you want to split execution on test level, you can use `--testlevelsplit` option. This will split execution on test level, so that each process will run a single test case.  
+By default, Pabot will split execution on suite level. That means that each process will run a single suite.
+Test Cases from the suite will be executed sequentially.
+If you want to split execution on test level, you can use `--testlevelsplit` option. This will split execution on test level, so that each process will run a single test case.
 
-Split execution to suite files.
+Split execution to suite files:
 
-     pabot [path to tests]
+```bash
+pabot [path to tests]
+```
 
-Split execution on test level.
+Split execution on test level:
 
-     pabot --testlevelsplit [path to tests]
+```bash
+pabot --testlevelsplit [path to tests]
+```
 
-Run with 8 parallel processes.
+Run with 8 parallel processes:
 
-     pabot --processes 8 [path to tests]
+```bash
+pabot --processes 8 [path to tests]
+```
 
-The default number of processes depends on the number of CPU cores. (2 processes per core)  
+The default number of processes depends on the number of CPU cores. (2 processes per core)
 If no number pro processes is given, the default number of processes is used.
 
 <details>
 <summary>Command Line Options</summary>
-
-    pabot [--verbose|--testlevelsplit|--command .. --end-command|
-           --processes num|--pabotlib|--pabotlibhost host|--pabotlibport port|
-           --shard i/n|
-           --artifacts extensions|--artifactsinsubfolders|
-           --resourcefile file|--argumentfile[num] file|--suitesfrom file] 
-          [robot options] [path ...]
-
+```bash
+pabot [--verbose|--testlevelsplit|--command .. --end-command|
+   --processes num|--pabotlib|--pabotlibhost host|--pabotlibport port|
+   --shard i/n|
+   --artifacts extensions|--artifactsinsubfolders|
+   --resourcefile file|--argumentfile[num] file|--suitesfrom file]
+  [robot options] [path ...]
+```
 Supports all [Robot Framework command line options](https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#all-command-line-options) and also following options (these must be before RF options):
 
---verbose     
+--verbose\
   more output from the parallel execution
 
---testlevelsplit          
+--testlevelsplit\
   Split execution on test level instead of default suite level.
   If .pabotsuitenames contains both tests and suites then this
   will only affect new suites and split only them.
@@ -58,70 +64,76 @@ Supports all [Robot Framework command line options](https://robotframework.org/r
   .pabotsuitenames file will also only affect new suites and
   add them as suite files.
 
---command [ACTUAL COMMANDS TO START ROBOT EXECUTOR] --end-command    
+--command [ACTUAL COMMANDS TO START ROBOT EXECUTOR] --end-command\
   RF script for situations where robot is not used directly
 
---processes   [NUMBER OF PROCESSES]          
+--processes   [NUMBER OF PROCESSES]\
   How many parallel executors to use (default max of 2 and cpu count)
 
---pabotlib          
+--pabotlib\
   Start PabotLib remote server. This enables locking and resource distribution between parallel test executions.
 
---pabotlibhost   [HOSTNAME]          
+--pabotlibhost   [HOSTNAME]\
   Host name of the PabotLib remote server (default is 127.0.0.1)
   If used with --pabotlib option, will change the host listen address of the created remote server (see https://github.com/robotframework/PythonRemoteServer)
   If used without the --pabotlib option, will connect to already running instance of the PabotLib remote server in the given host. The remote server can be also started and executed separately from pabot instances:
-  
-      python -m pabot.pabotlib <path_to_resourcefile> <host> <port>
-      python -m pabot.pabotlib resource.txt 192.168.1.123 8271
-  
+
+```bash
+python -m pabot.pabotlib \<path_to_resourcefile\> \<host\> \<port\>
+python -m pabot.pabotlib resource.txt 192.168.1.123 8271
+```
   This enables sharing a resource with multiple Robot Framework instances.
 
---pabotlibport   [PORT]          
+--pabotlibport   [PORT]\
   Port number of the PabotLib remote server (default is 8270)
   See --pabotlibhost for more information
 
---resourcefile   [FILEPATH]          
+--resourcefile   [FILEPATH]\
   Indicator for a file that can contain shared variables for distributing resources. This needs to be used together with pabotlib option. Resource file syntax is same as Windows ini files. Where a section is a shared set of variables.
-  
---artifacts [FILE EXTENSIONS]   
-  List of file extensions (comma separated).    
-  Defines which files (screenshots, videos etc.) from separate reporting directories would be copied and included in a final report.   
-  Possible links to copied files in RF log would be updated (only relative paths supported).   
-  The default value is `png`.    
+
+--artifacts [FILE EXTENSIONS]\
+  List of file extensions (comma separated).
+  Defines which files (screenshots, videos etc.) from separate reporting directories would be copied and included in a final report.
+  Possible links to copied files in RF log would be updated (only relative paths supported).
+  The default value is `png`.
   Examples:
 
-     --artifacts png,mp4,txt
+```bash
+--artifacts png,mp4,txt
+```
 
---artifactsinsubfolders   
+--artifactsinsubfolders\
   Copy artifacts located not only directly in the RF output dir, but also in it's sub-folders.
 
---argumentfile[INTEGER]   [FILEPATH]          
+--argumentfile[INTEGER]   [FILEPATH]\
   Run same suites with multiple [argumentfile](http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#argument-files) options.
   For example:
 
-     --argumentfile1 arg1.txt --argumentfile2 arg2.txt
+```bash
+--argumentfile1 arg1.txt --argumentfile2 arg2.txt
+```
 
---suitesfrom   [FILEPATH TO OUTPUTXML]          
+--suitesfrom   [FILEPATH TO OUTPUTXML]\
   Optionally read suites from output.xml file. Failed suites will run
   first and longer running ones will be executed before shorter ones.
 
---shard [INDEX]/[TOTAL]
+--shard [INDEX]/[TOTAL]\
   Optionally split execution into smaller pieces. This can
   be used for distributing testing to multiple machines.
 
---chunk
+--chunk\
   Optionally chunk tests to PROCESSES number of robot runs. This can save time because all the suites will share the same setups and teardowns.
 
 Example usages:
-
-     pabot test_directory
-     pabot --exclude FOO directory_to_tests
-     pabot --command java -jar robotframework.jar --end-command --include SMOKE tests
-     pabot --processes 10 tests     
-     pabot --pabotlibhost 192.168.1.123 --pabotlibport 8271 --processes 10 tests
-     pabot --pabotlib --pabotlibhost 192.168.1.111 --pabotlibport 8272 --processes 10 tests
-     pabot --artifacts png,mp4,txt --artifactsinsubfolders directory_to_tests
+```bash
+pabot test_directory
+pabot --exclude FOO directory_to_tests
+pabot --command java -jar robotframework.jar --end-command --include SMOKE tests
+pabot --processes 10 tests
+pabot --pabotlibhost 192.168.1.123 --pabotlibport 8271 --processes 10 tests
+pabot --pabotlib --pabotlibhost 192.168.1.111 --pabotlibport 8272 --processes 10 tests
+pabot --artifacts png,mp4,txt --artifactsinsubfolders directory_to_tests
+```
 </details>
 
 ### Examples
@@ -133,7 +145,7 @@ Multiple Test Suites in a `tests/` directory
 Test Case 1
     Log    Test Case 1
     Sleep   10s
-  
+
 Test Case 2
     Log    Test Case 2
     Sleep   10s
@@ -148,7 +160,7 @@ Test Case 3
 Test Case A
     Log    Test Case A
     Sleep   10s
-  
+
 Test Case B
     Log    Test Case B
     Sleep   10s
