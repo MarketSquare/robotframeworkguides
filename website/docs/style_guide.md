@@ -1148,7 +1148,7 @@ ${LONG ITEM}    some very long name of the
 ...             grape
 ...             avocado
 ...             kiwi
-...             $(LONG ITEM)
+...             ${LONG ITEM}
 ```
 
 ###### Dictionaries
