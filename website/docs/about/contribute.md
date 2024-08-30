@@ -4,6 +4,8 @@ sidebar_label: How to contribute
 title: How to contribute
 ---
 
+## Quickstart
+
 This documentation project is powered by [Docusaurus](https://docusaurus.io/) and maintained on [GitHub](https://github.com/MarketSquare/robotframeworkguides)
 
 The basic steps to contribute to the project are:
@@ -19,18 +21,18 @@ The basic steps to contribute to the project are:
 - Build and Deployment will be handled by GitHub Actions
 
 
-# GitHub Repository
+## GitHub Repository
 
-## Branches
+### Branches
 
 There are two branches in the project:
 
 - `main` is the default branch and is used to maintain the documentation
 - `gh-pages` is only used for the deployment of the `.html` documentation to GitHub Pages
 
-## Folders
+### Folders
 
-### Docs
+#### Docs
 
 Docs are written in Markdown and are stored [here](https://github.com/MarketSquare/robotframeworkguides/tree/main/website/docs)
 
@@ -54,14 +56,14 @@ You can use a `_category_.json` file to customize the sidebar label and the posi
 }
 ```
 
-## Static Files (e.g. images)
+### Static Files (e.g. images)
 
 Static files (like images) are stored in the `website/static` folder [here](https://github.com/MarketSquare/robotframeworkguides/tree/main/website/static)  
 They will be automatically included in the built and will be accessible via the `/` path (e.g. images are accessible via `/img/robotframeworkguides_logo.png`)
 
-# Updating Documentation
+## Updating Documentation
 
-## Run the development server
+### Run the development server
 
 - Go to directory containing the `package.json` file
 - Download dependencies via `npm install`
@@ -73,7 +75,7 @@ Changes are visible in real time in the browser.
 ![Development Server](/img/contribute/dev_server.png)
 
 
-## Create Build and Push
+### Create Build and Push
 
 - Run the build via `npm run build`
 - Test the build locally with `npm run serve`

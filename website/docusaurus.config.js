@@ -1,8 +1,8 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const lightCodeTheme = require('prism-react-renderer').themes.github;
+const darkCodeTheme = require('prism-react-renderer').themes.dracula;
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -145,12 +145,12 @@ const config = {
       algolia: {
         // The application ID provided by Algolia
         appId: 'GMGW7XXAQB',
-  
+
         // Public API key: it is safe to commit it
         apiKey: 'b14e514cb158f8bb5360fe8622d36ea5',
-  
+
         indexName: 'robotframeworkguides',
-  
+
         // Optional: see doc section below
         contextualSearch: true,
       },
