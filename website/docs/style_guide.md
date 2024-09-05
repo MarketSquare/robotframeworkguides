@@ -4,7 +4,7 @@ sidebar_position: 5
 
 # Style Guide
 
-Version 0.9b
+Version 0.10b
 
 ## Introduction
 
@@ -1808,3 +1808,202 @@ Attribute Variables
     Set Suite Variable        ${SUITE VARIABLE.name}    this is a suite variable
     ${SUITE VARIABLE.bar}     Set Variable              this is a suite attribute
 ```
+
+## Test Templates
+
+User Guide Reference:
+[Test Templates](https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#test-templates)
+
+General rules
+
+- Any two column should be separated by 4 spaces from each other.
+- Each column should be left-aligned.
+- Data columns should have titles.
+- The titles should be capitalised.
+- The titles should be left-aligned with respect to the data columns.
+
+The Template Keyword follows the same common rules as any other Keyword.
+
+---
+
+### Test Cases Or Tasks
+
+Templated test cases and tasks share the same guidelines. Below are examples for the
+different cases, depending on how templates are used.
+
+<Tabs>
+  <TabItem value="One test" label="Example 1">
+
+```robot
+*** Settings ***
+Documentation    Templated test case.
+Test Template    Template Keyword
+
+
+*** Test Cases ***    COLUMN1       COLUMN2    COLUMN3
+Test Case             00000         aaaaa      AAAAAAAAAA
+                      1111111111    bbb        BBBBBBBBBBBBBB
+                      ${EMPTY}      aaaa       AAAAAAA
+                      ${EMPTY}      bbbbbbb    BBB
+                      ${NONE}       a          AAAAAAAAAA
+                      ${NONE}       bbb        BBBBBBBBBBBBBB
+
+
+*** Keywords ***
+Template Keyword
+    [Arguments]    ${arg1}    ${arg2}    ${arg3}
+    Log Many    ${arg1}    ${arg2}    ${arg3}
+```
+
+  </TabItem>
+  <TabItem value="Two tests" label="Example 2">
+
+```robot
+*** Settings ***
+Documentation    Two templated tasks.
+Task Template    Template Keyword
+
+
+*** Tasks ***                    COLUMN1       COLUMN2        COLUMN3
+First Task                       00000         aaaaa          AAAAAAAAAA
+                                 1111111111    bbb            BBBBBBBBBBBBBB
+                                 ${EMPTY}      aaaa           AAAAAAA
+                                 ${EMPTY}      bbbbbbb        BBB
+                                 ${NONE}       a              AAAAAAAAAA
+                                 ${NONE}       bbb            BBBBBBBBBBBBBB
+
+Another Task With Longer Name    00000         a              AAAAAAAAAA
+                                 1111111111    bbbbbbbbbbb    BBBBBBBBBBBBBB
+                                 ${EMPTY}      aa             AAAAAAA
+                                 ${EMPTY}      bbbb           BBB
+                                 ${NONE}       aaaaaaaaaa     AAAAAAAAAA
+                                 ${NONE}       bb             BBBBBBBBBBBBBB
+
+
+*** Keywords ***
+Template Keyword
+    [Arguments]    ${arg1}    ${arg2}    ${arg3}
+    Log Many    ${arg1}    ${arg2}    ${arg3}
+```
+
+  </TabItem>
+  <TabItem value="Each test named" label="Example 3">
+
+```robot
+*** Settings ***
+Documentation    Individually named test cases.
+...              Tests sorted according to ARG values.
+Test Template    Template Keyword
+
+
+*** Test Cases ***              ARG           SECOND ARG    ANOTHER ARG
+Test                            abc123        aaaa          AAAAAAAAAA
+Another Test                    1111111111    bbb           BBBBBBBBBBBBBB
+One More Test With Long Name    222           cc            CCCCCCCCCCCCCCC
+
+Test With Empty                 ${EMPTY}      aaaa          AAAAAAAAAA
+Another Test With Empty         ${EMPTY}      bbb           BBBBBBBBBBBBBB
+One More Test With Empty        ${EMPTY}      cc            CCCCCCCCCCCCCCC
+
+Test With None                  ${NONE}       aaaa          AAAAAAAAAA
+Another Test With None          ${NONE}       bbb           BBBBBBBBBBBBBB
+One More Test With None         ${NONE}       cc            CCCCCCCCCCCCCCC
+
+
+*** Keywords ***
+Template Keyword
+    [Arguments]    ${arg1}    ${arg2}    ${arg3}
+    Log Many    ${arg1}    ${arg2}    ${arg3}
+```
+
+  </TabItem>
+    <TabItem value="Two tests two templates" label="Example 4">
+
+```robot
+*** Settings ***
+Documentation    Eeach test case using different template.
+
+
+*** Test Cases ***
+Test Case With Template A
+    [Template]    Template A
+    aa        123
+    a         Hello Word!
+    aaaaaa    ${5}
+    aaa       ${NONE}
+
+Test Case With Template B
+    [Template]    Template B
+    bbbbbbbbbbbbb    456          ${1.5}
+    bbbbbbbb         ${EMPTY}     anything
+    bbb              something    7899999999999
+    bbbbbbbbbbb      ${2}         ${EMPTY}
+
+
+*** Keywords ***
+Template A
+    [Documentation]    This is first template.
+    [Tags]    A
+    [Arguments]    ${arg1}    ${arg2}
+    Log Many    ${arg1}    ${arg2}
+
+Template B
+    [Documentation]    This is second template.
+    [Tags]    B
+    [Arguments]    ${arg_one}    ${arg_two}    ${arg_three}
+    Log Many    ${arg_one}    ${arg_two}    ${arg_three}
+```
+
+  </TabItem>
+</Tabs>
+
+In **Example 1**, section name `*** Test Cases ***` and `COLUMN1` are separated by 4 spaces, as well as following
+columns. The distance is measured between the longest item in the given column and the start of the following column.
+For example, the longest item in the first column is `1111111111`, therefore, corresponding item in the next
+column, `bbb` is separated by 4 spaces from it.
+
+In **Example 2**, there are two tasks in one file, and the
+data in all tasks are aligned with respect to each other.  In each task, for easier navigation, data rows with constant
+values are listed first, next with `${EMPTY}` and `${NONE}`.
+
+If the number of iterations, or the number of test cases/tasks grow, it is a good idea to sort rows in certain logical
+order if applicable. This will ease finding the relevant raws when adding or removing data. Empty lines can be used to
+separate tests into logical groups as in **Example 3**. When dealing with large data, consider using
+[DataDriver library](https://docs.robotframework.org/docs/testcase_styles/datadriven#using-datadriver-library).
+
+In **Example 4**, there are different templates set for different test cases. The data is aligned within *each* test
+case. This is because they are using different templates and therefore, are independent. Note that the columns are not
+titled - this is an exception in the per-test case templates because title placement on the same line as test names, and
+`[Template]` setting between the columns titles and the data, would make the tests unreadable.
+
+### Note On Documentation And Tags
+
+In special cases, there might be a need to specify Documentation and Tags for each test case.
+To achieve consistent formatting, they can be represented in columns just like test data,
+by passing them as arguments to the Template Keyword:
+
+```robot
+*** Settings ***
+Documentation    Different Tags and Documentation for each test case.
+Test Template    Template Keyword
+
+
+*** Test Cases ***    ARG1    ARG2    [Documentation]           [Tags]
+TestA                 aaa     AAA     Prints some message       tagA
+TestB                 bbb     BBB     Prints another message    tagB
+
+
+*** Keywords ***
+Template Keyword
+    [Arguments]    ${arg1}    ${arg2}    ${documentation}    ${tag}
+    [Setup]    Set Tags And Documentation    ${documentation}    ${tag}
+    Log Many   ${arg1}    ${arg2}
+
+Set Tags And Documentation
+   [Arguments]    ${documentation}    ${tag}
+   Set Test Documentation    ${documentation}
+   Set Tags    ${tag}
+```
+
+Square brackets around the column titles, `[Documentation]` and `[Tags]`, are merely to resemble the Settings
+syntax. This is to distinguish them from the test data.
