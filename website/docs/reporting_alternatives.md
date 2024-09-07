@@ -39,4 +39,5 @@ https://www.eficode.com/blog/rf-jenkins-grafana
 
 [Robot Framework Metrics](https://github.com/adiralashiva8/robotframework-metrics) creates custom HTML report (dashboard view) by parsing robotframework output.xml file
 
- - __Sample Report__ [link](https://rfmetrics.netlify.com/)
+Images
+![Metrics Report](https://adiralashiva8.github.io/robotframework-metrics/metrics.png)
