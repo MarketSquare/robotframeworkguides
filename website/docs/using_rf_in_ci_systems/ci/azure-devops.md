@@ -10,7 +10,7 @@ In Azure DevOps, pipelines are defined using YAML files that specify the steps a
 
 ### Example of Azure Pipelines YAML for Robot Framework
 
-```yaml
+```yaml showLineNumbers
 # azure-pipelines.yml
 
 trigger: none
@@ -48,14 +48,9 @@ jobs:
       publishLocation: 'Container'
     condition: succeededOrFailed()
 ```
-
-## Explanation of parameters
-Pool: Specifies the agent pool that will run the pipeline.
-Job: Defines a job called RunRobotTests.
-UsePythonVersion@0: Uses a specific version of Python on the agent.
-Install Dependencies: Installs necessary Python packages from requirements.txt.
-Run Robot Framework Tests: Executes the Robot Framework tests located in the specified test suite and outputs results to the Results directory.
-PublishBuildArtifacts@1: Publishes the test results as build artifacts, making them available for download.
-
-
-
+*Line 6-7:* `pool`: Specifies the agent pool that will run the pipeline.  
+*Line 10:* `job: RunRobotTests`: Defines a job called RunRobotTests.  
+*Line 14-17:* `task: UsePythonVersion@0`: Uses a specific version of Python on the agent.  
+*Line 19-22:* Installs necessary Python packages from requirements.txt.  
+*Line 24-28:* Executes the Robot Framework tests located in the specified test suite and outputs results to the Results directory.  
+*Line 30-36:* Publishes the test results as build artifacts, making them available for download.  
