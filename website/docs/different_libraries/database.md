@@ -29,7 +29,7 @@ Examples are:
 
 ## Examples
 
-Check out the [tests](https://github.com/franz-see/Robotframework-Database-Library/tree/master/test) folder in the repository for examples.
+Check out the [tests](https://github.com/MarketSquare/Robotframework-Database-Library/tree/master/test) folder in the repository for examples.
 
 Example for a PostgreSQL database:
 
