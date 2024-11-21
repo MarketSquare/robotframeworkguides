@@ -5,7 +5,7 @@
 <meta name="generator" content="Docusaurus v3.4.0">
 <title data-rh="true">Set up your IDE | ROBOT FRAMEWORK</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://docs.robotframework.org/docs/getting_started/ide"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Set up your IDE | ROBOT FRAMEWORK"><meta data-rh="true" name="description" content="Install an IDE and Extensions for code-completion and debugging"><meta data-rh="true" property="og:description" content="Install an IDE and Extensions for code-completion and debugging"><link data-rh="true" rel="icon" href="/img/rf_favicon.png"><link data-rh="true" rel="canonical" href="https://docs.robotframework.org/docs/getting_started/ide"><link data-rh="true" rel="alternate" href="https://docs.robotframework.org/docs/getting_started/ide" hreflang="en"><link data-rh="true" rel="alternate" href="https://docs.robotframework.org/docs/getting_started/ide" hreflang="x-default"><link data-rh="true" rel="preconnect" href="https://GMGW7XXAQB-dsn.algolia.net" crossorigin="anonymous"><link rel="search" type="application/opensearchdescription+xml" title="ROBOT FRAMEWORK" href="/opensearch.xml">
 <script src="https://plausible.io/js/script.js" defer="defer" data-domain="docs.robotframework.org"></script><link rel="stylesheet" href="/assets/css/styles.6bc02bfb.css">
-<script src="/assets/js/runtime~main.4846e158.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.44a0b7a7.js" defer="defer"></script>
 <script src="/assets/js/main.e09f2b3a.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -23,8 +23,12 @@ It provides extensions for a lot of different languages and technologies.</p>
 <p><img decoding="async" loading="lazy" alt="VS Code" src="/assets/images/vscode_site-071a6c131589f16534a055908a7d7ed4.png" width="1045" height="650" class="img_ev3q"></p>
 <p>Popular extensions for Robot Framework:</p>
 <ul>
-<li><a href="https://marketplace.visualstudio.com/items?itemName=d-biehl.robotcode" target="_blank" rel="noopener noreferrer">Robot Code</a></li>
-<li><a href="https://marketplace.visualstudio.com/items?itemName=robocorp.robotframework-lsp" target="_blank" rel="noopener noreferrer">Robot Framework Language Server</a></li>
+<li><a href="https://robotcode.io" target="_blank" rel="noopener noreferrer">Robot Code</a></li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=robocorp.robotframework-lsp" target="_blank" rel="noopener noreferrer">Robot Framework Language Server</a>
+<ul>
+<li>⚠️ No longer maintained and does not work with Robot Framework 7+</li>
+</ul>
+</li>
 </ul>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id="install-visual-studio-code">Install Visual Studio Code<a class="hash-link" aria-label="Direct link to Install Visual Studio Code" title="Direct link to Install Visual Studio Code" href="/docs/getting_started/ide#install-visual-studio-code">​</a></h4>
 <p>See the <a href="https://code.visualstudio.com/docs/setup/setup-overview" target="_blank" rel="noopener noreferrer">VS Code setup guide</a> for more information.</p>
@@ -55,13 +59,14 @@ It provides extensions for a lot of different languages and technologies.</p>
 <li>Start Visual Studio Code by executing <code>code</code></li>
 </ol></div></div></div>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id="visual-studio-code-extensions">Visual Studio Code Extensions<a class="hash-link" aria-label="Direct link to Visual Studio Code Extensions" title="Direct link to Visual Studio Code Extensions" href="/docs/getting_started/ide#visual-studio-code-extensions">​</a></h4>
-<div class="theme-admonition theme-admonition-caution admonition_xJq3 alert alert--warning"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></span>caution</div><div class="admonitionContent_BuS1"><p>Make sure that only a <strong>single</strong> Robot Framework extension is installed.</p></div></div>
-<div class="tabs-container tabList__CuJ"><ul role="tablist" aria-orientation="horizontal" class="tabs"><li role="tab" tabindex="0" aria-selected="true" class="tabs__item tabItem_LNqP tabs__item--active">Robot Code</li><li role="tab" tabindex="-1" aria-selected="false" class="tabs__item tabItem_LNqP">Robot Framework Language Server</li></ul><div class="margin-top--md"><div role="tabpanel" class="tabItem_Ymn6"><p><a href="https://marketplace.visualstudio.com/items?itemName=d-biehl.robotcode" target="_blank" rel="noopener noreferrer">RobotCode</a> is a Visual Studio Code extension for Robot Framework.</p><p><img decoding="async" loading="lazy" alt="RobotCode" src="/assets/images/robotcode-8a1f0cbaa90582027dbcfbc35532aedd.png" width="773" height="350" class="img_ev3q"></p><ol>
+<div class="theme-admonition theme-admonition-tip admonition_xJq3 alert alert--success"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 12 16"><path fill-rule="evenodd" d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"></path></svg></span>Only install one Robot Framework Extension</div><div class="admonitionContent_BuS1"><p>Make sure that only a <strong>single</strong> Robot Framework extension is installed.<br>
+<!-- -->We strongly recommend to only install <a href="https://robotcode.io" target="_blank" rel="noopener noreferrer">RobotCode</a></p></div></div>
+<div class="tabs-container tabList__CuJ"><ul role="tablist" aria-orientation="horizontal" class="tabs"><li role="tab" tabindex="0" aria-selected="true" class="tabs__item tabItem_LNqP tabs__item--active">Robot Code</li><li role="tab" tabindex="-1" aria-selected="false" class="tabs__item tabItem_LNqP">Robot Framework Language Server</li></ul><div class="margin-top--md"><div role="tabpanel" class="tabItem_Ymn6"><p><a href="https://robotcode.io" target="_blank" rel="noopener noreferrer">RobotCode</a> is a Visual Studio Code extension for Robot Framework.</p><p><img decoding="async" loading="lazy" alt="RobotCode" src="/assets/images/robotcode-8a1f0cbaa90582027dbcfbc35532aedd.png" width="773" height="350" class="img_ev3q"></p><ol>
 <li>Open Visual Studio Code</li>
 <li>Click on Extensions icon or press <code>Ctrl + Shift + X</code></li>
 <li>Search for <code>RobotCode</code> and click on it</li>
 <li>Click on <code>Install</code></li>
-</ol></div><div role="tabpanel" class="tabItem_Ymn6" hidden=""><p><a href="https://marketplace.visualstudio.com/items?itemName=robocorp.robotframework-lsp" target="_blank" rel="noopener noreferrer">Robot Framework Language Server</a> is a Visual Studio Code extension for Robot Framework.</p><p><img decoding="async" loading="lazy" alt="Robot Framework Language Server" src="/assets/images/rflsp-c0ed9dc55322bbce185e44461e74f688.png" width="941" height="301" class="img_ev3q"></p><ol>
+</ol><p>Check out this extended Tutorial about Robot Code</p><iframe width="560" height="315" src="https://www.youtube.com/embed/7Uad_250YuI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe></div><div role="tabpanel" class="tabItem_Ymn6" hidden=""><p><a href="https://marketplace.visualstudio.com/items?itemName=robocorp.robotframework-lsp" target="_blank" rel="noopener noreferrer">Robot Framework Language Server</a> is a Visual Studio Code extension for Robot Framework.</p><p>⚠️ No longer maintained and does not work with Robot Framework 7+</p><p><img decoding="async" loading="lazy" alt="Robot Framework Language Server" src="/assets/images/rflsp-c0ed9dc55322bbce185e44461e74f688.png" width="941" height="301" class="img_ev3q"></p><ol>
 <li>Open Visual Studio Code</li>
 <li>Click on Extensions icon or press <code>Ctrl + Shift + X</code></li>
 <li>Search for <code>Robot Framework Language Server</code> and click on it</li>
@@ -72,6 +77,7 @@ It provides extensions for a lot of different languages and technologies.</p>
 <p>Popular extensions for Robot Framework:</p>
 <ul>
 <li><a href="https://plugins.jetbrains.com/plugin/16086-robot-framework-language-server" target="_blank" rel="noopener noreferrer">Robot Framework Language Server</a></li>
+<li><a href="https://plugins.jetbrains.com/plugin/16382-hyper-robotframework-support" target="_blank" rel="noopener noreferrer">Hyper RobotFramework Support</a></li>
 </ul>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/srgZ3eQ6erw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id="install-pycharm">Install PyCharm<a class="hash-link" aria-label="Direct link to Install PyCharm" title="Direct link to Install PyCharm" href="/docs/getting_started/ide#install-pycharm">​</a></h4>
@@ -83,7 +89,7 @@ It provides extensions for a lot of different languages and technologies.</p>
 </ul>
 <p>Make sure to install the free <code>PyCharm Community Edition</code> and not the <code>PyCharm Professional</code> version.</p>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id="pycharm-extensions">PyCharm extensions<a class="hash-link" aria-label="Direct link to PyCharm extensions" title="Direct link to PyCharm extensions" href="/docs/getting_started/ide#pycharm-extensions">​</a></h4>
-<p>Make sure that only one single Robot Framework extension is installed.</p>
+<div class="theme-admonition theme-admonition-tip admonition_xJq3 alert alert--success"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 12 16"><path fill-rule="evenodd" d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"></path></svg></span>Only install one Robot Framework Extension</div><div class="admonitionContent_BuS1"><p>Make sure that only a <strong>single</strong> Robot Framework extension is installed.</p></div></div>
 <h5 class="anchor anchorWithStickyNavbar_LWe7" id="robot-framework-language-server">Robot Framework Language Server<a class="hash-link" aria-label="Direct link to Robot Framework Language Server" title="Direct link to Robot Framework Language Server" href="/docs/getting_started/ide#robot-framework-language-server">​</a></h5>
 <ol>
 <li>Press <code>Ctrl + Alt + S</code> to open the settings dialog</li>
@@ -95,6 +101,21 @@ It provides extensions for a lot of different languages and technologies.</p>
 <li>Add a Debug Configuration for Robot Framework to run current test case (via selected text)
 <img decoding="async" loading="lazy" alt="Debug Config Current Test Case" src="/assets/images/pycharm_conf_selected_test-ca97ed4b521a8a346a85bf2514ebdd27.png" width="1046" height="677" class="img_ev3q"></li>
 </ol>
+<div class="tabs-container tabList__CuJ"><ul role="tablist" aria-orientation="horizontal" class="tabs"><li role="tab" tabindex="0" aria-selected="true" class="tabs__item tabItem_LNqP tabs__item--active">Robot Framework Language Server</li><li role="tab" tabindex="-1" aria-selected="false" class="tabs__item tabItem_LNqP">Hyper RobotFramework Support</li></ul><div class="margin-top--md"><div role="tabpanel" class="tabItem_Ymn6"><p>⚠️ No longer maintained and does not work with Robot Framework 7+</p><ol>
+<li>Press <code>Ctrl + Alt + S</code> to open the settings dialog</li>
+<li>Select <code>Plugins</code></li>
+<li>Select the <code>Marketplace</code> tab</li>
+<li>Search for <code>Robot Framework Language Server</code> and click on <code>Install</code></li>
+<li>Add a Debug Configuration for Robot Framework to run current test suite<br>
+<img decoding="async" loading="lazy" alt="Debug Config Current Test Suite" src="/assets/images/pycharm_conf_current_suite-9c5420a84f2812413b331360793c6d49.png" width="1046" height="677" class="img_ev3q"></li>
+<li>Add a Debug Configuration for Robot Framework to run current test case (via selected text)
+<img decoding="async" loading="lazy" alt="Debug Config Current Test Case" src="/assets/images/pycharm_conf_selected_test-ca97ed4b521a8a346a85bf2514ebdd27.png" width="1046" height="677" class="img_ev3q"></li>
+</ol></div><div role="tabpanel" class="tabItem_Ymn6" hidden=""><ol>
+<li>Press <code>Ctrl + Alt + S</code> to open the settings dialog</li>
+<li>Select <code>Plugins</code></li>
+<li>Select the <code>Marketplace</code> tab</li>
+<li>Search for <code>Hyper RobotFramework Support</code> and click on <code>Install</code></li>
+</ol></div></div></div>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="run-and-debug-robot-framework-tests">Run and Debug Robot Framework Tests<a class="hash-link" aria-label="Direct link to Run and Debug Robot Framework Tests" title="Direct link to Run and Debug Robot Framework Tests" href="/docs/getting_started/ide#run-and-debug-robot-framework-tests">​</a></h2>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="visual-studio-code-with-robotcode">Visual Studio Code with RobotCode<a class="hash-link" aria-label="Direct link to Visual Studio Code with RobotCode" title="Direct link to Visual Studio Code with RobotCode" href="/docs/getting_started/ide#visual-studio-code-with-robotcode">​</a></h3>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id="run">Run<a class="hash-link" aria-label="Direct link to Run" title="Direct link to Run" href="/docs/getting_started/ide#run">​</a></h4>
@@ -110,7 +131,6 @@ It provides extensions for a lot of different languages and technologies.</p>
 <p>Use <code>Debug Toolbar</code> to select actions like step over, step into, step out, continue, pause, etc.<br>
 <img decoding="async" loading="lazy" alt="Debug Toolbar" src="/assets/images/VSC_DebugToolbar-bf8f5055a7f6b8c1dc117164b1a823b5.png" width="905" height="311" class="img_ev3q"></p>
 <p>Run Robot Frameworm commands while debugging from <code>Debug Console</code>.<br>
-<!-- -->Commands needs to start with <code>! </code><br>
 <img decoding="async" loading="lazy" alt="Debug Console" src="/assets/images/VSC_RBTCD_executeDebugCommands-dbae7bf94db56294f709d7f72ec83c05.png" width="762" height="199" class="img_ev3q"></p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="pycharm-with-robot-framework-language-server">PyCharm with Robot Framework Language Server<a class="hash-link" aria-label="Direct link to PyCharm with Robot Framework Language Server" title="Direct link to PyCharm with Robot Framework Language Server" href="/docs/getting_started/ide#pycharm-with-robot-framework-language-server">​</a></h3>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id="run-1">Run<a class="hash-link" aria-label="Direct link to Run" title="Direct link to Run" href="/docs/getting_started/ide#run-1">​</a></h4>
