@@ -55,7 +55,6 @@ There are a few options here but we recommend Robot Code. It is important to **r
 
 
 <Tabs>
-</TabItem>
 <TabItem value="RobotCode" label="Robot Code" default>
 
 :point_right: [Get Robot Code here](https://marketplace.visualstudio.com/items?itemName=d-biehl.robotcode)
@@ -63,4 +62,3 @@ There are a few options here but we recommend Robot Code. It is important to **r
 ![](vscode-robotcode.gif)
 </TabItem>
 </Tabs>
-
