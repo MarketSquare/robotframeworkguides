@@ -42,7 +42,7 @@ export const libraries = [
         title: "Database Library",
         description: "Python based library for database testing.",
         isData: "✅",
-        url: "https://github.com/franz-see/Robotframework-Database-Library",
+        url: "https://github.com/MarketSquare/Robotframework-Database-Library",
     },
 ];
 

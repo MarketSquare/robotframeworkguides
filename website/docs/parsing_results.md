@@ -71,8 +71,8 @@ Simple example to read number of passed and failed tests
 from robot.api import ExecutionResult
 result = ExecutionResult('output.xml')
 stats = result.statistics
-print(f"Number of Failed Tests: {stats.failed}")
-print(f"Total number of Tests: {stats.passed}")
+print(f"Number of Failed Tests: {stats.total.failed}")
+print(f"Total number of Tests: {stats.total.passed}")
 ```
 
 You can also create a table in a markdown file `report.md`with the results.

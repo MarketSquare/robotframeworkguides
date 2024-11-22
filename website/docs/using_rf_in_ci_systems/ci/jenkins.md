@@ -134,6 +134,6 @@ These are steps you need to have in your Jenkins configuration. I recommend putt
 1. ```npm config set registry https://local-site-for-node-modules``` \<-- here you need a server that is providing all required node modules; if it doesn't exist proxy config might work as well
 1. Additional commands that might be needed could be ```npm config set strict-ssl false``` or ```npm config set always-auth true```depending how the server is configured
 1. Then run ```rfbrowser init --skip-browsers``` to avoid the installation of browsers that may appear hard over the firewall
-1. ... and use instead the ones installed by root when the agent was initialised by pointing with ```PLAYWRIGHT_BROWSERS_PATH```` to the location defined
+1. ... and use instead the ones installed by root when the agent was initialised by pointing with ```PLAYWRIGHT_BROWSERS_PATH``` to the location defined
 
 Now you should be ready to execute tests.

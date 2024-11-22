@@ -45,7 +45,7 @@ function LibraryGrid() {
             name: "Database Library",
             description: "Python based library for database testing.",
             localpage: "database",
-            urls: { GitHub: "https://github.com/franz-see/Robotframework-Database-Library", PyPI: "https://pypi.org/project/robotframework-databaselibrary/", Project: "http://franz-see.github.io/Robotframework-Database-Library/", Docs: "http://franz-see.github.io/Robotframework-Database-Library/api/1.2.2/DatabaseLibrary.html" },
+            urls: { GitHub: "https://github.com/MarketSquare/Robotframework-Database-Library", PyPI: "https://pypi.org/project/robotframework-databaselibrary/", Project: "https://github.com/MarketSquare/Robotframework-Database-Library", Docs: "https://marketsquare.github.io/Robotframework-Database-Library/" },
             tags: "Database"
         },
         {

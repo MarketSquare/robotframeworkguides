@@ -40,8 +40,9 @@ It provides extensions for a lot of different languages and technologies.
 ![VS Code](/img/vscode_site.png)
 
 Popular extensions for Robot Framework:
-- [Robot Code](https://marketplace.visualstudio.com/items?itemName=d-biehl.robotcode)
+- [Robot Code](https://robotcode.io)
 - [Robot Framework Language Server](https://marketplace.visualstudio.com/items?itemName=robocorp.robotframework-lsp)
+  - ⚠️ No longer maintained and does not work with Robot Framework 7+
 
 #### Install Visual Studio Code
 
@@ -88,14 +89,15 @@ e.g. `sudo rpm -i ~/Downloads/code-1.65.2-1646927812.el7.x86_64.rpm`
 
 #### Visual Studio Code Extensions
 
-:::caution
+:::tip  Only install one Robot Framework Extension
 Make sure that only a **single** Robot Framework extension is installed.
+We strongly recommend to only install [RobotCode](https://robotcode.io)
 :::
 
 <Tabs>
 <TabItem value="Robot Code" label="Robot Code">
 
-[RobotCode](https://marketplace.visualstudio.com/items?itemName=d-biehl.robotcode) is a Visual Studio Code extension for Robot Framework.
+[RobotCode](https://robotcode.io) is a Visual Studio Code extension for Robot Framework.
 
 ![RobotCode](/img/robotcode.png)
 
@@ -104,10 +106,15 @@ Make sure that only a **single** Robot Framework extension is installed.
 3. Search for `RobotCode` and click on it
 4. Click on `Install`
 
+Check out this extended Tutorial about Robot Code
+<iframe width="560" height="315" src="https://www.youtube.com/embed/7Uad_250YuI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 </TabItem>
 <TabItem value="Robot Framework Language Server" label="Robot Framework Language Server">
 
 [Robot Framework Language Server](https://marketplace.visualstudio.com/items?itemName=robocorp.robotframework-lsp) is a Visual Studio Code extension for Robot Framework.
+
+⚠️ No longer maintained and does not work with Robot Framework 7+
 
 ![Robot Framework Language Server](/img/rflsp.png)
 
@@ -126,6 +133,7 @@ Make sure that only a **single** Robot Framework extension is installed.
 
 Popular extensions for Robot Framework:
 - [Robot Framework Language Server](https://plugins.jetbrains.com/plugin/16086-robot-framework-language-server)
+- [Hyper RobotFramework Support](https://plugins.jetbrains.com/plugin/16382-hyper-robotframework-support)
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/srgZ3eQ6erw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -141,7 +149,9 @@ Make sure to install the free `PyCharm Community Edition` and not the `PyCharm P
 
 #### PyCharm extensions
 
-Make sure that only one single Robot Framework extension is installed.
+:::tip  Only install one Robot Framework Extension
+Make sure that only a **single** Robot Framework extension is installed.
+:::
 
 ##### Robot Framework Language Server
 
@@ -154,6 +164,32 @@ Make sure that only one single Robot Framework extension is installed.
 6. Add a Debug Configuration for Robot Framework to run current test case (via selected text)
 ![Debug Config Current Test Case](/img/getting_started/pycharm_conf_selected_test.png)
 
+<Tabs>
+<TabItem value="Robot Framework Language Server" label="Robot Framework Language Server">
+
+⚠️ No longer maintained and does not work with Robot Framework 7+
+
+1. Press `Ctrl + Alt + S` to open the settings dialog
+2. Select `Plugins`
+3. Select the `Marketplace` tab
+4. Search for `Robot Framework Language Server` and click on `Install`
+5. Add a Debug Configuration for Robot Framework to run current test suite
+![Debug Config Current Test Suite](/img/getting_started/pycharm_conf_current_suite.png)
+6. Add a Debug Configuration for Robot Framework to run current test case (via selected text)
+![Debug Config Current Test Case](/img/getting_started/pycharm_conf_selected_test.png)
+
+</TabItem>
+
+<TabItem value="Hyper RobotFramework Support" label="Hyper RobotFramework Support">
+
+1. Press `Ctrl + Alt + S` to open the settings dialog
+2. Select `Plugins`
+3. Select the `Marketplace` tab
+4. Search for `Hyper RobotFramework Support` and click on `Install`
+
+</TabItem>
+
+</Tabs>
 
 ## Run and Debug Robot Framework Tests
 
@@ -176,8 +212,7 @@ Test Execution will begin and stop at the breakpoint.
 Use `Debug Toolbar` to select actions like step over, step into, step out, continue, pause, etc.
 ![Debug Toolbar](/img/VSC_DebugToolbar.png)
 
-Run Robot Frameworm commands while debugging from `Debug Console`.
-Commands needs to start with `! `
+Run Robot Framework commands while debugging from `Debug Console`.
 ![Debug Console](/img/VSC_RBTCD_executeDebugCommands.png)
 
 ### PyCharm with Robot Framework Language Server
