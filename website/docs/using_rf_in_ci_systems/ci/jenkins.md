@@ -96,11 +96,14 @@ pipeline {
         stage('Run Robot tests') {
             steps {
                 sh """
-                    // command to run your tests
+                    robot -d test_results ${args}
                 """
             }
             post {
                 always {
+                    // Note! Do not mix the Jenkins `robot` step with the `robot` command run inside the previous
+                    // `sh` step! The `robot` step _only_ publishes the results for Jenkins and the `robot` command
+                    // inside `sh` step runs the tests!
                     robot(
                         outputPath          : 'test_results',
                         outputFileName      : "output.xml",
