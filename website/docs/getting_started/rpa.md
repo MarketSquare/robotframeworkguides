@@ -47,7 +47,7 @@ If you are using [VS Code](https://code.visualstudio.com) or are looking for the
 
 :point_right: [Get VS Code here](https://code.visualstudio.com)
 
-To get going with RPA development, you need an extension that's call a language server protocl. Essentially it is a plug-in or extension that provides helpers within the IDE environment that assist you in writing your RPA scripts.
+To get going with RPA development, you need an extension that's call a language server protocol. Essentially it is a plug-in or extension that provides helpers within the IDE environment that assist you in writing your RPA scripts.
 
 ### Robot Framework LSP extensions for VS Code
 Language Server Protocol extensions bring in code completion, documentation, highlighting, etc., for your Robot Framework code.
