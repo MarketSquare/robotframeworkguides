@@ -6,7 +6,7 @@ title: Robot Framework Dashboard
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-[Robot Framework Dashboard](https://github.com/timdegroot1996/robotframework-dashboard) is a powerful tool for analyzing and visualizing test results across multiple Robot Framework runs. It processes output XML files, stores test execution data in an SQLite database, and generates an interactive HTML dashboard. The dashboard utilizes Chart.js, Datatables, and Bootstrap for clear and structured visual representation.
+[Robot Framework Dashboard](https://github.com/timdegroot1996/robotframework-dashboard) is a powerful tool for analyzing and visualizing test results across multiple Robot Framework runs. It processes output XML files, stores test execution data in a SQLite database, and generates an interactive HTML dashboard. The dashboard utilizes Chart.js, Datatables, and Bootstrap for clear and structured visual representation.
 
 ![Dashboard](/img/robotdashboard.png)
 
