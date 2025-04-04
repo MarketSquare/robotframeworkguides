@@ -31,8 +31,8 @@ Reusable keywords are stored in `.resource` files in the `resources` folder.
 Also `Python` keywords in `.py` files can be stored there.
 
 - `resources/` - Reusable keywords
-    - `common.robot` - General Keywords (e.g. Login/Logout, Navigation, ...) are stored here
-    - `search.robot` - Keywords for searching are stored here
+    - `common.resource` - General Keywords (e.g. Login/Logout, Navigation, ...) are stored here
+    - `search.resource` - Keywords for searching are stored here
     - `utils.py` - Python helper keywords are stored here
     - ...
 
@@ -237,18 +237,18 @@ You can also find the setting under `File > Preferences > Settings` by searching
 
 :::tip
 
-You can also add the `resources/` , `lib/` or `keyword/` folders  to the `pythonPath` setting:
+You can also add the `resources/` , `libraries/` or `keywords/` folders  to the `pythonPath` setting:
 
 ```json
 "robotcode.robot.pythonPath": [
     "./",
-    "./lib",
+    "./libraries",
     "./resources",
     "./keywords",
     ],
 ```
 
-That way, you can import libraries, resources and variables from the `resources/`, `lib/` and `keyword/` folders without the `resources/`, `lib/` or `keyword/` prefix.
+That way, you can import libraries, resources and variables from the `resources/`, `libraries/` and `keywords/` folders without the `resources/`, `libraries/` or `keywords/` prefix.
 
 ```robotframework
 *** Settings ***
@@ -420,13 +420,13 @@ Now the tests run successfully.
 
 :::tip
 
-You can also add the `resources/` , `lib/` or `keyword/` folders  to the `--pythonpath` setting:
+You can also add the `resources/` , `libraries/` or `keywords/` folders  to the `--pythonpath` setting:
 
 ```shell
-$ robot --pythonpath .:./lib:./resources:./keywords tests/suiteA.robot
+$ robot --pythonpath .:./libraries:./resources:./keywords tests/suiteA.robot
 ```
 
-That way, you can import libraries, resources and variables from the `resources/`, `lib/` and `keyword/` folders without the `resources/`, `lib/` or `keyword/` prefix.
+That way, you can import libraries, resources and variables from the `resources/`, `libraries/` and `keywords/` folders without the `resources/`, `libraries/` or `keywords/` prefix.
 
 ```robotframework
 *** Settings ***
