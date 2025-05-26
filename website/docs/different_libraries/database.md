@@ -9,6 +9,7 @@ It offers keywords to e.g.
 - execute SQL queries
 - fetch results from the database
 - assert table contents and result sets
+For specifics, please refer to the library's [Keyword documentation](https://marketsquare.github.io/Robotframework-Database-Library/#library-documentation-top).
 
 ## Installation
 
