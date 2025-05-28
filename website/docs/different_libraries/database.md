@@ -10,6 +10,8 @@ It offers keywords to e.g.
 - fetch results from the database
 - assert table contents and result sets
 
+For specifics, please refer to the library's [Keyword documentation](https://marketsquare.github.io/Robotframework-Database-Library/).
+
 ## Installation
 
 ### Install from PyPI
