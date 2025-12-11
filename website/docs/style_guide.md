@@ -10,11 +10,10 @@ Version 0.10b
 
 ### Purpose
 
-This style guide is a community driven set of sensible rules to write your Robot Framework code.
+This style guide is a community-driven set of sensible rules to write your Robot Framework code.
 
 As a starting point, use the existing standards from
-[Robot Framework](https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#getting-started) user guide,
-[Robocop](https://robocop.readthedocs.io/en/stable/), and [Robotidy](https://robotidy.readthedocs.io/en/stable/).
+[Robot Framework](https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#getting-started) user guide and [Robocop](https://robocop.dev).
 
 ### Robocon 2022 Presentation
 
@@ -33,11 +32,11 @@ Guido Demmenie, Manana Koberidze, Kelby Stine
 
 #### Special Thanks To
 
-Václav Fuksa, Many Kasiriha, Bartlomiej Hirsz, Mateusz Nojek, René Rohner, Miikka Solmela
+Václav Fuksa, Many Kasiriha, Bartłomiej Hirsz, Mateusz Nojek, René Rohner, Miikka Solmela
 
 #### We are always looking for contributors
 
-- If you have feedback please:
+- If you have feedback, please:
   - Reach out to any one of us on the RobotFramework Slack channel: `#style-guide`
   - Create an issue on [robotframework-style-guide](https://github.com/MarketSquare/robotframework-style-guide)
 - We meet up once every two weeks to talk about style guide topics
@@ -246,7 +245,8 @@ Keyword With Static Variables
 
 #### Keyword Organization
 
-In order to make keyword search within a resource file easier alphabetize your keywords. Some IDEs have an outline side bar (i.e. VSCode) and by alphabetizing the keywords they appear in the side menu in the same way.
+To make keyword search within a resource file easier, alphabetize your keywords. Some IDEs have an outline sidebar
+(i.e. VSCode) and by alphabetizing the keywords they appear in the side menu in the same way.
 
 ## Vertical Spacing
 
@@ -445,7 +445,7 @@ Key to examples:
 > ① Two spaces between sections\
 ② One space between Tests/Tasks\
 ③ No space in the settings section of Tests/Tasks or Keywords\
-④ No space after settings section of Tests/Tasks or Keywords\
+④ No space after the settings section of Tests/Tasks or Keywords\
 ⑤ No spaces between template Test/Task data lines\
 ⑥ One space Between Keywords\
 ⑦ No space between continuation lines\
@@ -664,7 +664,7 @@ This Is A Complex Keyword With Sections
 
 ## Horizontal Spacing
 
-Separation of tokens should be **4 spaces** as described in the the recommended file format: [space separated format](https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#space-separated-format).
+Separation of tokens should be **4 spaces** as described in the recommended file format: [space separated format](https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#space-separated-format).
 
 #### Separation
 
@@ -719,11 +719,11 @@ My Nested Keyword
 
 #### Line Length
 
-> A line length of 120 characters is recommended. [Robocop: #line-too-long](https://robocop.readthedocs.io/en/stable/rules_list.html#line-too-long-w0508)
+> A line length of 120 characters is recommended. [Robocop: #line-too-long](https://robocop.dev/stable/rules_list/#len08-line-too-long)
 
 #### Trailing Whitespaces
 
-> Trailing whitespaces should be avoided. [Robocop: #trailing-whitespace](https://robocop.readthedocs.io/en/stable/rules_list.html#trailing-whitespace-w1001)
+> Trailing whitespaces should be avoided. [Robocop: #trailing-whitespace](https://robocop.dev/stable/rules_list/#spc01-trailing-whitespace)
 
 ---
 
@@ -733,7 +733,7 @@ My Nested Keyword
 
 Indentations should only be added when needed.
 
-The `*** Settings ***` section should always be left aligned without any indentation [Robocop: #suite-setting-should-be-left-aligned](https://robocop.readthedocs.io/en/stable/rules_list.html#suite-setting-should-be-left-aligned-e1016)
+The `*** Settings ***` section should always be left aligned without any indentation [Robocop: #suite-setting-not-left-aligned](https://robocop.dev/stable/rules_list/#spc16-suite-setting-not-left-aligned)
 
 ```robot
 *** Settings ***
@@ -744,10 +744,10 @@ Variables    vars.robot
 
 #### Separation Within Settings Section
 
-Arguments to settings should be aligned according to the longest setting added with 4 spaces. [Robotidy: #alignsettingssection](https://robotidy.readthedocs.io/en/stable/transformers/AlignSettingsSection.html#alignsettingssection)
+Arguments to settings should be aligned according to the longest setting added with 4 spaces. [Robocop format: #alignsettingssection](https://robocop.dev/stable/formatter/formatters/AlignSettingsSection/)
 
 Arguments to Libraries should be aligned if there are multiple libraries that have arguments on importing.
-After the first argument to libraries all other arguments should either:
+After the first argument to libraries, all other arguments should either:
 
 - be separated with 4 spaces
 - be aligned in columns
@@ -782,7 +782,7 @@ Test Tags     mytag
 
 #### Indentation Within Variables Section
 
-The `*** Variables ***` section should always be left aligned without any indentation [Robocop: #variable-should-be-left-aligned](https://robocop.readthedocs.io/en/stable/rules_list.html#variable-should-be-left-aligned-e1014)
+The `*** Variables ***` section should always be left aligned without any indentation [Robocop: #variable-not-left-aligned](https://robocop.dev/stable/rules_list/#spc14-variable-not-left-aligned)
 
 ```robot
 *** Variables ***
@@ -796,7 +796,8 @@ ${VAR2}    2
 
 #### Indentation Within Test Cases, Tasks And Keywords Section
 
-The test case, task and keyword names should always start at the first character on a line. Test steps, task steps and keywords called from within keyword should be indented.
+The test case, task and keyword names should always start at the first character on a line. Test steps, task steps and
+keywords called from within keyword should be indented.
 
 <Tabs>
   <TabItem  value="tests" label="Tests">
@@ -833,7 +834,8 @@ Test Step Two That Returns A Value
 
 #### Block Indentation
 
-Blocks like `IF`, `WHILE`, `FOR` and `TRY/EXCEPT` should always be indented such that the keywords that are run within the loop have to be indented from the lines that start and end the block. [Robocop: #bad-indent](https://robocop.readthedocs.io/en/stable/rules_list.html#bad-indent-w1008)
+Blocks like `IF`, `WHILE`, `FOR` and `TRY/EXCEPT` should always be indented such that the keywords that are run within
+the loop have to be indented from the lines that start and end the block. [Robocop: #bad-indent](https://robocop.dev/stable/rules_list/#spc08-bad-indent)
 
 #### Examples From The User Guide
 
@@ -898,9 +900,9 @@ First example
 
 ### Comments
 
-In comments there should be a space between the `#` and the actual comment. [Robocop: #missing-space-after-comment](https://robocop.readthedocs.io/en/stable/rules_list.html#missing-space-after-comment-w0702)
+In comments there should be a space between the `#` and the actual comment. [Robocop: #missing-space-after-comment](https://robocop.dev/stable/rules_list/#com02-missing-space-after-comment)
 
-Comments should be avoided, write your code readable or use the `[Documentation]`.
+Avoid using comments; instead, make your code self-explanatory or use the `[Documentation]`.
 The only valid use of comments is for TODO's that should be fixed soon.
 
 If you use comments:
@@ -923,17 +925,17 @@ Some Keyword
 
 ### Arguments
 
-Recommended use of line continuation when having more than one arguments as described in the Robot Framework User Guide:
+Recommended use of line continuation when having more than one argument as described in the Robot Framework User Guide:
 [User keyword arguments](https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#user-keyword-arguments).
 
 General guidelines:
 
-- Try limiting the number of arguments to 5 ([Robocop: #too-many-arguments](https://robocop.readthedocs.io/en/stable/rules_list.html#too-many-arguments-w0507)).
+- Try limiting the number of arguments to 5 ([Robocop: #too-many-arguments](https://robocop.dev/stable/rules_list/#len07-too-many-arguments)).
 - One argument per continuation line.
-- Continuation line should not be indented.
-- Line continuation character (`...`) should be placed at the beginning of the new row.
-- No empty lines between arguments.
-- No empty continuation lines between arguments (i.e., lines containing only `'...'`)
+- Continuation line should not be indented ([Robocop: #misaligned-continuation](https://robocop.dev/stable/rules_list/#spc11-misaligned-continuation)).
+- Line continuation character (`...`) should be placed at the beginning of the new row ([Robocop: #misaligned-continuation-row](https://robocop.dev/stable/rules_list/#spc15-misaligned-continuation-row)).
+- No empty lines between arguments ([Robocop: #empty-lines-in-statement](https://robocop.dev/stable/rules_list/#spc13-empty-lines-in-statement)).
+- No empty continuation lines between arguments (i.e. lines containing only `'...'`) ([Robocop: #empty-variable](https://robocop.dev/stable/rules_list/#var01-empty-variable)).
 - If many arguments are required, consider representing them as a list or a dictionary.
 
 #### Line Continuation For Arguments In Keyword Definition
@@ -943,7 +945,7 @@ should be placed on a new continuation line and aligned with the argument on the
 
 #### Required Arguments
 
-Required arguments placed on continuation lines:
+Required arguments are placed on the continuation lines:
 
 ```robot
 *** Keywords ***
@@ -973,7 +975,9 @@ Custom Keyword With Various Optional Arguments
 
 #### Required And Optional Arguments Together
 
-Here, all required arguments are listed first, and optional arguments with default values afterwards (please note that this is a requirement within Robot Framework).
+Here, all required arguments are listed first, and optional arguments with default values afterwards (please note that
+this is a requirement within Robot Framework).
+
 Each argument is placed on a single continuation line, as before:
 
 ```robot
@@ -1005,9 +1009,9 @@ Get Capital Of "${country}" And First "${number}" Cities With Biggest Population
 
 In Test Cases, the first argument should be placed on the same line as the Keyword to which it belongs.
 Every other argument should be placed on a new continuation line and separated from the continuation character
-by exactly four spaces. Following arguments should be aligned with the argument on the previous line.
+by exactly four spaces. The following arguments should be aligned with the argument on the previous line.
 This is different from the argument formatting in the Keywords definition.
-The reason is that test cases might include several Keywords with arguments and overly sparse
+The reason is that test cases might include several Keywords with arguments, and overly sparse
 formatting may result in difficult to read test cases.
 
 EXAMPLES
@@ -1179,7 +1183,8 @@ either on a single line or each on a new line:
 ...              documentation=This text is so long that it does not fit on one line
 ```
 
-Similarly to the list items, a key-value pair of the dictionary cannot be split using the line continuation character. In this case, it is recommended to define the value separately:
+Similarly to the list items, a key-value pair of the dictionary cannot be split using the line continuation character.
+In this case, it is recommended to define the value separately:
 
 ```robot
 *** Variables ***
@@ -1312,7 +1317,8 @@ Understanding variable scope and proper naming are important for managing them i
 
 This is also an area where you will need to understand the stakeholders involved in the project.
 
-If your project participants are less technical more syntactic sugar may be necessary than if a project is managed mostly by more technical roles (developers, devops, etc...) then more code-like syntax might be better.
+If your project participants are less technical, more syntactic sugar may be necessary than if a project is managed
+mostly by more technical roles (developers, devops, etc...) then more code-like syntax might be better.
 
 ***In either case choose the style that best fits your project and keep to that decision.***
 
@@ -1427,7 +1433,7 @@ Referring back to who will be involved with reading and understanding test cases
 
 In the user guide there are existing examples of this syntax [built-in-variables](https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#built-in-variables)
 
-Since Robot Framework treats spaces and underscores the same and in most cases not even necessary, each of these variable names are the same:
+Since Robot Framework treats spaces and underscores the same and in most cases not even necessary, each of these variable names is the same:
 
 ```robot
 *** Variables ***
@@ -1463,7 +1469,7 @@ Variables can be used within the settings section.
 
 They are useful for dynamic file paths and other values.
 
-Typically they are Suite or Global scoped variables. (i.e. Always UPPER CASED, UPPER_CASED)
+Typically, they are Suite or Global scoped variables [#section-variable-not-uppercase](https://robocop.dev/stable/rules_list/#name08-section-variable-not-uppercase) (i.e. Always UPPER CASED, UPPER_CASED).
 
 These variables may come from the Command Line, Resource Files, Variable Files, or the current `*** Variables ***` section
 
@@ -1516,13 +1522,13 @@ Be sure to use the correct indicators of type of Variables:
 - List (@)
 - Dictionary (&)
 
-Consult the Style Guide Line Continuation Section in regards to how to handle the values of these types.
+Consult the Style Guide Line Continuation Section in regard to how to handle the values of these types.
 
 :::note
 
 You can build variables in the  `*** Variables ***` section by combining previously assigned variables.
 
-Order of the variable assignments is important.
+The order of the variable assignments is important.
 
 :::
 
@@ -1557,7 +1563,7 @@ ${VARIABLES PATH}    ${RESOURCE PATH}/Variables
 
 Variables assigned within a test/task should be treated as Test Variables in scope. (i.e. Always UPPER CASED, UPPER_CASED)
 
-The ocassional exception would be if there are FOR LOOP or WHILE LOOP structures then in those cases it would be acceptable.
+The occasional exception would be if there are FOR LOOP or WHILE LOOP structures, then in those cases it would be acceptable.
 
 *FOR LOOP and WHILE LOOP structures should be avoided in test cases.*
 
@@ -1627,7 +1633,7 @@ The examples given are using variables with spaces.
 
 ##### .resource Variable Files
 
-Assume variables declared within the Variable section of a resource files to be at minimum SUITE in scope. (i.e. Always UPPER CASED, UPPER_CASED)
+Assume variables declared within the Variable section of a resource file to be at minimum SUITE in scope. (i.e. Always UPPER CASED, UPPER_CASED)
 
 ```robot
 *** Variables ***
@@ -1641,9 +1647,9 @@ ${INT VARIABLE}       ${42}
 
 Assume variables declared within python variable files to be at minimum SUITE in scope. (i.e. Always UPPER CASED, UPPER_CASED)
 
-Note that syntactically you cannot declare python variables with a space, but when you use them in Robot Framework you can use a space.
+Note that syntactically you cannot declare python variables with a space, but when you use them in Robot Framework, you can use a space.
 
-Python libraries that declare variables are handled according to use case.
+Python libraries that declare variables are handled according to a use case.
 
 ```python
 STRING_VARIABLE = "Hello I am a python variable."
@@ -1654,11 +1660,11 @@ DICT_VARIABLE = {"one": "yksi", "two": "kaksi", "with spaces": "kolme"}
 
 ##### Yaml Variable Files
 
-Assume variables declared within yaml variable files to be at minimum SUITE in scope. (i.e. Always UPPER CASED, UPPER_CASED)
+Assume variables declared within YAML variable files to be at minimum SUITE in scope. (i.e. Always UPPER CASED, UPPER_CASED)
 
-When using a Yaml file you should follow Yaml Specifications for the key and value formatting.
+When using a YAML file, you should follow YAML Specifications for the key and value formatting.
 
-As with python variables when you use them in Robot Framework you can use a space.
+As with python variables, when you use them in Robot Framework, you can use a space.
 
 ```yaml
 STRING VARIABLE: Hello I am a yaml variable.
@@ -1674,7 +1680,7 @@ DICT VARIABLE:
 
 #### Json Variable Files
 
-Assume variables declared within json variable files to be at minimum SUITE in scope. (i.e. Always UPPER CASED, UPPER_CASED)
+Assume variables declared within JSON variable files to be at minimum SUITE in scope. (i.e. Always UPPER CASED, UPPER_CASED)
 
 ```json
 {
@@ -1816,7 +1822,7 @@ User Guide Reference:
 
 General rules
 
-- Any two column should be separated by 4 spaces from each other.
+- Any two columns should be separated by 4 spaces from each other.
 - Each column should be left-aligned.
 - Data columns should have titles.
 - The titles should be capitalised.
@@ -1957,7 +1963,7 @@ Template B
   </TabItem>
 </Tabs>
 
-In **Example 1**, section name `*** Test Cases ***` and `COLUMN1` are separated by 4 spaces, as well as following
+In **Example 1**, section name `*** Test Cases ***` and `COLUMN1` are separated by 4 spaces, as well as the following
 columns. The distance is measured between the longest item in the given column and the start of the following column.
 For example, the longest item in the first column is `1111111111`, therefore, corresponding item in the next
 column, `bbb` is separated by 4 spaces from it.
@@ -1966,15 +1972,15 @@ In **Example 2**, there are two tasks in one file, and the
 data in all tasks are aligned with respect to each other.  In each task, for easier navigation, data rows with constant
 values are listed first, next with `${EMPTY}` and `${NONE}`.
 
-If the number of iterations, or the number of test cases/tasks grow, it is a good idea to sort rows in certain logical
+If the number of iterations or the number of test cases/tasks grow, it is a good idea to sort rows in certain logical
 order if applicable. This will ease finding the relevant raws when adding or removing data. Empty lines can be used to
 separate tests into logical groups as in **Example 3**. When dealing with large data, consider using
 [DataDriver library](https://docs.robotframework.org/docs/testcase_styles/datadriven#using-datadriver-library).
 
 In **Example 4**, there are different templates set for different test cases. The data is aligned within *each* test
-case. This is because they are using different templates and therefore, are independent. Note that the columns are not
+case. This is because they are using different templates and, therefore, are independent. Note that the columns are not
 titled - this is an exception in the per-test case templates because title placement on the same line as test names, and
-`[Template]` setting between the columns titles and the data, would make the tests unreadable.
+`[Template]` setting between the column titles and the data, would make the tests unreadable.
 
 ### Note On Documentation And Tags
 
