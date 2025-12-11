@@ -933,7 +933,7 @@ General guidelines:
 - Try limiting the number of arguments to 5 ([Robocop: #too-many-arguments](https://robocop.dev/stable/rules_list/#len07-too-many-arguments)).
 - One argument per continuation line.
 - Continuation line should not be indented ([Robocop: #misaligned-continuation](https://robocop.dev/stable/rules_list/#spc11-misaligned-continuation)).
-- Line continuation character (`...`) should be placed at the beginning of the new row ([Robocop: #misaligned-continuation-row](https://robocop.dev/stable/rules_list/#spc11-misaligned-continuation-row)).
+- Line continuation character (`...`) should be placed at the beginning of the new row ([Robocop: #misaligned-continuation-row](https://robocop.dev/stable/rules_list/#spc15-misaligned-continuation-row)).
 - No empty lines between arguments ([Robocop: #empty-lines-in-statement](https://robocop.dev/stable/rules_list/#spc13-empty-lines-in-statement)).
 - No empty continuation lines between arguments (i.e. lines containing only `'...'`) ([Robocop: #too-many-arguments](https://robocop.dev/stable/rules_list/#len07-too-many-arguments)).
 - If many arguments are required, consider representing them as a list or a dictionary.
