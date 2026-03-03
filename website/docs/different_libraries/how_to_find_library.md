@@ -42,7 +42,7 @@ There are libraries out there for general windows desktop automation or image ba
 - [Zoomba Library](https://github.com/Accruent/robotframework-zoomba)
 - [AutoIT Library](https://github.com/nokia/robotframework-autoitlibrary)
 
-But if you know that it's wiritten in Java - check out some SWING or SWT Libraries!
+But if you know that it's written in Java - check out some SWING or SWT Libraries!
 
 #### Java Specific UI Libraries
 
