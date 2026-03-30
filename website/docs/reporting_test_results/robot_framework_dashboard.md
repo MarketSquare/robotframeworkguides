@@ -10,12 +10,38 @@ import TabItem from '@theme/TabItem';
 
 ![Dashboard](/img/robotdashboard.png)
 
-Key Features:
-- Command-Line Interface: Provides options to upload runs, list runs, remove runs, and generate dashboards.
-- Customization: Supports specifying custom database locations, dashboard filenames, and output tagging.
-- Test Result Analysis: Parses Robot Framework output XML files and extracts key metrics.
-- HTML Dashboard Generation: Creates an interactive dashboard with graphs and tables for detailed insights.
-- Filtering and Sorting: Allows filtering by run, suite, test, keyword, and tags for precise analysis.
-- Statistics & Trends: Displays pass/fail rates, durations, most failed tests, and failure messages.
+## 🔍 Key features:
+- Multi-run analysis: compare results from multiple runs and track trends over time.
+- Interactive dashboard pages: Overview, Dashboard, Compare, suite/test/keyword drilldowns.
+- Graphs & tables: pass/fail, duration, status, flaky tests, historical trends, most failed tests.
+- Filtering and sorting: run, suite, test, keyword, tags, metadata, date range, and status.
+- Comparison mode: side-by-side view of up to 4 runs with delta statistics.
+- Log linking: click from dashboard entries to Robot Framework logs (local and server setups).
+- Customization: config defaults, layout persistence, graph options, dashboard sections.
+- Storage/extendability: SQLite backend plus custom database class support (MySQL/custom).
+- Server mode: optional HTTP service that includes an admin page, an API and hosts the dashboard.
+- Listener integration: runtime updates via listener to keep dashboard updated after each run.
 
-The tool supports Robot Framework 6.x and 7.x, ensuring compatibility with various output formats.
+## 🚀 Install:
+```bash
+pip install robotframework-dashboard
+# for server/listener features
+pip install robotframework-dashboard[server]
+# or
+pip install robotframework-dashboard[all]
+```
+
+## 📖 Quick links:
+- [Working Example Dashboard](https://marketsquare.github.io/robotframework-dashboard/example/robot_dashboard.html)
+- [Documentation](https://marketsquare.github.io/robotframework-dashboard/)
+- [PyPi](https://pypi.org/project/robotframework-dashboard/)
+- [GitHub](https://github.com/marketsquare/robotframework-dashboard)
+
+## 🎬 RoboCon Talk
+See also my 2025 [RoboCon](https://robocon.io) talk, where I explain robotdashboard and its use cases. Note that the UI has improved significantly since then.
+
+[![Robocon 2025 talk](https://img.youtube.com/vi/olf1_pd9YfM/0.jpg)](https://www.youtube.com/watch?v=olf1_pd9YfM)
+
+## 📋 Version requirements:
+- Robot Framework 6.0+
+- Python 3.8+
