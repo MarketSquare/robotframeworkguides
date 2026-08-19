@@ -49,6 +49,13 @@ function LibraryGrid() {
             tags: "Database"
         },
         {
+            name: "canoe-robot-lib",
+            description: "Robot Framework library for automating Vector CANoe testing.",
+            localpage: "canoe-robot-lib",
+            urls: {GitHub: "https://github.com/Nik-coder789/canoe-robot-lib",PyPI: "https://pypi.org/project/canoe-robot-lib/", Docs: "https://github.com/Nik-coder789/canoe-robot-lib/blob/main/KEYWORDS.md"},
+            tags: "Automotive, CANoe, Testing"
+        },
+        {
             name: "Standard Library",
             description: "Logging, File Handling, Operating System, Process, String, and XML and much more",
             localpage: "standard",
