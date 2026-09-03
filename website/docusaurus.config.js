@@ -11,11 +11,18 @@ const config = {
   url: 'https://docs.robotframework.org',
   baseUrl: '/',
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
   favicon: 'img/rf_favicon.png',
   organizationName: 'marketsquare', // Usually your GitHub org/user name.
   projectName: 'robotframeworkguides', // Usually your repo name.
   trailingSlash: false,
+  future: {
+    v4: true,
+  },
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: 'warn',
+    },
+  },
   scripts: [{src: 'https://plausible.io/js/script.js', defer: true, 'data-domain': 'docs.robotframework.org'}],
   presets: [
     [
