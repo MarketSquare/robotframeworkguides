@@ -74,7 +74,7 @@ robot --listener path/to/listener.py tests
 ### Class or Module
 
 You can use a Listener as a class or as a module.  
-When using a class, I recommend to use the same name for the class and the file.   
+When using a class, I recommend using the same name for the class and the file.   
 
 ```python title="ListenerClass.py"
 

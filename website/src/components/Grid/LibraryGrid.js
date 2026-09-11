@@ -21,13 +21,6 @@ function LibraryGrid() {
             tags: "UI, Web"
         },
         {
-            name: "RPA Framework",
-            description: "Collection of open-source libraries and tools for Robotic Process Automation (RPA), designed to be used both with Robot Framework and Python.",
-            localpage: "rpa",
-            urls: { GitHub: "https://github.com/robocorp/rpaframework", PyPI: "https://pypi.org/project/rpaframework/", Project: "https://rpaframework.org/" },
-            tags: "UI, Web, Desktop, API, Database, RPA"
-        },
-        {
             name: "Requests Library",
             description: "A Robot Framework library aimed to provide HTTP api testing functionalities by wrapping the well known Python Requests Library",
             localpage: "requests",

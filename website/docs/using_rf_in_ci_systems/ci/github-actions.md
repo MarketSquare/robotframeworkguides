@@ -89,7 +89,7 @@ jobs:
    - This step sets up Python version 3.10 using `actions/setup-python`.
 
 3. **Install Dependencies**:
-   - Upgrades pip and installs the dependencies specified in `requirements.txt` and a local package.
+   - Upgrades pip and installs the dependencies specified in `requirements.txt`.
 
     ```requirements.txt
     requests==2.32.3
@@ -99,8 +99,6 @@ jobs:
     robotframework-pythonlibcore==4.4.1
     robotframework-seleniumlibrary==6.3.0
     robotframework-tidy==4.0
-    rpaframework-core==11.3.3
-    rpaframework-recognition==5.2.4
     selenium==4.12
     ```
 

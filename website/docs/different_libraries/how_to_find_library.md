@@ -6,9 +6,9 @@ title: How to find the right library
 
 # What technology does your Application under Test use?
 
-That's the main question, when searching for a library to steer your application.  
-Sure, there are libraries out there, which use image and text recognition to find controls and interact with them.  
-But nothing beats a library which can steer your application natively via it's exposed interfaces.
+That's the main question when searching for a library to steer your application.  
+Sure, there are libraries out there which use image and text recognition to find controls and interact with them.  
+But nothing beats a library which can steer your application natively via its exposed interfaces.
 
 ## Web Applications
 
@@ -25,19 +25,19 @@ There are two main libraries which can automate web applications in a web browse
 
 ## Desktop Applications
 
-### Does if offer a User Interface ?
-Automation via the User Interface is a common approach, even though it can be very unstable, slow and heavy on the maintenance.  
+### Does it offer a User Interface?
+Automation via the User Interface is a common approach, even though it can be very unstable, slow and heavy on maintenance.  
 But if your Application offers a User Interface, there is also the possibility to automate it via that User Interface.  
-That's where the used technology becomes important.
+That's where the technology used becomes important.
 
 #### General Windows Desktop UI Libraries  
 
-There are libraries out there for general windows desktop automation or image based automation.
+There are libraries out there for general Windows desktop automation or image-based automation.
 
 - [FlaUI](https://github.com/GDATASoftwareAG/robotframework-flaui)
 - [Sikuli Library](https://github.com/rainmanwy/robotframework-SikuliLibrary)
 - [White Library](https://github.com/Omenia/robotframework-whitelibrary)
-- [RPA Framework](https://rpaframework.org/)
+- [PlatynUI](https://github.com/imbus/robotframework-platynui)
 - [ImageHorizon Library](https://github.com/eficode/robotframework-imagehorizonlibrary)
 - [Zoomba Library](https://github.com/Accruent/robotframework-zoomba)
 - [AutoIT Library](https://github.com/nokia/robotframework-autoitlibrary)
@@ -51,7 +51,6 @@ Some Libraries to steer the User Interface of your Java Application
 - [RemoteSwing Library](https://github.com/robotframework/remoteswinglibrary)
 - [Swing Library](https://github.com/robotframework/SwingLibrary/wiki)
 - [Eclipse Library](https://github.com/lcarbonn/robotframework-eclipselibrary)
-- [RPA Framework JavaAccessBridge](https://rpaframework.org/libraries/javaaccessbridge/index.html)
 
 
 

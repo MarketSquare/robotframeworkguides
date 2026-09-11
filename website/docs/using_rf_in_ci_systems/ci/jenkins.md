@@ -15,7 +15,7 @@ out of the plugin, please refer to the official plugin documentation.
 By default, Jenkins won't allow you to open log files in the Jenkins UI. To allow this, you need
 to [change your CSP settings](https://plugins.jenkins.io/robot/#plugin-content-log-file-not-showing-properly).
 However, please note that **changing your CSP settings will potentially expose your Jenkins instance
-for security vulnerabilities.**
+to security vulnerabilities.**
 
 ## Examples
 
@@ -128,7 +128,7 @@ This is related especially to the use of Browser library which requires installa
 
 ### Preparing the Jenkins agent
 
-These are steps that needs to be done by the person administrating the Jenkins agents.
+These are steps that need to be done by the person administrating the Jenkins agents.
 
 1. Install all the tools that are needed for running the tests: nodejs, python 3.x, Robot Framework, Browser library
 1. Set `PLAYWRIGHT_BROWSERS_PATH` to point where you want to install browsers

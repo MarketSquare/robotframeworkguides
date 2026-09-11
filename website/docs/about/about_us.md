@@ -18,13 +18,13 @@ We hope that people will find this guide useful and that it will help them to wr
 ## Why we do this
 
 When I started using Robot Framework, I was always impressed with the documentation and the examples.
-The [User Guide](https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html) and the [Keyword Documentation](https://robotframework.org/robotframework/#standard-libraries) were very helpful and always open in by browser while working.
+The [User Guide](https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html) and the [Keyword Documentation](https://robotframework.org/robotframework/#standard-libraries) were very helpful and always open in my browser while working.
 
 When I discovered the [Slack Channel](https://slack.robotframework.org/), I got another productivity boost. My questions there were answered quicker than by any professional support of any tool I've ever used.
 
 But there was also another thing I noticed:
-Some of the question were repeating.
-- "Which IDE shall I used?"
+Some of the questions were repeating.
+- "Which IDE shall I use?"
 - "What extensions do I need?"
 - "Can I debug with Robot Framework?"
 - "How to integrate Robot Framework with Test Management Tool XYZ?"

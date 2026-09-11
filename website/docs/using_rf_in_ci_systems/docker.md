@@ -52,7 +52,7 @@ The [guide](https://www.paulsblog.dev/how-to-install-docker-without-docker-deskt
 ## Creating a Robot Framework Dockerimage
 
 You can choose from a lot of different base images to build your own Docker image.  
-One possibility is to use one of the the official [python](https://hub.docker.com/_/python) images.  
+One possibility is to use one of the official [python](https://hub.docker.com/_/python) images.  
 
 As they already contain `python` and `pip`, you can install `robotframework` and other libraries using pip easily.  
 There are different tags for different python versions and operating systems.
@@ -150,7 +150,7 @@ https://github.com/MarketSquare/robotframework-browser/tree/main/docker
 docker pull marketsquare/robotframework-browser
 ```
 
-The image comes with latest robotframework-browser and robotframework, and with pre-initialized browsers and other dependencies for running headful tests in the container.
+The image comes with the latest robotframework-browser and robotframework, and with pre-initialized browsers and other dependencies for running headful tests in the container.
 
 Example usage:
 ``` bash
@@ -166,7 +166,7 @@ https://github.com/ppodgorsek/docker-robot-framework
 
 <details>
   <summary>Check the list of included packages</summary>
-  <p>The image contains latest robot-framework and a huge collection of helpful libraries.</p>
+  <p>The image contains the latest robot-framework and a huge collection of helpful libraries.</p>
   <ul>
     <li><a href="https://github.com/robotframework/robotframework">Robot Framework</a></li>
     <li><a href="https://github.com/MarketSquare/robotframework-browser">Robot Framework Browser Library</a></li>

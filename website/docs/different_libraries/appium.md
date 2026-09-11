@@ -6,8 +6,8 @@ title: Appium Library
 ## Introduction
 
 [AppiumLibrary](https://github.com/serhatbolsu/robotframework-appiumlibrary) is an appium testing library for [Robot Framework](https://robotframework.org/). Library can be downloaded from [PyPI](https://pypi.org/project/robotframework-appiumlibrary/).  
-It uses Appium to communicate with Android and iOS application similar to how Selenium WebDriver talks to web browser.  
-It is supporting Python 3.7+ (since Appium Python Client doesn't support Python 2.7 anymore)
+It uses Appium to communicate with Android and iOS applications similar to how Selenium WebDriver talks to a web browser.  
+It supports Python 3.7+ (since Appium Python Client doesn't support Python 2.7 anymore)
 
 ### Tutorial Videos about RF and Appium
 
@@ -27,7 +27,7 @@ Install with pip:
 
 ## Device Setup
 
-After installing the library, you still need to setup an simulator/emulator or real device to use in tests. iOS and Android have separate paths to follow, and those steps better explained in [Appium Driver Setup Guide](https://appium.io/docs/en/2.1/quickstart/uiauto2-driver/). Please follow the Driver-Specific Setup according to platform.
+After installing the library, you still need to set up a simulator/emulator or real device to use in tests. iOS and Android have separate paths to follow, and those steps are better explained in [Appium Driver Setup Guide](https://appium.io/docs/en/2.1/quickstart/uiauto2-driver/). Please follow the Driver-Specific Setup according to platform.
 
 ## Example
 

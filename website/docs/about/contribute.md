@@ -46,7 +46,7 @@ title: How to contribute
 ---
 ```
 
-Folders will added to the sidebar automatically.
+Folders will be added to the sidebar automatically.
 You can use a `_category_.json` file to customize the sidebar label and the position of the folder.
 
 ```
@@ -59,7 +59,7 @@ You can use a `_category_.json` file to customize the sidebar label and the posi
 ### Static Files (e.g. images)
 
 Static files (like images) are stored in the `website/static` folder [here](https://github.com/MarketSquare/robotframeworkguides/tree/main/website/static)  
-They will be automatically included in the built and will be accessible via the `/` path (e.g. images are accessible via `/img/robotframeworkguides_logo.png`)
+They will be automatically included in the build and will be accessible via the `/` path (e.g. images are accessible via `/img/robotframeworkguides_logo.png`)
 
 ## Updating Documentation
 

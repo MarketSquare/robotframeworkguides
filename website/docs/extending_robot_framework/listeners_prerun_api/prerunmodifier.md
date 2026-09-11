@@ -17,7 +17,7 @@ Check out the [Robot Framework User Guide](https://robotframework.org/robotframe
 
 ## Visitor
 
-Pre-run modifiers should be implemented as **visitors** that can traverse through the executable test suite structure and modify it as needed. The visitor interface is explained as part of the [Robot Framework API documentation](https://robot-framework.readthedocs.io/en/master/autodoc/robot.model.html#module-robot.model.visitor), and it possible to modify executed test suites, test cases and keywords using it
+Pre-run modifiers should be implemented as **visitors** that can traverse through the executable test suite structure and modify it as needed. The visitor interface is explained as part of the [Robot Framework API documentation](https://robot-framework.readthedocs.io/en/master/autodoc/robot.model.html#module-robot.model.visitor), and it is possible to modify executed test suites, test cases, and keywords using it.
 
 The visitor interface can execute code on the following events:
 
@@ -31,7 +31,7 @@ The visitor interface can execute code on the following events:
 - `start_keyword`
 - `end_keyword`
 
-This is only a subset of the events that are available, but it is the most common ones.  
+This is only a subset of the events that are available, but these are the most common ones.  
 Check out the [Robot Framework API documentation](https://robot-framework.readthedocs.io/en/master/autodoc/robot.model.html#module-robot.model.visitor) for more information.
 
 ## Robot Model
@@ -46,7 +46,7 @@ The following table shows the different objects that are available for each even
 | `visit_test`/`start_test`/`end_test` | [Testcase](https://robot-framework.readthedocs.io/en/master/autodoc/robot.model.html#module-robot.model.testcase) |
 | `visit_keyword`/`start_keyword`/`end_keyword` | [Keyword](https://robot-framework.readthedocs.io/en/master/autodoc/robot.model.html#module-robot.model.keyword) |
 
-Again, this is only a subset of the objects that are available, but it is the most common ones.
+Again, this is only a subset of the objects that are available, but these are the most common ones.
 
 ### Test Suite
 
