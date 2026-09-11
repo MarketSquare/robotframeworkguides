@@ -15,10 +15,11 @@ jobs:
       run:
         working-directory: ./website/
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
         with:
-          node-version: 18.x
+          # Docusaurus 3 requires Node >=20; 22.x is the active LTS.
+          node-version: 22.x
           cache: npm
           cache-dependency-path: './website/package-lock.json'
 

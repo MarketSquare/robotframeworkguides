@@ -32,6 +32,9 @@
     "@tsconfig/docusaurus": "^1.0.5",
     "typescript": "^5.0.0"
   },
+  "engines": {
+    "node": ">=20.0"
+  },
   "browserslist": {
     "production": [
       ">0.5%",
