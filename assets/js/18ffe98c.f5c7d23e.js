@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([["6366"],{5363(e){e.exports=JSON.parse('{"metadata":{"permalink":"/blog/page/3","page":3,"postsPerPage":10,"totalPages":3,"totalCount":23,"previousPage":"/blog/page/2","blogDescription":"News, releases and stories from the Robot Framework community","blogTitle":"Robot Framework Blog"}}')}}]);
