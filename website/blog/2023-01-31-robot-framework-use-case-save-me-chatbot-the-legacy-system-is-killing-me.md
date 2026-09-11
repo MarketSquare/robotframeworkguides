@@ -19,7 +19,7 @@ Robotic Process Automation (RPA) and chatbots are two technologies that are incr
 
 There are often numerous software platforms in use, different ERP- and CRM systems and legacy stuff that is either too hard, expensive or even impossible to use over API connections. At the same time, chatbots can help the users to by-pass a lot of the manual work in the riptide of the sea of software.
 
-One of the [Robot Framework Foundatio](/blog/robot-framework-foundation)n members, Robocorp has built an example that brings open-source conversational AI platform RASA and Robot Framework together. Roborop is a company with strong footing in the RPA and bot automation.
+One of the [Robot Framework Foundation](/blog/robot-framework-foundation) members, Robocorp has built an example that brings the open-source conversational AI platform Rasa and Robot Framework together. Robocorp is a company with strong footing in RPA and bot automation.
 
 ## Chatbots with Robot Framework
 

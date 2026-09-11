@@ -79,4 +79,4 @@ Felix Doppel,
 
 Test manager at HUK-COBURG
 
-If you wish to write blogs with us, do [contact](http://executive.director@robotframework.org) us!
+If you wish to write blogs with us, do [contact](mailto:executive.director@robotframework.org) us!

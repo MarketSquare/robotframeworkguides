@@ -116,7 +116,7 @@ A few attendee reflections from this year:
 🤖 [NiceProject — RoboCon Highlights from the Team](https://www.linkedin.com/posts/niceproject-sp-z-o-o_robocon2025-testautomation-ai-activity-7298691070534524928-Y4ER/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAyCupEBMEkwABH7HYU_TC0zMSa_pAKixnM)  
 🧠 [Markus Boos — Insights & Takeaways from RoboCon](https://www.linkedin.com/posts/activity-7295462611402305537-ff1j/?utm_source=share&utm_medium=member_desktop&rcm=ACoAABsKcysBvi3nwZAqY8YY9h_fmIlwT-tgECo)
 
-If you wrote or shared something —[ inform](http://executive.director@robotframework.org) us. We’ll keep updating the list.
+If you wrote or shared something —[ inform](mailto:executive.director@robotframework.org) us. We’ll keep updating the list.
 
 ### 🎥 Aftermovie & Gallery
 

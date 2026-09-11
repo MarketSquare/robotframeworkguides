@@ -45,7 +45,7 @@ What do we expect from the members? An active touch is welcome, but paying the a
 
 Does your organization have, for example, a style guide you could share or some other way to contribute?
 
-If you have any further questions on what we do and how we operate, please do not [hesitate to ask](http://executive.director@robotframework.org). Transparency is fundamental for us.
+If you have any further questions on what we do and how we operate, please do not [hesitate to ask](mailto:executive.director@robotframework.org). Transparency is fundamental for us.
 
 Yours truly,
 

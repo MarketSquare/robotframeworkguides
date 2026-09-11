@@ -62,7 +62,7 @@ Our dedicated workgroups are the gears that keep our mission moving smoothly. He
 
 **Call to Action**
 
-We invite you to get involved! For more information or to offer your skills, please [reach out](http://executive.director@robotframework.org) to us. Whether you want to join a workgroup, participate in the community or simply learn more, your involvement is invaluable.
+We invite you to get involved! For more information or to offer your skills, please [reach out](mailto:executive.director@robotframework.org) to us. Whether you want to join a workgroup, participate in the community or simply learn more, your involvement is invaluable.
 
 **A Heartfelt Thank You**
 

@@ -82,7 +82,6 @@ The RoboCon 2026 ecosystem track is shaping up to be a masterclass in solving re
 
 We’ll see you in Helsinki — make sure your laptop is charged and your curiosity is piqued. The future of the ecosystem is looking bright.
 
-The future of the ecosystem is looking bright.
 
 > **Part of the RoboCon 2026 Preview Series**
 

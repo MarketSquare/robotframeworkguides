@@ -120,7 +120,7 @@ The automated approach also helped uncover defects in development builds that ha
 
 Taken together, the project did not simply automate the existing manual procedure. It improved repeatability, extended the practical reach of system-level regression and strengthened specification-driven validation for an embedded sensor platform.
 
-> *We’re always looking for guest posts to feature on this blog. Got something to share with the Robot Framework community — a use case, a lesson learned, or something completely different? We’d love to hear from you.* [*Drop me a line*](http://executive.director@robotframework.org) *and you could be our next guest author.*
+> *We’re always looking for guest posts to feature on this blog. Got something to share with the Robot Framework community — a use case, a lesson learned, or something completely different? We’d love to hear from you.* [*Drop me a line*](mailto:executive.director@robotframework.org) *and you could be our next guest author.*
 
 > *Yours truly,*
 

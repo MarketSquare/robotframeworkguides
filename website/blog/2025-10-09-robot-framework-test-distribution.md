@@ -41,7 +41,7 @@ This is great, but can be the source of headache when documenting how a measurem
 
 ### Close in time with access to wheels, uv available
 
-[Uv](/blog/robot-framework-test-distribution) allows us to do this with an incredibly small overhead.
+[uv](https://docs.astral.sh/uv/) allows us to do this with an incredibly small overhead.
 
     uvx --python=3.13.6 --from robotframework==7.2.2 --with numpy==2.2.6 robot
 
