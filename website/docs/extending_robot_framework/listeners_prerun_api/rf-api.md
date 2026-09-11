@@ -5,7 +5,7 @@
 The Robot Framework API allows us to do two main things.  
 
 - Run commands like `robot` and `rebot` from Python scripts
-- Access and modify all kinds of Robot Framework objects , e.g.
+- Access and modify all kinds of Robot Framework objects, e.g.
     - Execution Results
     - Test Suites
     - Parsers
@@ -58,7 +58,7 @@ The only difference when using the `run` function is
 
 - we don't need to prefix the arguments with `--`
     - e.g. `--variable` becomes `variable`
-- boolean arguments like `--dryrun` or `--exitonfailure` need to be set to `True`(or `False`)
+- boolean arguments like `--dryrun` or `--exitonfailure` need to be set to `True` (or `False`)
     - e.g. `--dryrun` becomes `dryrun=True`
 - options which can be specified multiple times (like `--variable`) need to be passed as a list
     - e.g. `--variable BROWSER:chrome --variable URL:https://www.google.com` becomes `variable=['BROWSER:chrome', 'URL:https://www.google.com']`

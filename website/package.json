@@ -15,8 +15,9 @@
     "typecheck": "tsc"
   },
   "dependencies": {
-    "@docusaurus/core": "^3.3.2",
-    "@docusaurus/preset-classic": "^3.3.2",
+    "@docusaurus/core": "^3.10.2",
+    "@docusaurus/faster": "^3.10.2",
+    "@docusaurus/preset-classic": "^3.10.2",
     "@mdx-js/react": "^3.0.0",
     "clsx": "^1.1.1",
     "gridjs": "^5.1.0",
@@ -27,9 +28,12 @@
     "react-table": "^7.8.0"
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "^3.3.2",
+    "@docusaurus/module-type-aliases": "^3.10.2",
     "@tsconfig/docusaurus": "^1.0.5",
     "typescript": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=20.0"
   },
   "browserslist": {
     "production": [

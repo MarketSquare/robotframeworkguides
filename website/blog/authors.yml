@@ -1,0 +1,104 @@
+# Authors of the posts migrated from https://medium.com/@RobotFramework
+#
+# Medium carried authorship in prose only ("This is a guest post by …",
+# "Yours truly, …") and never in metadata, so every entry below was read out of
+# the post text and each social account was verified individually.
+#
+# Entries without socials are deliberate: no account could be tied to that
+# person with enough confidence to publish it. Guessing would misattribute a
+# real, named person, so those fields stay empty until someone confirms them.
+
+robotframework:
+  name: Robot Framework
+  title: Robot Framework Foundation
+  url: https://robotframework.org
+  image_url: /img/robot-framework_BG_WHT.png
+  page: true
+  socials:
+    github: robotframework
+
+miikka:
+  name: Miikka Solmela
+  title: Executive Director, Robot Framework Foundation
+  url: https://robotframework.org
+  page: true
+  image_url: /img/blog/authors/miikka.jpeg
+  socials:
+    github: MiikkaSolmela
+    linkedin: https://www.linkedin.com/in/miikka1salonen/
+
+bjorn:
+  name: Björn Morgenthaler
+  title: Head of Test Engineering & Validation, comlet Verteilte Systeme GmbH
+  url: https://github.com/b-morgenthaler
+  image_url: https://github.com/b-morgenthaler.png
+  page: true
+  socials:
+    github: b-morgenthaler
+    linkedin: https://de.linkedin.com/in/bjoern-morgenthaler
+
+christoph:
+  name: Christoph Singer
+  title: Senior Test Automation Engineer, imbus AG
+  url: https://github.com/chsinger
+  image_url: https://github.com/chsinger.png
+  page: true
+  socials:
+    github: chsinger
+    linkedin: https://de.linkedin.com/in/christophsinger
+
+franz:
+  name: Franz Haas
+  title: Author of robotframework-construct
+  url: https://github.com/franzhaas
+  image_url: /img/blog/authors/franzhaas.webp
+  page: true
+  socials:
+    github: franzhaas
+    linkedin: https://www.linkedin.com/in/franz-haas-071614b1/
+
+felix:
+  name: Felix Doppel
+  title: Test Manager, HUK-COBURG
+  url: https://www.linkedin.com/in/felix-doppel-20b594177/
+  page: true
+  image_url: /img/blog/authors/felixdoppel.webp
+  socials:
+    linkedin: https://www.linkedin.com/in/felix-doppel-20b594177/
+
+tatu:
+  name: Tatu Kairi
+  title: Principal Consultant, Eficode | Robot Framework Ambassador | Robot Framework Board Member
+  url: https://github.com/Tattoo
+  image_url: /img/blog/authors/tatu-kairi.png
+  page: true
+  socials:
+    github: Tattoo
+    linkedin: https://www.linkedin.com/in/tatukairi/
+
+# --- socials still unconfirmed, see the open questions in the handover ---
+
+krzysztof:
+  name: Krzysztof Żminkowski
+  title: RoboCon 2026 organizing team, Robot Framework Ambassador
+  page: true
+  image_url: https://github.com/krzysztofzm.png
+  socials:
+    github: krzysztofzm
+    linkedin: https://www.linkedin.com/in/krzysztof-żminkowski-5553625a/
+
+jose:
+  name: José María Martín Blázquez
+  title: Validation Engineer, GMV Aerospace and Defence
+  page: true
+  image_url: /img/blog/authors/jose.webp
+  socials:
+    linkedin: https://www.linkedin.com/in/josé-maría-martín-blázquez-240463141/
+
+eero:
+  name: Eero Laine
+  title: QA Engineer, Eficode
+  page: true
+  image_url: /img/blog/authors/eero.jpeg
+  socials:
+    linkedin: https://www.linkedin.com/in/eero-laine-243bb313a/

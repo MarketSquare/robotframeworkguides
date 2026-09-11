@@ -40,9 +40,7 @@ It provides extensions for a lot of different languages and technologies.
 ![VS Code](/img/vscode_site.png)
 
 Popular extensions for Robot Framework:
-- [Robot Code](https://robotcode.io)
-- [Robot Framework Language Server](https://marketplace.visualstudio.com/items?itemName=robocorp.robotframework-lsp)
-  - ⚠️ No longer maintained and does not work with Robot Framework 7+
+- [RobotCode](https://robotcode.io)
 
 #### Install Visual Studio Code
 
@@ -91,48 +89,27 @@ e.g. `sudo rpm -i ~/Downloads/code-1.65.2-1646927812.el7.x86_64.rpm`
 
 :::tip  Only install one Robot Framework Extension
 Make sure that only a **single** Robot Framework extension is installed.
-We strongly recommend to only install [RobotCode](https://robotcode.io)
+We strongly recommend to only install [RobotCode](https://robotcode.io).
 :::
-
-<Tabs>
-<TabItem value="Robot Code" label="Robot Code">
 
 [RobotCode](https://robotcode.io) is a Visual Studio Code extension for Robot Framework.
 
 ![RobotCode](/img/robotcode.png)
 
 1. Open Visual Studio Code
-2. Click on Extensions icon or press `Ctrl + Shift + X`
+2. Click on the Extensions icon or press `Ctrl + Shift + X`
 3. Search for `RobotCode` and click on it
 4. Click on `Install`
 
-Check out this extended Tutorial about Robot Code
+Check out this extended tutorial about RobotCode:
 <iframe width="560" height="315" src="https://www.youtube.com/embed/7Uad_250YuI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-</TabItem>
-<TabItem value="Robot Framework Language Server" label="Robot Framework Language Server">
-
-[Robot Framework Language Server](https://marketplace.visualstudio.com/items?itemName=robocorp.robotframework-lsp) is a Visual Studio Code extension for Robot Framework.
-
-⚠️ No longer maintained and does not work with Robot Framework 7+
-
-![Robot Framework Language Server](/img/rflsp.png)
-
-1. Open Visual Studio Code
-2. Click on Extensions icon or press `Ctrl + Shift + X`
-3. Search for `Robot Framework Language Server` and click on it
-4. Click on `Install`
-
-</TabItem>
-
-</Tabs>
 
 ### PyCharm
 
 [PyCharm](https://www.jetbrains.com/pycharm/) is a free and open-source IDE for Python.
 
-Popular extensions for Robot Framework:
-- [Robot Framework Language Server](https://plugins.jetbrains.com/plugin/16086-robot-framework-language-server)
+Popular plugins for Robot Framework:
+- [RobotCode](https://plugins.jetbrains.com/plugin/26216-robotcode--robot-framework-support)
 - [Hyper RobotFramework Support](https://plugins.jetbrains.com/plugin/16382-hyper-robotframework-support)
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/srgZ3eQ6erw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -141,41 +118,29 @@ Popular extensions for Robot Framework:
 
 See the [PyCharm installation instructions](https://www.jetbrains.com/help/pycharm/2021.3/installation-guide.html) for more information.
 
-There two installation approaches
-- The recommended one by JetBrains using the [Toolbox App](https://www.jetbrains.com/toolbox-app/).
-- The alternative [stand alone installation](https://www.jetbrains.com/help/pycharm/2021.3/installation-guide.html#standalone)
+There are two installation approaches:
+- The one recommended by JetBrains, using the [Toolbox App](https://www.jetbrains.com/toolbox-app/).
+- The alternative [stand-alone installation](https://www.jetbrains.com/help/pycharm/2021.3/installation-guide.html#standalone)
 
 Make sure to install the free `PyCharm Community Edition` and not the `PyCharm Professional` version.
 
 #### PyCharm extensions
 
 :::tip  Only install one Robot Framework Extension
-Make sure that only a **single** Robot Framework extension is installed.
+Make sure that only a **single** Robot Framework plugin is installed.
+We strongly recommend to only install [RobotCode](https://robotcode.io).
 :::
 
-##### Robot Framework Language Server
-
-1. Press `Ctrl + Alt + S` to open the settings dialog
-2. Select `Plugins`
-3. Select the `Marketplace` tab
-4. Search for `Robot Framework Language Server` and click on `Install`
-5. Add a Debug Configuration for Robot Framework to run current test suite
-![Debug Config Current Test Suite](/img/getting_started/pycharm_conf_current_suite.png)
-6. Add a Debug Configuration for Robot Framework to run current test case (via selected text)
-![Debug Config Current Test Case](/img/getting_started/pycharm_conf_selected_test.png)
-
 <Tabs>
-<TabItem value="Robot Framework Language Server" label="Robot Framework Language Server">
-
-⚠️ No longer maintained and does not work with Robot Framework 7+
+<TabItem value="RobotCode" label="RobotCode" default>
 
 1. Press `Ctrl + Alt + S` to open the settings dialog
 2. Select `Plugins`
 3. Select the `Marketplace` tab
-4. Search for `Robot Framework Language Server` and click on `Install`
-5. Add a Debug Configuration for Robot Framework to run current test suite
+4. Search for `RobotCode` and click on `Install`
+5. Add a Debug Configuration for Robot Framework to run the current test suite
 ![Debug Config Current Test Suite](/img/getting_started/pycharm_conf_current_suite.png)
-6. Add a Debug Configuration for Robot Framework to run current test case (via selected text)
+6. Add a Debug Configuration for Robot Framework to run the current test case (via selected text)
 ![Debug Config Current Test Case](/img/getting_started/pycharm_conf_selected_test.png)
 
 </TabItem>
@@ -215,7 +180,7 @@ Use `Debug Toolbar` to select actions like step over, step into, step out, conti
 Run Robot Framework commands while debugging from `Debug Console`.
 ![Debug Console](/img/VSC_RBTCD_executeDebugCommands.png)
 
-### PyCharm with Robot Framework Language Server
+### PyCharm with RobotCode
 #### Run
 Run current test suite
 ![Run Tests](/img/getting_started/pycharm_run_suite.gif)

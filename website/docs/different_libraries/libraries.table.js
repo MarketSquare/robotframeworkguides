@@ -3,27 +3,24 @@ import React from "react";
 export const libraries = [
     {
         title: "Browser Library",
-        description: "Web testing library that uses popular Selenium tool internally.",
+        description: "A modern web testing library powered by Playwright. Aiming for speed, reliability and visibility.",
         isUI: "✅",
         isWeb: "✅",
         url: "https://github.com/MarketSquare/robotframework-browser",
     },
     {
         title: "SeleniumLibrary",
-        description: "A modern web testing library powered by Playwright. Aiming for speed, reliability and visibility.",
+        description: "Web testing library that uses popular Selenium tool internally.",
         isUI: "✅",
         isWeb: "✅",
         url: "https://github.com/robotframework/SeleniumLibrary/",
     },
     {
-        title: "RPA Framework",
-        description: "Collection of open-source libraries and tools for Robotic Process Automation (RPA), designed to be used both with Robot Framework and Python.",
+        title: "PlatynUI",
+        description: "Desktop UI automation library for Robot Framework, supporting Windows, Linux and macOS applications.",
         isUI: "✅",
-        isWeb: "✅",
         isDesktop: "✅",
-        isAPI: "✅",
-        isData: "✅",
-        url: "https://github.com/robocorp/rpaframework",
+        url: "https://github.com/imbus/robotframework-platynui",
     },
     {
         title: "Requests Library",

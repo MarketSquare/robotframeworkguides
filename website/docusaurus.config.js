@@ -11,11 +11,18 @@ const config = {
   url: 'https://docs.robotframework.org',
   baseUrl: '/',
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
   favicon: 'img/rf_favicon.png',
   organizationName: 'marketsquare', // Usually your GitHub org/user name.
   projectName: 'robotframeworkguides', // Usually your repo name.
   trailingSlash: false,
+  future: {
+    v4: true,
+  },
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: 'warn',
+    },
+  },
   scripts: [{src: 'https://plausible.io/js/script.js', defer: true, 'data-domain': 'docs.robotframework.org'}],
   presets: [
     [
@@ -28,7 +35,25 @@ const config = {
           // Please change this to your repo.
           editUrl: 'https://github.com/MarketSquare/robotframeworkguides/edit/main/website',
         },
-        blog: false,
+        blog: {
+          routeBasePath: '/blog',
+          blogTitle: 'Robot Framework Blog',
+          blogDescription: 'News, releases and stories from the Robot Framework community',
+          blogSidebarTitle: 'Recent posts',
+          blogSidebarCount: 20,
+          postsPerPage: 10,
+          showReadingTime: true,
+          editUrl: 'https://github.com/MarketSquare/robotframeworkguides/edit/main/website',
+          // Posts migrated from Medium keep their original publication date, so the
+          // feed stays chronologically correct after the move.
+          feedOptions: {
+            type: 'all',
+            title: 'Robot Framework Blog',
+            description: 'News, releases and stories from the Robot Framework community',
+            copyright: `Copyright © ${new Date().getFullYear()} Robot Framework Foundation`,
+          },
+          onUntruncatedBlogPosts: 'warn',
+        },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
@@ -54,6 +79,11 @@ const config = {
           {
             label: 'Guides',
             to: '/docs',
+            position: 'right',
+          },
+          {
+            label: 'Blog',
+            to: '/blog',
             position: 'right',
           },
           {

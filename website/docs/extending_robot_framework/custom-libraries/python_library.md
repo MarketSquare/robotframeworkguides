@@ -9,7 +9,7 @@ Talk **Creating Libraries - Why and How** from RoboCon 2021
 
 ## Static Library
 
-A static library has all of its robot framework keywords defined as python functions.
+A static library has all of its Robot Framework keywords defined as Python functions.
 
 ### Static Library With a Class
 
@@ -68,7 +68,7 @@ Use Custom Keywords
 
 
 ## Decorators
-You can add decorators like `@keyword` `@not_keyword` to mark your functions as keywords and e.g. provide another name for the keyword.
+You can add decorators like `@keyword`, `@not_keyword` to mark your functions as keywords and e.g. provide another name for the keyword.
 
 ```python
 from robot.api.deco import keyword, not_keyword

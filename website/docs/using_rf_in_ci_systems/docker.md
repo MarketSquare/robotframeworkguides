@@ -52,7 +52,7 @@ The [guide](https://www.paulsblog.dev/how-to-install-docker-without-docker-deskt
 ## Creating a Robot Framework Dockerimage
 
 You can choose from a lot of different base images to build your own Docker image.  
-One possibility is to use one of the the official [python](https://hub.docker.com/_/python) images.  
+One possibility is to use one of the official [python](https://hub.docker.com/_/python) images.  
 
 As they already contain `python` and `pip`, you can install `robotframework` and other libraries using pip easily.  
 There are different tags for different python versions and operating systems.
@@ -150,7 +150,7 @@ https://github.com/MarketSquare/robotframework-browser/tree/main/docker
 docker pull marketsquare/robotframework-browser
 ```
 
-The image comes with latest robotframework-browser and robotframework, and with pre-initialized browsers and other dependencies for running headful tests in the container.
+The image comes with the latest robotframework-browser and robotframework, and with pre-initialized browsers and other dependencies for running headful tests in the container.
 
 Example usage:
 ``` bash
@@ -166,25 +166,25 @@ https://github.com/ppodgorsek/docker-robot-framework
 
 <details>
   <summary>Check the list of included packages</summary>
-  The image contains latest robot-framework and a huge collection of helpful libraries.
-
-* [Robot Framework](https://github.com/robotframework/robotframework)
-* [Robot Framework Browser Library](https://github.com/MarketSquare/robotframework-browser)
-* [Robot Framework DatabaseLibrary](https://github.com/franz-see/Robotframework-Database-Library)
-* [Robot Framework Datadriver](https://github.com/Snooz82/robotframework-datadriver)
-* [Robot Framework DateTimeTZ](https://github.com/testautomation/DateTimeTZ)
-* [Robot Framework Faker](https://github.com/guykisel/robotframework-faker)
-* [Robot Framework FTPLibrary](https://github.com/kowalpy/Robot-Framework-FTP-Library)
-* [Robot Framework IMAPLibrary 2](https://pypi.org/project/robotframework-imaplibrary2/)
-* [Robot Framework Pabot](https://github.com/mkorpela/pabot)
-* [Robot Framework Requests](https://github.com/bulkan/robotframework-requests)
-* [Robot Framework SeleniumLibrary](https://github.com/robotframework/SeleniumLibrary)
-* [Robot Framework SSHLibrary](https://github.com/robotframework/SSHLibrary)
-* [Axe Selenium Library](https://github.com/mozilla-services/axe-selenium-python)
-* Firefox
-* Chromium
-* [Amazon AWS CLI](https://pypi.org/project/awscli/)
-
+  <p>The image contains the latest robot-framework and a huge collection of helpful libraries.</p>
+  <ul>
+    <li><a href="https://github.com/robotframework/robotframework">Robot Framework</a></li>
+    <li><a href="https://github.com/MarketSquare/robotframework-browser">Robot Framework Browser Library</a></li>
+    <li><a href="https://github.com/franz-see/Robotframework-Database-Library">Robot Framework DatabaseLibrary</a></li>
+    <li><a href="https://github.com/Snooz82/robotframework-datadriver">Robot Framework Datadriver</a></li>
+    <li><a href="https://github.com/testautomation/DateTimeTZ">Robot Framework DateTimeTZ</a></li>
+    <li><a href="https://github.com/guykisel/robotframework-faker">Robot Framework Faker</a></li>
+    <li><a href="https://github.com/kowalpy/Robot-Framework-FTP-Library">Robot Framework FTPLibrary</a></li>
+    <li><a href="https://pypi.org/project/robotframework-imaplibrary2/">Robot Framework IMAPLibrary 2</a></li>
+    <li><a href="https://github.com/mkorpela/pabot">Robot Framework Pabot</a></li>
+    <li><a href="https://github.com/bulkan/robotframework-requests">Robot Framework Requests</a></li>
+    <li><a href="https://github.com/robotframework/SeleniumLibrary">Robot Framework SeleniumLibrary</a></li>
+    <li><a href="https://github.com/robotframework/SSHLibrary">Robot Framework SSHLibrary</a></li>
+    <li><a href="https://github.com/mozilla-services/axe-selenium-python">Axe Selenium Library</a></li>
+    <li>Firefox</li>
+    <li>Chromium</li>
+    <li><a href="https://pypi.org/project/awscli/">Amazon AWS CLI</a></li>
+  </ul>
 </details>
 
 

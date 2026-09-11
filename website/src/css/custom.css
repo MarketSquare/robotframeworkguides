@@ -433,3 +433,14 @@
 .theme-doc-sidebar-item-category-level-1 .menu__list {
   margin-bottom: 18px;
 }
+
+/* Blog post titles ship at 3rem from the theme
+   (theme-classic BlogPostItem/Header/Title), which dwarfs the 2rem used for
+   headings in the docs. Match the docs instead.
+   Selecting by structure rather than the generated `title_xxxx` module class,
+   because that hash changes whenever the theme is rebuilt. The title is always
+   the first heading inside the article header: h2 in the list, h1 on the post. */
+.blog-wrapper article > header > h1,
+.blog-wrapper article > header > h2 {
+  font-size: 2rem;
+}

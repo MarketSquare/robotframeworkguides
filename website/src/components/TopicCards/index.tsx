@@ -44,12 +44,11 @@ const Topics = [
 
 interface Props {
   name: string;
-  image: string;
   url: string;
   description: JSX.Element;
 }
 
-function TopicCard({name, image, url, description}: Props) {
+function TopicCard({name, url, description}: Props) {
   return (
     <div className="col col--4 margin-bottom--lg">
       <div className={clsx('card')}>

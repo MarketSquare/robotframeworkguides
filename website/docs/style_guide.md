@@ -181,7 +181,7 @@ Library    Dcustom
 
 ### Variables
 
-Simple variables (scalar, list, dictionary) variables should be listed first.
+Simple variables (scalar, list, dictionary) should be listed first.
 Composite variables (variables composed of other variables) should be listed after simple variables.
 
 ```robot
@@ -695,7 +695,7 @@ My Task
 
 #### Indentation
 
-- **Indentation** n time 4 spaces (where n is the level of indentation) and n never exceeds 5, hence nesting depth cannot exceed 4 steps in a keyword.
+- **Indentation** n times 4 spaces (where n is the level of indentation) and n never exceeds 5, hence nesting depth cannot exceed 4 steps in a keyword.
 
 *Example with additional vertical lines for visual clarification: where n == 4 because the keyword also counts in the nesting.*
 
@@ -797,7 +797,7 @@ ${VAR2}    2
 #### Indentation Within Test Cases, Tasks And Keywords Section
 
 The test case, task and keyword names should always start at the first character on a line. Test steps, task steps and
-keywords called from within keyword should be indented.
+keywords called from within a keyword should be indented.
 
 <Tabs>
   <TabItem  value="tests" label="Tests">
@@ -903,12 +903,12 @@ First example
 In comments there should be a space between the `#` and the actual comment. [Robocop: #missing-space-after-comment](https://robocop.dev/stable/rules_list/#com02-missing-space-after-comment)
 
 Avoid using comments; instead, make your code self-explanatory or use the `[Documentation]`.
-The only valid use of comments is for TODO's that should be fixed soon.
+The only valid use of comments is for TODOs that should be fixed soon.
 
 If you use comments:
 
 - Comments should be aligned with the block they belong to.
-- Inline comments have one indentation before the `#`
+- Inline comments have one indentation before the `#`.
 
 ```robot
 *** Keywords ***
@@ -1106,7 +1106,7 @@ ${STRING}    This string has multiple sentences.
 ...          on a new row.
 ```
 
-###### Lists
+##### Lists
 
 List variable in `Variables` section on a single line:
 
@@ -1135,7 +1135,7 @@ It is recommended to either accommodate all items on a single line or to list ea
 ...              some very long name of the fruit which exceeds the recommended line length
 ```
 
-Please note that the item values of the iterable cannot be split using line continuation character. Therefore,
+Please note that the item values of the iterable cannot be split using the line continuation character. Therefore,
 it is not possible to divide the last item in the above example with the ellipses (`...`).
 
 In this case, it is recommended to define the item separately:
@@ -1155,7 +1155,7 @@ ${LONG ITEM}    some very long name of the
 ...             ${LONG ITEM}
 ```
 
-###### Dictionaries
+##### Dictionaries
 
 Dictionary variable in `Variables` section on a single line:
 
@@ -1222,7 +1222,7 @@ My Keyword
 ```
 
 Definition split across multiple lines (note use of built-in keyword [Catenate](http://robotframework.org/robotframework/latest/libraries/BuiltIn.html#Catenate.).
-This is exception for scalars in the `Keywords` and `Test Cases` sections):
+This is an exception for scalars in the `Keywords` and `Test Cases` sections):
 
 ```robot
 *** Keywords ***
@@ -1444,7 +1444,7 @@ ${VARIABLEONE}     same
 
 #### Using Variables With Spaces Within Python Code Blocks
 
-If you are using variables containing spaces within python code blocks (Inline script, Evaluate keyword, python module, etc...) replace the space with an underscore.
+If you are using variables containing spaces within Python code blocks (Inline script, Evaluate keyword, Python module, etc...) replace the space with an underscore.
 
   ```robot
   *** Keywords ***
@@ -1471,7 +1471,7 @@ They are useful for dynamic file paths and other values.
 
 Typically, they are Suite or Global scoped variables [#section-variable-not-uppercase](https://robocop.dev/stable/rules_list/#name08-section-variable-not-uppercase) (i.e. Always UPPER CASED, UPPER_CASED).
 
-These variables may come from the Command Line, Resource Files, Variable Files, or the current `*** Variables ***` section
+These variables may come from the Command Line, Resource Files, Variable Files, or the current `*** Variables ***` section.
 
 It is a good idea to set a default value for a variable used in the `*** Settings ***` section to prevent import errors.
 
@@ -1645,9 +1645,9 @@ ${INT VARIABLE}       ${42}
 
 ##### Python Variable Files
 
-Assume variables declared within python variable files to be at minimum SUITE in scope. (i.e. Always UPPER CASED, UPPER_CASED)
+Assume variables declared within Python variable files to be at minimum SUITE in scope. (i.e. Always UPPER CASED, UPPER_CASED)
 
-Note that syntactically you cannot declare python variables with a space, but when you use them in Robot Framework, you can use a space.
+Note that syntactically you cannot declare Python variables with a space, but when you use them in Robot Framework, you can use a space.
 
 Python libraries that declare variables are handled according to a use case.
 
@@ -1664,7 +1664,7 @@ Assume variables declared within YAML variable files to be at minimum SUITE in s
 
 When using a YAML file, you should follow YAML Specifications for the key and value formatting.
 
-As with python variables, when you use them in Robot Framework, you can use a space.
+As with Python variables, when you use them in Robot Framework, you can use a space.
 
 ```yaml
 STRING VARIABLE: Hello I am a yaml variable.
@@ -1678,7 +1678,7 @@ DICT VARIABLE:
   with spaces: kolme
 ```
 
-#### Json Variable Files
+##### Json Variable Files
 
 Assume variables declared within JSON variable files to be at minimum SUITE in scope. (i.e. Always UPPER CASED, UPPER_CASED)
 
@@ -1712,7 +1712,7 @@ It is also possible that the variable casing needs to match how the variable has
 
 #### Deviation When Context Is More Important
 
-Sometimes variables should mimic the parameters of an API. This is especially true when interacting with REST API json bodies.
+Sometimes variables should mimic the parameters of an API. This is especially true when interacting with REST API JSON bodies.
 
 You have a couple of choices:
 
@@ -1800,7 +1800,7 @@ Set Suite Variables
   </TabItem>
 </Tabs>
 
-#### Variables with Attributes
+#### Variables With Attributes
 
 [extended-variable-assignment](https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#extended-variable-assignment)
 
@@ -1965,15 +1965,15 @@ Template B
 
 In **Example 1**, section name `*** Test Cases ***` and `COLUMN1` are separated by 4 spaces, as well as the following
 columns. The distance is measured between the longest item in the given column and the start of the following column.
-For example, the longest item in the first column is `1111111111`, therefore, corresponding item in the next
+For example, the longest item in the first column is `1111111111`, therefore, the corresponding item in the next
 column, `bbb` is separated by 4 spaces from it.
 
 In **Example 2**, there are two tasks in one file, and the
 data in all tasks are aligned with respect to each other.  In each task, for easier navigation, data rows with constant
 values are listed first, next with `${EMPTY}` and `${NONE}`.
 
-If the number of iterations or the number of test cases/tasks grow, it is a good idea to sort rows in certain logical
-order if applicable. This will ease finding the relevant raws when adding or removing data. Empty lines can be used to
+If the number of iterations or the number of test cases/tasks grows, it is a good idea to sort rows in certain logical
+order if applicable. This will ease finding the relevant rows when adding or removing data. Empty lines can be used to
 separate tests into logical groups as in **Example 3**. When dealing with large data, consider using
 [DataDriver library](https://docs.robotframework.org/docs/testcase_styles/datadriven#using-datadriver-library).
 
